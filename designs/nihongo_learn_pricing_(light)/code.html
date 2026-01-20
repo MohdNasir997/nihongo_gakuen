@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NihonGo Learn Pricing</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        :root {
+            --milk-bg: hsl(40, 20%, 98%);
+            --paper-border: rgba(0, 0, 0, 0.06);
+            --soft-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.03), 0 2px 10px -2px rgba(0, 0, 0, 0.02);
+            --primary-blue: #3c83f6;
+        }.zen-bg {
+            background-color: var(--milk-bg);
+            background-image: radial-gradient(at 0% 0%, hsla(40, 30%, 90%, 0.5) 0, transparent 50%),
+                              radial-gradient(at 100% 100%, hsla(20, 30%, 92%, 0.5) 0, transparent 50%);
+            background-attachment: fixed;
+        }.zen-bg::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0.03;
+            background-image: repeating-linear-gradient(
+                -45deg,
+                #000,
+                #000 1px,
+                transparent 1px,
+                transparent 40px
+            );
+            mask-image: radial-gradient(circle at center, black, transparent 80%);
+        }
+        .dark .zen-bg {
+            background-color: #101722;
+            background-image: none;
+        }
+        .dark .zen-bg::before {
+            display: none;
+        }
+        .paper-card {
+            background-color: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(8px);
+            border: 1px solid var(--paper-border);
+            box-shadow: var(--soft-shadow);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .paper-card:hover {
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+            transform: translateY(-2px);
+        }
+        .paper-card-highlight {
+            background-color: #ffffff;
+            border: 1px solid rgba(60, 131, 246, 0.2);
+            box-shadow: 0 15px 40px -10px rgba(60, 131, 246, 0.08);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3c83f6",
+                        "background-light": "hsl(40, 20%, 98%)",
+                        "background-dark": "#101722",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1.25rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark zen-bg min-h-screen text-[#2d3a4d]">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-black/5 dark:border-[#2d3a4d] bg-white/40 dark:bg-background-dark/80 backdrop-blur-md px-10 py-4 sticky top-0 z-50">
+<div class="flex items-center gap-4 text-[#0d131c] dark:text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-tight">NihonGo Learn</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<nav class="hidden md:flex items-center gap-9">
+<a class="text-[#2d3a4d] dark:text-white text-sm font-medium hover:text-primary transition-colors" href="#">Courses</a>
+<a class="text-[#2d3a4d] dark:text-white text-sm font-medium hover:text-primary transition-colors" href="#">Community</a>
+<a class="text-[#2d3a4d] dark:text-white text-sm font-medium hover:text-primary transition-colors" href="#">Resources</a>
+</nav>
+<div class="flex gap-3">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-10 px-5 bg-primary text-white text-sm font-semibold hover:bg-primary/90 transition-all">
+<span class="truncate">Sign Up</span>
+</button>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-10 px-5 bg-black/5 dark:bg-[#2d3a4d] text-[#2d3a4d] dark:text-white text-sm font-semibold hover:bg-black/10 transition-colors">
+<span class="truncate">Login</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex flex-1 justify-center py-20 px-6">
+<div class="layout-content-container flex flex-col max-w-[1140px] flex-1">
+<div class="max-w-3xl mx-auto text-center mb-16">
+<h1 class="text-[#0d131c] dark:text-white tracking-tight text-4xl sm:text-5xl font-extrabold leading-tight pb-4">
+                            Master Japanese with Comfort
+                        </h1>
+<p class="text-[#5c6d85] dark:text-gray-400 text-lg font-normal leading-relaxed max-w-2xl mx-auto">
+                            A focused, serene environment for your language journey. Join 50,000+ students mastering JLPT levels with our visual-first approach.
+                        </p>
+</div>
+<div class="flex justify-center mb-16">
+<div class="flex h-12 w-full max-w-[340px] items-center justify-center rounded-2xl bg-black/5 dark:bg-[#1e293b] p-1.5 shadow-inner">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-xl px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-[#334155] has-[:checked]:shadow-sm has-[:checked]:text-[#0d131c] dark:has-[:checked]:text-white text-[#5c6d85] dark:text-gray-400 text-sm font-semibold transition-all">
+<span class="truncate">Monthly</span>
+<input checked="" class="invisible w-0" name="billing-cycle" type="radio" value="monthly"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-xl px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-[#334155] has-[:checked]:shadow-sm has-[:checked]:text-[#0d131c] dark:has-[:checked]:text-white text-[#5c6d85] dark:text-gray-400 text-sm font-semibold transition-all">
+<span class="truncate">Yearly (Save 20%)</span>
+<input class="invisible w-0" name="billing-cycle" type="radio" value="yearly"/>
+</label>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+<div class="paper-card flex flex-col gap-8 rounded-2xl p-10">
+<div class="flex flex-col gap-2">
+<h2 class="text-[#5c6d85] dark:text-gray-400 text-xs font-bold uppercase tracking-[0.2em]">Beginner</h2>
+<h3 class="text-[#0d131c] dark:text-white text-xl font-bold">Free Access</h3>
+<p class="flex items-baseline gap-1 text-[#0d131c] dark:text-white mt-2">
+<span class="text-5xl font-extrabold tracking-tighter">$0</span>
+<span class="text-base font-medium opacity-50">/mo</span>
+</p>
+</div>
+<button class="flex w-full cursor-pointer items-center justify-center rounded-xl h-12 px-4 bg-black/5 dark:bg-[#2d3a4d] text-[#0d131c] dark:text-white text-sm font-bold tracking-tight hover:bg-black/10 transition-colors">
+<span class="truncate">Start Learning</span>
+</button>
+<div class="flex flex-col gap-5 mt-2">
+<div class="text-[14px] font-medium leading-normal flex gap-3 text-[#2d3a4d] dark:text-gray-200">
+<span class="material-symbols-outlined text-green-600/60 font-medium">check_circle</span>
+                                    JLPT N5 basics
+                                </div>
+<div class="text-[14px] font-medium leading-normal flex gap-3 text-[#2d3a4d] dark:text-gray-200">
+<span class="material-symbols-outlined text-green-600/60 font-medium">check_circle</span>
+                                    Core vocabulary decks
+                                </div>
+<div class="text-[14px] font-medium leading-normal flex gap-3 text-[#2d3a4d] dark:text-gray-200">
+<span class="material-symbols-outlined text-green-600/60 font-medium">check_circle</span>
+                                    Community access
+                                </div>
+</div>
+</div>
+<div class="paper-card paper-card-highlight flex flex-col gap-8 rounded-2xl p-10 relative md:-mt-4 md:mb-4 lg:-mt-6 lg:mb-6">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2">
+<span class="bg-primary/10 text-primary text-[10px] font-black uppercase tracking-[0.2em] px-5 py-2 rounded-full border border-primary/20">Most Popular</span>
+</div>
+<div class="flex flex-col gap-2">
+<h2 class="text-primary text-xs font-bold uppercase tracking-[0.2em]">Fluent</h2>
+<h3 class="text-[#0d131c] dark:text-white text-xl font-bold">Pro Plan</h3>
+<p class="flex items-baseline gap-1 text-[#0d131c] dark:text-white mt-2">
+<span class="text-5xl font-extrabold tracking-tighter">$19</span>
+<span class="text-base font-medium opacity-50">/mo</span>
+</p>
+</div>
+<button class="flex w-full cursor-pointer items-center justify-center rounded-xl h-12 px-4 bg-primary text-white text-sm font-bold tracking-tight hover:shadow-lg hover:shadow-primary/20 transition-all">
+<span class="truncate">Choose Pro</span>
+</button>
+<div class="flex flex-col gap-5 mt-2">
+<div class="text-[14px] font-semibold leading-normal flex gap-3 text-[#0d131c] dark:text-gray-200">
+<span class="material-symbols-outlined text-primary">verified</span>
+                                    Full JLPT N5-N1 access
+                                </div>
+<div class="text-[14px] font-semibold leading-normal flex gap-3 text-[#0d131c] dark:text-gray-200">
+<span class="material-symbols-outlined text-primary">verified</span>
+                                    Native Teacher Q&amp;A
+                                </div>
+<div class="text-[14px] font-semibold leading-normal flex gap-3 text-[#0d131c] dark:text-gray-200">
+<span class="material-symbols-outlined text-primary">verified</span>
+                                    AI Kanji Recognition
+                                </div>
+<div class="text-[14px] font-semibold leading-normal flex gap-3 text-[#0d131c] dark:text-gray-200">
+<span class="material-symbols-outlined text-primary">verified</span>
+                                    JLPT Mock Exams
+                                </div>
+<div class="text-[14px] font-semibold leading-normal flex gap-3 text-[#0d131c] dark:text-gray-200">
+<span class="material-symbols-outlined text-primary">verified</span>
+                                    Speech Analysis AI
+                                </div>
+</div>
+</div>
+<div class="paper-card flex flex-col gap-8 rounded-2xl p-10">
+<div class="flex flex-col gap-2">
+<h2 class="text-[#5c6d85] dark:text-gray-400 text-xs font-bold uppercase tracking-[0.2em]">Master</h2>
+<h3 class="text-[#0d131c] dark:text-white text-xl font-bold">Ultimate</h3>
+<p class="flex items-baseline gap-1 text-[#0d131c] dark:text-white mt-2">
+<span class="text-5xl font-extrabold tracking-tighter">$49</span>
+<span class="text-base font-medium opacity-50">/mo</span>
+</p>
+</div>
+<button class="flex w-full cursor-pointer items-center justify-center rounded-xl h-12 px-4 bg-[#0d131c] dark:bg-[#3c83f6] text-white text-sm font-bold tracking-tight hover:opacity-90 transition-all">
+<span class="truncate">Go Ultimate</span>
+</button>
+<div class="flex flex-col gap-5 mt-2">
+<div class="text-[14px] font-medium leading-normal flex gap-3 text-[#2d3a4d] dark:text-gray-200">
+<span class="material-symbols-outlined text-primary/70">auto_awesome</span>
+                                    Everything in Pro
+                                </div>
+<div class="text-[14px] font-medium leading-normal flex gap-3 text-[#2d3a4d] dark:text-gray-200">
+<span class="material-symbols-outlined text-primary/70">groups</span>
+                                    Live Language Exchange
+                                </div>
+<div class="text-[14px] font-medium leading-normal flex gap-3 text-[#2d3a4d] dark:text-gray-200">
+<span class="material-symbols-outlined text-primary/70">school</span>
+                                    1-on-1 Monthly Coaching
+                                </div>
+<div class="text-[14px] font-medium leading-normal flex gap-3 text-[#2d3a4d] dark:text-gray-200">
+<span class="material-symbols-outlined text-primary/70">offline_bolt</span>
+                                    Downloads &amp; Offline
+                                </div>
+</div>
+</div>
+</div>
+<div class="mt-32 py-16 border-t border-black/5 dark:border-[#2d3a4d] flex flex-col items-center">
+<p class="text-xs font-bold text-[#5c6d85] dark:text-gray-400 uppercase tracking-[0.3em] mb-12">Trusted by students at</p>
+<div class="flex flex-wrap justify-center gap-16 grayscale opacity-40 hover:opacity-60 transition-opacity dark:invert">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-2xl">domain</span>
+<span class="font-bold text-lg">Waseda Univ.</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-2xl">apartment</span>
+<span class="font-bold text-lg">Tokyo Tech</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-2xl">corporate_fare</span>
+<span class="font-bold text-lg">Kyoto Edu</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-2xl">location_city</span>
+<span class="font-bold text-lg">Nagoya Art</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-white/30 dark:bg-background-dark/50 border-t border-black/5 dark:border-[#2d3a4d] py-16 px-10">
+<div class="max-w-[1140px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-2">
+<div class="flex items-center gap-3 text-primary mb-6">
+<span class="material-symbols-outlined text-3xl">language_japanese_kana</span>
+<h3 class="text-xl font-bold text-[#0d131c] dark:text-white">NihonGo Learn</h3>
+</div>
+<p class="text-[#5c6d85] dark:text-gray-400 text-sm max-w-sm leading-relaxed">
+                            The most advanced platform to master Japanese. From Hiragana to N1, we provide the tools, the community, and the teachers to help you succeed in a comfortable learning environment.
+                        </p>
+</div>
+<div>
+<h4 class="text-xs font-bold text-[#0d131c] dark:text-white mb-6 uppercase tracking-wider">Product</h4>
+<ul class="text-sm space-y-3 text-[#5c6d85] dark:text-gray-400">
+<li><a class="hover:text-primary transition-colors" href="#">Course Catalog</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Study Tools</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">JLPT Mastery</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Kanji AI</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-xs font-bold text-[#0d131c] dark:text-white mb-6 uppercase tracking-wider">Company</h4>
+<ul class="text-sm space-y-3 text-[#5c6d85] dark:text-gray-400">
+<li><a class="hover:text-primary transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Our Teachers</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-[1140px] mx-auto mt-16 pt-10 border-t border-black/5 dark:border-[#2d3a4d] flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-xs text-[#5c6d85] dark:text-gray-500">© 2024 NihonGo Learn Inc. Designed for visual comfort.</p>
+<div class="flex gap-8 text-[#5c6d85] dark:text-gray-500">
+<a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-xl">public</span></a>
+<a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-xl">chat</span></a>
+<a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-xl">mail</span></a>
+</div>
+</div>
+</footer>
+</div>
+</div>
+
+</body></html>

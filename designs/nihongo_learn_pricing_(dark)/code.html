@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NihonGo Learn Pricing</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3c83f6",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101722",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .japanese-motif {
+            background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.05) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+        .glow-effect {
+            box-shadow: 0 0 20px rgba(60, 131, 246, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white transition-colors duration-300">
+<!-- Sticky Navigation -->
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-[#223149] px-6 md:px-10 py-3 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md sticky top-0 z-50">
+<div class="flex items-center gap-4 text-slate-900 dark:text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-tight">NihonGo Learn</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors" href="#">Lessons</a>
+<a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors" href="#">Kanji</a>
+<a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors" href="#">JLPT Prep</a>
+<a class="text-primary text-sm font-bold border-b-2 border-primary" href="#">Pricing</a>
+</div>
+<div class="flex gap-2">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold transition-all hover:bg-primary/90">
+<span>Get Started</span>
+</button>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-slate-100 dark:bg-[#223149] text-slate-900 dark:text-white text-sm font-bold transition-all hover:bg-slate-200 dark:hover:bg-[#2d4161]">
+<span>Log In</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<main class="flex-1 japanese-motif">
+<div class="px-4 md:px-40 flex flex-col items-center py-12 md:py-20">
+<div class="max-w-[960px] w-full flex flex-col items-center">
+<span class="text-primary text-sm font-bold tracking-widest uppercase mb-4">Pricing Plans</span>
+<h1 class="text-slate-900 dark:text-white tracking-tight text-4xl md:text-5xl font-extrabold leading-tight text-center pb-4">
+                            Master Japanese at your own pace
+                        </h1>
+<p class="text-slate-600 dark:text-slate-400 text-lg font-normal leading-relaxed max-w-2xl text-center pb-8">
+                            Choose the plan that's right for your learning journey. Whether you're just starting hiragana or aiming for N1, we have you covered.
+                        </p>
+<!-- Billing Toggle -->
+<div class="flex w-full max-w-xs px-4 py-3 mb-10">
+<div class="flex h-12 flex-1 items-center justify-center rounded-xl bg-slate-200 dark:bg-[#223149] p-1.5">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-background-dark has-[:checked]:shadow-sm text-slate-500 dark:text-[#90a7cb] has-[:checked]:text-slate-900 dark:has-[:checked]:text-white text-sm font-bold transition-all">
+<span class="truncate">Monthly</span>
+<input class="invisible w-0" name="billing_cycle" type="radio" value="Monthly"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-background-dark has-[:checked]:shadow-sm text-slate-500 dark:text-[#90a7cb] has-[:checked]:text-slate-900 dark:has-[:checked]:text-white text-sm font-bold transition-all">
+<span class="truncate">Yearly <span class="text-emerald-500 ml-1">(-20%)</span></span>
+<input checked="" class="invisible w-0" name="billing_cycle" type="radio" value="Yearly"/>
+</label>
+</div>
+</div>
+<!-- Pricing Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full px-4">
+<!-- Free Plan -->
+<div class="flex flex-col gap-6 rounded-2xl border border-solid border-slate-200 dark:border-[#314668] bg-white dark:bg-[#182334] p-8 transition-transform hover:-translate-y-1">
+<div class="flex flex-col gap-2">
+<h3 class="text-slate-500 dark:text-slate-400 text-sm font-bold uppercase tracking-widest">Entry</h3>
+<h2 class="text-slate-900 dark:text-white text-2xl font-bold">Free</h2>
+<p class="flex items-baseline gap-1 text-slate-900 dark:text-white">
+<span class="text-4xl font-black tracking-tighter">$0</span>
+<span class="text-slate-500 dark:text-slate-400 text-sm font-medium">/mo</span>
+</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-2">Perfect for hobbyists and travelers getting their feet wet.</p>
+</div>
+<button class="w-full flex cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-4 bg-slate-100 dark:bg-[#223149] text-slate-900 dark:text-white text-sm font-bold transition-all hover:bg-slate-200 dark:hover:bg-[#2d4161]">
+<span>Start Your Journey</span>
+</button>
+<div class="flex flex-col gap-4 pt-4">
+<div class="text-sm font-medium flex items-center gap-3 text-slate-700 dark:text-slate-200">
+<span class="material-symbols-outlined text-emerald-500 text-xl">check_circle</span>
+                                        Core lessons (Intro)
+                                    </div>
+<div class="text-sm font-medium flex items-center gap-3 text-slate-700 dark:text-slate-200">
+<span class="material-symbols-outlined text-emerald-500 text-xl">check_circle</span>
+                                        Basic kanji (80 characters)
+                                    </div>
+<div class="text-sm font-medium flex items-center gap-3 text-slate-700 dark:text-slate-200">
+<span class="material-symbols-outlined text-emerald-500 text-xl">check_circle</span>
+                                        Community forum access
+                                    </div>
+<div class="text-sm font-medium flex items-center gap-3 text-slate-400 dark:text-slate-500 line-through">
+<span class="material-symbols-outlined text-slate-300 dark:text-slate-600 text-xl">cancel</span>
+                                        Daily drills
+                                    </div>
+</div>
+</div>
+<!-- Pro Plan (Emphasized) -->
+<div class="flex flex-col gap-6 rounded-2xl border-2 border-solid border-primary bg-white dark:bg-[#1c2a42] p-8 relative glow-effect scale-105 z-10">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white text-[10px] font-black uppercase tracking-[0.2em] px-4 py-1.5 rounded-full">
+                                    Most Popular
+                                </div>
+<div class="flex flex-col gap-2">
+<h3 class="text-primary text-sm font-bold uppercase tracking-widest">Scholar</h3>
+<h2 class="text-slate-900 dark:text-white text-2xl font-bold">Pro</h2>
+<p class="flex items-baseline gap-1 text-slate-900 dark:text-white">
+<span class="text-4xl font-black tracking-tighter">$19</span>
+<span class="text-slate-500 dark:text-slate-400 text-sm font-medium">/mo</span>
+</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-2">For serious students aiming for fluency and JLPT certificates.</p>
+</div>
+<button class="w-full flex cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-4 bg-primary text-white text-sm font-bold transition-all hover:bg-primary/90 shadow-lg shadow-primary/20">
+<span>Go Fluent</span>
+</button>
+<div class="flex flex-col gap-4 pt-4">
+<div class="text-sm font-medium flex items-center gap-3 text-slate-700 dark:text-slate-200">
+<span class="material-symbols-outlined text-primary text-xl">verified</span>
+                                        Everything in Free
+                                    </div>
+<div class="text-sm font-medium flex items-center gap-3 text-slate-700 dark:text-slate-200">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                                        Adaptive Daily Drills
+                                    </div>
+<div class="text-sm font-medium flex items-center gap-3 text-slate-700 dark:text-slate-200">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                                        Full JLPT N5-N1 modules
+                                    </div>
+<div class="text-sm font-medium flex items-center gap-3 text-slate-700 dark:text-slate-200">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                                        Unlimited AI Speaking Practice
+                                    </div>
+<div class="text-sm font-medium flex items-center gap-3 text-slate-700 dark:text-slate-200">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                                        Offline learning mode
+                                    </div>
+</div>
+</div>
+<!-- Ultimate Plan -->
+<div class="flex flex-col gap-6 rounded-2xl border border-solid border-slate-200 dark:border-[#314668] bg-white dark:bg-[#182334] p-8 transition-transform hover:-translate-y-1">
+<div class="flex flex-col gap-2">
+<h3 class="text-slate-500 dark:text-slate-400 text-sm font-bold uppercase tracking-widest">Master</h3>
+<h2 class="text-slate-900 dark:text-white text-2xl font-bold">Ultimate</h2>
+<p class="flex items-baseline gap-1 text-slate-900 dark:text-white">
+<span class="text-4xl font-black tracking-tighter">$49</span>
+<span class="text-slate-500 dark:text-slate-400 text-sm font-medium">/mo</span>
+</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-2">Comprehensive mastery with personal guidance and lifetime perks.</p>
+</div>
+<button class="w-full flex cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-4 bg-slate-100 dark:bg-[#223149] text-slate-900 dark:text-white text-sm font-bold transition-all hover:bg-slate-200 dark:hover:bg-[#2d4161]">
+<span>Unrestricted Mastery</span>
+</button>
+<div class="flex flex-col gap-4 pt-4">
+<div class="text-sm font-medium flex items-center gap-3 text-slate-700 dark:text-slate-200">
+<span class="material-symbols-outlined text-emerald-500 text-xl">check_circle</span>
+                                        Everything in Pro
+                                    </div>
+<div class="text-sm font-medium flex items-center gap-3 text-slate-700 dark:text-slate-200">
+<span class="material-symbols-outlined text-emerald-500 text-xl">check_circle</span>
+                                        2x 1-on-1 tutor sessions / mo
+                                    </div>
+<div class="text-sm font-medium flex items-center gap-3 text-slate-700 dark:text-slate-200">
+<span class="material-symbols-outlined text-emerald-500 text-xl">check_circle</span>
+                                        Priority content access
+                                    </div>
+<div class="text-sm font-medium flex items-center gap-3 text-slate-700 dark:text-slate-200">
+<span class="material-symbols-outlined text-emerald-500 text-xl">check_circle</span>
+                                        Lifetime updates included
+                                    </div>
+</div>
+</div>
+</div>
+<!-- FAQ Section (Generated) -->
+<div class="mt-24 w-full px-4 max-w-3xl">
+<h2 class="text-slate-900 dark:text-white text-2xl font-bold text-center mb-10">Frequently Asked Questions</h2>
+<div class="space-y-4">
+<div class="p-6 rounded-xl bg-white dark:bg-[#182334] border border-slate-200 dark:border-[#223149]">
+<h4 class="text-slate-900 dark:text-white font-bold mb-2">Can I switch plans later?</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm">Yes! You can upgrade or downgrade your plan at any time from your account settings. If you upgrade, the change is immediate.</p>
+</div>
+<div class="p-6 rounded-xl bg-white dark:bg-[#182334] border border-slate-200 dark:border-[#223149]">
+<h4 class="text-slate-900 dark:text-white font-bold mb-2">Is there a student discount?</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm">We offer a 50% discount for verified students. Contact our support team with your student ID to claim your coupon.</p>
+</div>
+<div class="p-6 rounded-xl bg-white dark:bg-[#182334] border border-slate-200 dark:border-[#223149]">
+<h4 class="text-slate-900 dark:text-white font-bold mb-2">What is the AI speaking practice?</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm">Our proprietary AI voice recognition engine listens to your pronunciation and provides real-time feedback on pitch accent and intonation.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Simple Footer -->
+<footer class="border-t border-slate-200 dark:border-[#223149] py-12 px-6 md:px-40 bg-white dark:bg-background-dark">
+<div class="max-w-[960px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-2 text-slate-400 dark:text-slate-500">
+<div class="size-4">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z"></path>
+</svg>
+</div>
+<span class="text-xs font-medium tracking-widest uppercase">© 2024 NihonGo Learn Inc.</span>
+</div>
+<div class="flex gap-8 text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-widest">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-primary transition-colors" href="#">Support</a>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</body></html>

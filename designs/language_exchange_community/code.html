@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Language Exchange Community | NihonGo Learn</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3c83f6",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101722",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#0d131c] dark:text-white">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Navigation Bar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#e7ecf4] dark:border-slate-800 bg-white dark:bg-background-dark px-10 py-3 sticky top-0 z-50">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-primary">
+<div class="size-6">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-[#0d131c] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">NihonGo Learn</h2>
+</div>
+<div class="hidden md:flex items-center gap-9">
+<a class="text-[#49699c] dark:text-slate-400 text-sm font-medium hover:text-primary transition-colors" href="#">Courses</a>
+<a class="text-primary text-sm font-bold border-b-2 border-primary" href="#">Community</a>
+<a class="text-[#49699c] dark:text-slate-400 text-sm font-medium hover:text-primary transition-colors" href="#">Flashcards</a>
+<a class="text-[#49699c] dark:text-slate-400 text-sm font-medium hover:text-primary transition-colors" href="#">Tutors</a>
+</div>
+</div>
+<div class="flex flex-1 justify-end gap-6 items-center">
+<label class="hidden lg:flex flex-col min-w-40 !h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-[#49699c] flex border-none bg-[#e7ecf4] dark:bg-slate-800 items-center justify-center pl-4 rounded-l-lg">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 border-none bg-[#e7ecf4] dark:bg-slate-800 text-[#0d131c] dark:text-white focus:ring-0 h-full placeholder:text-[#49699c] px-4 rounded-r-lg text-sm" placeholder="Search community..." value=""/>
+</div>
+</label>
+<button class="bg-primary text-white text-sm font-bold px-4 py-2 rounded-lg hover:opacity-90 transition-opacity">Sign Up</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border border-slate-200 dark:border-slate-700" data-alt="User avatar placeholder" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAPNh71aQZgqErxvKA4bmJVbvxirbObsP59dm3yuPQLLmmyP4EyclUcvczKdqR3wRihqcqafly9PKh7SZdOU-3MJVW-NoOzeuSX6H7tz-0kx7qNYU7HWale4buVzkgkRWG-voAf9ZL7e3WXgvN_8HZVJCQHjRgBRyfNKTq_02xeFjsHaqzw2kEDO8pclDumXQ6fsxmRz1-kcP8HoSUUbigATuFlw9orkAfr4hSC3mJZpgfXOrBz1oHTObTyQRWxh34watYs4efRC_0");'></div>
+</div>
+</header>
+<main class="flex flex-col items-center">
+<div class="w-full max-w-[1200px] px-4 md:px-10 py-8">
+<!-- Hero Section -->
+<div class="@container mb-12">
+<div class="@[480px]:p-0">
+<div class="flex min-h-[400px] flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-xl items-center justify-center p-8 text-center" data-alt="Japanese city skyline with orange sunset" style='background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDX31Jd_8hJC-XIEevkjJpWNxHUbVy1r2OiNuACg29ekXPZGE_ttuNWV30_KDLU_dwE8g3y53NTVPhr0KipRA36mNXhmpL0FGozaO7PVjKND5HkO-nJwpqmcOVux3al6yXtbwAu95a-WZSw_g5oQAJxuzP5YmzUqsT001wIkLQDDpZFzGA7_p1cFD2Brk9VbPL2oMGgrlRBWFRrQU2YsqPgXHfm3sIRVw8n5tSJjwPw2XmzKu2fyz4P6RVdAm6JWjl5UPmO4pFXWWM");'>
+<div class="flex flex-col gap-4 max-w-2xl">
+<h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-6xl">
+                                    Connect with Native Speakers
+                                </h1>
+<p class="text-white/90 text-lg font-normal leading-relaxed">
+                                    Practice Japanese with locals and help them learn your language. Build real friendships while mastering a new tongue through our exchange community.
+                                </p>
+</div>
+<button class="mt-4 bg-primary text-white text-base font-bold h-12 px-8 rounded-lg hover:scale-105 transition-transform shadow-lg">
+                                Join the Community
+                            </button>
+</div>
+</div>
+</div>
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-2">
+<div class="px-4">
+<h2 class="text-[#0d131c] dark:text-white text-3xl font-bold tracking-tight">Find Your Partner</h2>
+<p class="text-[#49699c] dark:text-slate-400 mt-1">Discover native speakers who share your interests.</p>
+</div>
+</div>
+<!-- ToolBar & Filters -->
+<div class="flex flex-col gap-2 px-4 py-6 bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-[#e7ecf4] dark:border-slate-800 my-6">
+<div class="flex flex-wrap justify-between items-center gap-4">
+<div class="flex flex-wrap gap-2">
+<button class="flex h-10 items-center gap-2 px-4 rounded-lg bg-background-light dark:bg-slate-800 text-sm font-medium border border-slate-200 dark:border-slate-700">
+<span class="material-symbols-outlined text-[20px]">translate</span>
+                                Native: Japanese
+                                <span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+<button class="flex h-10 items-center gap-2 px-4 rounded-lg bg-background-light dark:bg-slate-800 text-sm font-medium border border-slate-200 dark:border-slate-700">
+<span class="material-symbols-outlined text-[20px]">school</span>
+                                Learning: English
+                                <span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+<button class="flex h-10 items-center gap-2 px-4 rounded-lg bg-background-light dark:bg-slate-800 text-sm font-medium border border-slate-200 dark:border-slate-700">
+<span class="material-symbols-outlined text-[20px]">military_tech</span>
+                                JLPT N2+
+                                <span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+<button class="flex h-10 items-center gap-2 px-4 rounded-lg bg-primary/10 text-primary text-sm font-bold border border-primary/20">
+<span class="material-symbols-outlined text-[20px]">fiber_manual_record</span>
+                                Online Now
+                            </button>
+</div>
+<div class="flex gap-2">
+<button class="p-2.5 rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800">
+<span class="material-symbols-outlined">filter_list</span>
+</button>
+<button class="flex items-center justify-center rounded-lg h-10 bg-primary text-white px-6 font-bold shadow-md hover:opacity-90 transition-all gap-2">
+<span class="material-symbols-outlined text-[20px]">search</span>
+<span>Search Partners</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Partner Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 py-4">
+<!-- Card 1 -->
+<div class="flex flex-col bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-[#e7ecf4] dark:border-slate-800 shadow-sm hover:shadow-md transition-shadow group">
+<div class="relative h-32 bg-gradient-to-r from-blue-400 to-indigo-500">
+<div class="absolute -bottom-10 left-6 ring-4 ring-white dark:ring-slate-900 rounded-full bg-cover bg-center size-20" data-alt="Profile photo of a Japanese woman" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBSKmRYZ_zQB62x4gAqANuaUAWBQjm6W-Rtk7wZ1jKaOQ1pSeUJJdWMA0xMgUrx4W7Z_DCtqv8gWAv-vbEXu2EHJ1SkoGudy1VGeif1UcBz8wJRPn_iSG5de1d5cN6seKwZbYuQ4RIYLvHYFXvuiS26uE-twGJ7uQdYgiIS9olLVaSMIeIqL7-h3Ad3Y9Gf4WvzYayjjsFoPwrGCLm49ko9jNHTC5sKogWOwGtUeCDAbOHk-AbMJJgJ_k7FNxcABgmQDRFhHR2LuNw");'>
+<div class="absolute bottom-1 right-1 size-4 bg-green-500 rounded-full border-2 border-white dark:border-slate-900"></div>
+</div>
+</div>
+<div class="pt-12 pb-6 px-6 flex flex-col gap-4">
+<div>
+<h3 class="text-xl font-bold">Haruka Sato</h3>
+<p class="text-sm text-[#49699c] dark:text-slate-400 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span> Tokyo, Japan
+                                </p>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 bg-green-100 text-green-700 text-xs font-bold rounded">Native: JP</span>
+<span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded">Learn: EN</span>
+<span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-bold rounded">N1</span>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-300 line-clamp-2">
+                                Hello! I'm a chef in Tokyo. I love talking about food, anime, and hiking. Let's practice together!
+                            </p>
+<div class="flex gap-2 pt-2">
+<button class="flex-1 h-10 bg-primary text-white font-bold rounded-lg text-sm">Message</button>
+<button class="h-10 px-4 border border-slate-200 dark:border-slate-700 rounded-lg text-slate-600 dark:text-white"><span class="material-symbols-outlined">person</span></button>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="flex flex-col bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-[#e7ecf4] dark:border-slate-800 shadow-sm hover:shadow-md transition-shadow group">
+<div class="relative h-32 bg-gradient-to-r from-orange-400 to-red-500">
+<div class="absolute -bottom-10 left-6 ring-4 ring-white dark:ring-slate-900 rounded-full bg-cover bg-center size-20" data-alt="Profile photo of a Japanese man" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCuykdViqF3Pvgm5LobyV_iAgssk4msRyHbjuMs0wvL5DibvivAbwhuV9QQco0PT9sJDdYHe_NnmsmCzKeWOwNxmq1XVFP95Wg2H5Gm5ZOagPv4AemC0yS9d6Gsn1kO6jfwrGPSGCRM6vGFdgXnhin4l8HcWhgZbm0RV_wo3_7KO3h1RdVzs3DIk3Y_03tHllAUkkObuZBvTejNNiMjdELDgd4jZ3VtA6R8uYz7JewpEaUhjSp5F2BuhESyuQgn1gmVO7R9ygdvyRQ");'>
+<div class="absolute bottom-1 right-1 size-4 bg-slate-400 rounded-full border-2 border-white dark:border-slate-900"></div>
+</div>
+</div>
+<div class="pt-12 pb-6 px-6 flex flex-col gap-4">
+<div>
+<h3 class="text-xl font-bold">Kenji Tanaka</h3>
+<p class="text-sm text-[#49699c] dark:text-slate-400 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span> Osaka, Japan
+                                </p>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 bg-green-100 text-green-700 text-xs font-bold rounded">Native: JP</span>
+<span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded">Learn: FR</span>
+<span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-bold rounded">N2</span>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-300 line-clamp-2">
+                                Designer from Osaka. I want to improve my French while helping you with Japanese slang!
+                            </p>
+<div class="flex gap-2 pt-2">
+<button class="flex-1 h-10 bg-primary text-white font-bold rounded-lg text-sm">Message</button>
+<button class="h-10 px-4 border border-slate-200 dark:border-slate-700 rounded-lg text-slate-600 dark:text-white"><span class="material-symbols-outlined">person</span></button>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="flex flex-col bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-[#e7ecf4] dark:border-slate-800 shadow-sm hover:shadow-md transition-shadow group">
+<div class="relative h-32 bg-gradient-to-r from-teal-400 to-emerald-500">
+<div class="absolute -bottom-10 left-6 ring-4 ring-white dark:ring-slate-900 rounded-full bg-cover bg-center size-20" data-alt="Profile photo of a Japanese student" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCyIF7aDcKt6jZ1kxKiyqxMJNlq8i_vLjlS2M0Pni6sERjwHr0nuEOLOC0Ds9dIZNY4cY_XFCF1pL4KYvOoxwSMSKt1TJ9MtGr06oetn-IrrfeJXXzvZFhiCUkPoALZiBwVNyJdJe_svfm1os55Sga8Vvw-sX7MXLxYpYborxy1KIgbk-MSje643l4edg4KU_7RoVDpqiVPKMVnDc_bNPLNkU2BK1Kil4hNVOj8ODAcezS_nnyKj97fHHX1FKOCDpJpWEhDeo2MQTs");'>
+<div class="absolute bottom-1 right-1 size-4 bg-green-500 rounded-full border-2 border-white dark:border-slate-900"></div>
+</div>
+</div>
+<div class="pt-12 pb-6 px-6 flex flex-col gap-4">
+<div>
+<h3 class="text-xl font-bold">Mina Yamamoto</h3>
+<p class="text-sm text-[#49699c] dark:text-slate-400 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span> Kyoto, Japan
+                                </p>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 bg-green-100 text-green-700 text-xs font-bold rounded">Native: JP</span>
+<span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded">Learn: EN</span>
+<span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-bold rounded">N4</span>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-300 line-clamp-2">
+                                Kyoto University student. Interested in literature and history. Happy to help beginners!
+                            </p>
+<div class="flex gap-2 pt-2">
+<button class="flex-1 h-10 bg-primary text-white font-bold rounded-lg text-sm">Message</button>
+<button class="h-10 px-4 border border-slate-200 dark:border-slate-700 rounded-lg text-slate-600 dark:text-white"><span class="material-symbols-outlined">person</span></button>
+</div>
+</div>
+</div>
+</div>
+<!-- How it Works Section -->
+<div class="py-16 mt-12 px-4 border-t border-slate-200 dark:border-slate-800">
+<h2 class="text-2xl font-bold text-center mb-12">How Language Exchange Works</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+<div class="flex flex-col items-center gap-4">
+<div class="size-16 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-4xl">person_search</span>
+</div>
+<h3 class="text-lg font-bold">1. Find a Partner</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm">
+                                Use our filters to find native speakers who share your interests and language goals.
+                            </p>
+</div>
+<div class="flex flex-col items-center gap-4">
+<div class="size-16 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-4xl">chat_bubble</span>
+</div>
+<h3 class="text-lg font-bold">2. Start Conversing</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm">
+                                Reach out and introduce yourself. Chat via text or set up a video call for real practice.
+                            </p>
+</div>
+<div class="flex flex-col items-center gap-4">
+<div class="size-16 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-4xl">auto_graph</span>
+</div>
+<h3 class="text-lg font-bold">3. Grow Together</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm">
+                                Exchange feedback, share culture, and improve your skills while helping someone else do the same.
+                            </p>
+</div>
+</div>
+</div>
+<!-- Footer Section -->
+<footer class="mt-16 pb-12 border-t border-slate-200 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2 text-primary font-bold">
+<svg class="size-5" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z" fill="currentColor"></path>
+</svg>
+<span>NihonGo Learn</span>
+</div>
+<p class="text-xs text-slate-500">© 2024 Language Exchange Community. All rights reserved.</p>
+</div>
+<div class="flex gap-6 text-sm font-medium text-slate-600 dark:text-slate-400">
+<a class="hover:text-primary transition-colors" href="#">Safety Tips</a>
+<a class="hover:text-primary transition-colors" href="#">Privacy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms</a>
+<a class="hover:text-primary transition-colors" href="#">Help</a>
+</div>
+</footer>
+</div>
+</main>
+</div>
+</body></html>

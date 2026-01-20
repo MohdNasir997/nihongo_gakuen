@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NihonGo Learn - Master Japanese with Confidence</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#4361ee",
+                        "background-light": "#faf9f6",
+                        "card-light": "#fffdfa",
+                        "background-dark": "#1a1c1e",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "serif": ["Noto Serif JP", "serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.4rem", "lg": "0.75rem", "xl": "1rem", "2xl": "1.5rem", "full": "9999px" },
+                    boxShadow: {
+                        "soft": "0 4px 20px -2px rgba(0, 0, 0, 0.03), 0 2px 8px -1px rgba(0, 0, 0, 0.02)",
+                        "organic": "0 10px 40px -10px rgba(60, 50, 30, 0.08)",
+                    }
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">.seigaiha-bg {
+    background-color: transparent;
+    background-size: 80px 40px
+    }
+body {
+    font-family: "Inter", sans-serif;
+    -webkit-font-smoothing: antialiased
+    }
+.paper-texture {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuB8TyOEhGkRDv87M-ir_rQFaVyvqTnjAGE--V0Xm3hObDMQhLGNDUcd9teHBSOWC8QWs1TRkePvj_DlmDE0HHxMP9Bca4-wVpeqItDZ0gtvs0KYb1Bz8UnlJAaa2ZsGIRQTBM7lAMMhUwNIEDl0dHjxZh_W-naxa-6On14zOJOLDa-lKKNQ392c_YCkhEGdIyXASKjXysiRycnx1vIr4um9Ej1X7CZO02SXQEXF0P3QFQ-Rj4phq4v1NfrtpIbeGPEUCAd0kDNdTXk)
+    }</style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#2d333a] dark:text-slate-100 font-display transition-colors duration-300 paper-texture">
+<header class="sticky top-0 z-50 w-full border-b border-solid border-[#e8e4db] dark:border-slate-800 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md px-6 lg:px-40 py-4">
+<div class="max-w-[1280px] mx-auto flex items-center justify-between whitespace-nowrap">
+<div class="flex items-center gap-3 text-[#1a1c1e] dark:text-white">
+<div class="size-8 text-primary">
+<svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z"></path>
+</svg>
+</div>
+<h1 class="text-xl font-bold leading-tight tracking-tight font-serif">NihonGo Learn</h1>
+</div>
+<div class="flex flex-1 justify-end gap-10 items-center">
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium text-slate-600 hover:text-primary transition-colors" href="#">Courses</a>
+<a class="text-sm font-medium text-slate-600 hover:text-primary transition-colors" href="#">Exchange</a>
+<a class="text-sm font-medium text-slate-600 hover:text-primary transition-colors" href="#">About</a>
+<a class="text-sm font-medium text-slate-600 hover:text-primary transition-colors" href="#">Contact</a>
+</nav>
+<div class="flex gap-4">
+<button class="flex min-w-[100px] cursor-pointer items-center justify-center rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold transition-all hover:bg-primary/90 shadow-soft">
+                    Sign Up
+                </button>
+<button class="flex min-w-[100px] cursor-pointer items-center justify-center rounded-lg h-10 px-5 bg-[#eeeae0] dark:bg-slate-800 text-[#2d333a] dark:text-white text-sm font-bold transition-all hover:bg-[#e4e0d4] dark:hover:bg-slate-700">
+                    Login
+                </button>
+<button class="flex items-center justify-center rounded-lg h-10 w-10 text-slate-400 hover:text-primary transition-all">
+<span class="material-symbols-outlined text-[20px]">light_mode</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="relative">
+<section class="relative overflow-hidden pt-20 pb-24 lg:pt-32 lg:pb-40 px-6 lg:px-40 seigaiha-bg">
+<div class="max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="flex flex-col gap-10 order-2 lg:order-1">
+<div class="flex flex-col gap-6">
+<div class="inline-flex items-center gap-2 rounded-full bg-[#f0ede4] px-4 py-1.5 text-[10px] font-bold text-slate-500 w-fit uppercase tracking-[0.2em] border border-[#e8e4db]">
+<span class="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
+                        Learning Reimagined
+                    </div>
+<h1 class="text-[#1a1c1e] dark:text-white text-5xl lg:text-7xl font-bold leading-[1.1] tracking-tight font-serif">
+                        Master Japanese <br/><span class="text-primary/80">with Confidence</span>
+</h1>
+<p class="text-lg lg:text-xl text-slate-500 dark:text-slate-400 max-w-[540px] leading-relaxed">
+                        Join 50,000+ learners today. A gentle, structured path designed for visual comfort and focused mastery.
+                    </p>
+</div>
+<div class="flex flex-col sm:flex-row gap-5">
+<button class="flex min-w-[200px] cursor-pointer items-center justify-center rounded-xl h-14 px-8 bg-primary text-white text-lg font-bold shadow-organic hover:-translate-y-1 transition-all duration-300">
+                        Start Learning
+                    </button>
+<button class="flex min-w-[200px] cursor-pointer items-center justify-center rounded-xl h-14 px-8 bg-card-light dark:bg-slate-800 border border-[#e8e4db] dark:border-slate-700 text-[#2d333a] dark:text-white text-lg font-bold hover:bg-[#f5f2eb] dark:hover:bg-slate-700 transition-colors">
+                        Explore Courses
+                    </button>
+</div>
+<div class="flex items-center gap-5 pt-4">
+<div class="flex -space-x-3">
+<div class="size-11 rounded-full border-4 border-background-light dark:border-background-dark bg-cover shadow-sm" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCO8aLw5kIyLQKIX6XDY7a4zq9XnN7KnZ4bNhnY5ypciEtWN_9i6lEAtCuQ6-ZmnZr-uN07sm9Rc0cZvBem17ngoqP8dw9DiS-hA8wi3HLugHft7zl1cSB4adO3BZ5QzF2uDivK5a_0Mu9Fqx65u8DyF5e2fyUFtkOT66KxWavsGgZviwYkhLSnBezShiyTYMX4JzPXREgsyxjLo5EsNPOcwn672MR3zVayJkMan4RuPdz46frwHR_goPyZN21rwL-4--rtoycTO14");'></div>
+<div class="size-11 rounded-full border-4 border-background-light dark:border-background-dark bg-cover shadow-sm" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBUYc5x30OGw25yX5qdKJAofykoj25bH0TvDR9qB33zJpm6nIz61bVhWevvSgKZ5qvZOegyua-Srz0TwquOLFwr5rTXXrWOjmnaepabKZDVpFrA1mq36SWShTEAz7ndOnX09-vgQ-uxVH59-94TAs3JElPzUitY2U9YBt87SeIbQ7y-LJn5aJgxs9wk8OwUkEpyCA8HGKuvzm9O4gwgO4ii1DfNTsUWb4EtWXxR9NuA1mSa-tpKxR0lONlX3vwwp1PAsovu5XQA-uw");'></div>
+<div class="size-11 rounded-full border-4 border-background-light dark:border-background-dark bg-cover shadow-sm" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDo9oejP8rYIz1n317UFNGwf7htAViG9VKfGHhDkrvTzZyuUKQWP028J-R9H6dqUvSKVtR7TeV8uAT71Xy1q9eXMuv5CmlCEpcPWR2ik_aPncxAk-imeHxO8Isg2gCytrkcv-KL3bnu94QIr9ZiRPxFaaf6UIB7AWoVF8d_7F45ITDX4gqL0gSTlO90V7wyBXkDlgNvpCxHhUufY3w4paDrOlaJ6yojotIGPJXSf0q2KilKWFD4Hm_tNUFoJm12XY9DdMJOlLN0vV8");'></div>
+</div>
+<p class="text-sm font-medium text-slate-400">Trusted by over <span class="text-[#1a1c1e] dark:text-white font-bold">50k students</span></p>
+</div>
+</div>
+<div class="relative order-1 lg:order-2">
+<div class="w-full aspect-[4/3] bg-center bg-no-repeat bg-cover rounded-3xl shadow-organic relative z-10 border-[12px] border-card-light dark:border-slate-800" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAEUKF3cBdtelLVfvIdUeeGY-_eErm64CqrLL61C4z7r1on3hrGR5-h0l3jsoaACF2MDl3oZMoG04ukH2xgOERHuP919VZ75oRwKGCMbLrQo5povP6cHx5Vl8DTQHhyAGN-0JWDPGAgN5XL29kPzcZE9KlfhKIF9yYtowYCVY1HPZuQ--AQ3WfrdjKwMyrzuvswrrtZSfah0uuwXEcbDMtsrPBOlkwSyf22PjkI0PhdzriQlHn__ucSSMAz07zWebiCQXTNT6L_CNc");'></div>
+<div class="absolute -bottom-8 -left-8 size-64 bg-primary/5 rounded-full blur-[80px] z-0"></div>
+<div class="absolute -top-8 -right-8 size-64 bg-[#8b7355]/5 rounded-full blur-[80px] z-0"></div>
+</div>
+</div>
+</section>
+<section class="py-32 px-6 lg:px-40 bg-card-light/50 dark:bg-[#151719] border-y border-[#eeeae0] dark:border-slate-800">
+<div class="max-w-[1280px] mx-auto">
+<div class="flex flex-col gap-6 mb-20 text-center items-center">
+<h2 class="text-[#1a1c1e] dark:text-white text-3xl lg:text-5xl font-bold leading-tight tracking-tight max-w-[800px] font-serif">
+                    Everything you need to go from <span class="text-primary/70 italic font-serif">Beginner to Fluent</span>
+</h2>
+<p class="text-slate-500 dark:text-slate-400 text-lg max-w-[600px] leading-relaxed">
+                    Our holistic approach combines curriculum, conversation, and character practice in a distraction-free environment.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+<div class="group flex flex-col gap-8 rounded-2xl border border-[#eeeae0] dark:border-slate-800 bg-card-light dark:bg-background-dark p-10 hover:border-primary/30 transition-all duration-500 shadow-soft hover:shadow-organic">
+<div class="flex size-14 items-center justify-center rounded-2xl bg-[#f0f4ff] text-primary transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-[32px]">play_circle</span>
+</div>
+<div class="flex flex-col gap-4">
+<h3 class="text-[#1a1c1e] dark:text-white text-xl font-bold leading-tight font-serif">Structured Video Courses</h3>
+<p class="text-slate-500 dark:text-slate-400 text-base leading-relaxed">
+                            Expert-led lessons mapped to JLPT standards. Master grammar with bite-sized video modules.
+                        </p>
+</div>
+<a class="mt-auto flex items-center gap-2 text-primary/80 font-bold text-sm" href="#">
+                        Explore Curriculum <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+<div class="group flex flex-col gap-8 rounded-2xl border border-[#eeeae0] dark:border-slate-800 bg-card-light dark:bg-background-dark p-10 hover:border-emerald-200 transition-all duration-500 shadow-soft hover:shadow-organic">
+<div class="flex size-14 items-center justify-center rounded-2xl bg-[#f0fdf4] text-emerald-600 transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-[32px]">forum</span>
+</div>
+<div class="flex flex-col gap-4">
+<h3 class="text-[#1a1c1e] dark:text-white text-xl font-bold leading-tight font-serif">Live Language Exchange</h3>
+<p class="text-slate-500 dark:text-slate-400 text-base leading-relaxed">
+                            Practice real-world Japanese with native speakers. Scheduled 1-on-1 calls to boost confidence.
+                        </p>
+</div>
+<a class="mt-auto flex items-center gap-2 text-emerald-600 font-bold text-sm" href="#">
+                        Meet Tutors <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+<div class="group flex flex-col gap-8 rounded-2xl border border-[#eeeae0] dark:border-slate-800 bg-card-light dark:bg-background-dark p-10 hover:border-orange-200 transition-all duration-500 shadow-soft hover:shadow-organic">
+<div class="flex size-14 items-center justify-center rounded-2xl bg-[#fff7ed] text-orange-600 transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-[32px]">ink_pen</span>
+</div>
+<div class="flex flex-col gap-4">
+<h3 class="text-[#1a1c1e] dark:text-white text-xl font-bold leading-tight font-serif">Gamified Kanji Training</h3>
+<p class="text-slate-500 dark:text-slate-400 text-base leading-relaxed">
+                            Our SRS-powered system helps you memorize 2,000+ characters with high-quality visual aids.
+                        </p>
+</div>
+<a class="mt-auto flex items-center gap-2 text-orange-600 font-bold text-sm" href="#">
+                        Try SRS Tool <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<section class="py-32 px-6 lg:px-40 seigaiha-bg bg-background-light">
+<div class="max-w-[1280px] mx-auto">
+<div class="flex items-end justify-between mb-16">
+<div class="flex flex-col gap-3">
+<span class="text-primary/60 font-bold uppercase tracking-[0.2em] text-[10px]">Student Voices</span>
+<h2 class="text-[#1a1c1e] dark:text-white text-3xl lg:text-4xl font-bold font-serif">Success Stories</h2>
+</div>
+<div class="flex gap-3">
+<button class="flex size-12 items-center justify-center rounded-full border border-[#eeeae0] dark:border-slate-700 bg-card-light dark:bg-slate-800 hover:bg-[#f5f2eb] transition-all">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="flex size-12 items-center justify-center rounded-full border border-[#eeeae0] dark:border-slate-700 bg-card-light dark:bg-slate-800 hover:bg-[#f5f2eb] transition-all">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="flex gap-10 overflow-x-auto pb-8 scrollbar-hide">
+<div class="flex-none w-[380px] flex flex-col gap-8 p-10 bg-card-light dark:bg-[#1a2332] rounded-2xl shadow-soft border border-[#eeeae0] dark:border-slate-800 transition-all hover:shadow-organic">
+<div class="flex text-[#8b7355]/40">
+<span class="material-symbols-outlined text-[18px] fill-[1]">star</span>
+<span class="material-symbols-outlined text-[18px] fill-[1]">star</span>
+<span class="material-symbols-outlined text-[18px] fill-[1]">star</span>
+<span class="material-symbols-outlined text-[18px] fill-[1]">star</span>
+<span class="material-symbols-outlined text-[18px] fill-[1]">star</span>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed font-serif italic">
+                        "The interface is so calm and focused. It feels like studying with high-quality paper. Passed N2 in 6 months!"
+                    </p>
+<div class="flex items-center gap-4 mt-auto">
+<div class="size-12 rounded-full border-2 border-[#eeeae0] bg-center bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBPZOv5FBGbpkDvtUVVBJfqCqeyECKKvtnpx39QrvVdUZ1wmpx-ZMa5QqenWsTx9JY8Da5KftcH5a8lZOSroZdNCLMfL5B-RLzkRX8u5KpLLd3qwUZvriGiKRmxRtDG14xxH-jJgk8KfTBbAiLaVibrozl2Mlz3-hRzCwpi5DWQh5fyiNzSrIRFw7XYOqg7aAZWtGl-vBL69j3QFBUM4vXrn_10_JGGCpVjDfIH4cPpsu5yi1cgC_XFAB_Tg8htlUIiriOSE5bM5GU");'></div>
+<div>
+<p class="text-[#1a1c1e] dark:text-white font-bold">Sarah M.</p>
+<p class="text-slate-400 text-sm">Marketing Executive</p>
+</div>
+</div>
+</div>
+<div class="flex-none w-[380px] flex flex-col gap-8 p-10 bg-card-light dark:bg-[#1a2332] rounded-2xl shadow-soft border border-[#eeeae0] dark:border-slate-800 transition-all hover:shadow-organic">
+<div class="flex text-[#8b7355]/40">
+<span class="material-symbols-outlined text-[18px] fill-[1]">star</span>
+<span class="material-symbols-outlined text-[18px] fill-[1]">star</span>
+<span class="material-symbols-outlined text-[18px] fill-[1]">star</span>
+<span class="material-symbols-outlined text-[18px] fill-[1]">star</span>
+<span class="material-symbols-outlined text-[18px] fill-[1]">star</span>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed font-serif italic">
+                        "I love the minimalism. No distractions, just high-quality content and great conversations."
+                    </p>
+<div class="flex items-center gap-4 mt-auto">
+<div class="size-12 rounded-full border-2 border-[#eeeae0] bg-center bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB9l8FR8dfpkg21KWixWnwvzGbyYvgPuY83Y0ZwcD0B_47J3XIv3e12BYeRIDn__UXM-v6A8f4aJcyHYIANaBkjladqkPzwmm_njqfsFVoy6wVjHH53Q9d3PFryGqDgssLw8tMVzg_VtyKiKBlQBOZ65HIhtKptTw6ZXxhBgbQ8wnrqkmC08Sq_O9-9oeiSmwbZquzp8AqxcBT8h-B-zBhus9rMbljVVdWRxy6YQwt878wsUpip5ZYCjlT9m8Vd1C7P9o0GCyi-l7E");'></div>
+<div>
+<p class="text-[#1a1c1e] dark:text-white font-bold">Kenji R.</p>
+<p class="text-slate-400 text-sm">Software Engineer</p>
+</div>
+</div>
+</div>
+<div class="flex-none w-[380px] flex flex-col gap-8 p-10 bg-card-light dark:bg-[#1a2332] rounded-2xl shadow-soft border border-[#eeeae0] dark:border-slate-800 transition-all hover:shadow-organic">
+<div class="flex text-[#8b7355]/40">
+<span class="material-symbols-outlined text-[18px] fill-[1]">star</span>
+<span class="material-symbols-outlined text-[18px] fill-[1]">star</span>
+<span class="material-symbols-outlined text-[18px] fill-[1]">star</span>
+<span class="material-symbols-outlined text-[18px] fill-[1]">star</span>
+<span class="material-symbols-outlined text-[18px] fill-[1]">star</span>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed font-serif italic">
+                        "The Kanji tools are visually beautiful and very effective. It’s a joy to log in every morning."
+                    </p>
+<div class="flex items-center gap-4 mt-auto">
+<div class="size-12 rounded-full border-2 border-[#eeeae0] bg-center bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBynp9njJC6Snf9c03Of_GfteYIuxXo0S6_mg7PVO1nShStGA0UGbJ9DaW3Irks1Zl4_FDYy6pOG-oHI7T_c5stsVeWJdru5BQVj2EHxsjOIH-tyi4c27tk42ktBLmcnAUGuV7Xk5xlzWFn6u12vfSZIi57gO5ikEImzmU24JwOAFw7UvuLZi0KiAwKR6laR0A1e01yxRlyeiJrnGAYkvVXB-JEZCuXJaj6bvI5IKnjaJeyfWh_pMaHPK_9CZUIqLo-i-PILCOoz3k");'></div>
+<div>
+<p class="text-[#1a1c1e] dark:text-white font-bold">Elena V.</p>
+<p class="text-slate-400 text-sm">University Student</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-6 lg:px-40">
+<div class="max-w-[1280px] mx-auto bg-[#2d333a] dark:bg-[#1a1c1e] rounded-[2.5rem] p-12 lg:p-24 relative overflow-hidden shadow-organic">
+<div class="relative z-10 flex flex-col lg:flex-row items-center gap-16">
+<div class="flex flex-col gap-6 text-center lg:text-left flex-1">
+<h2 class="text-card-light text-4xl lg:text-6xl font-bold leading-tight font-serif">Ready to start your journey?</h2>
+<p class="text-slate-400 text-xl max-w-lg">Get your first week of premium access for free. No commitment, just quality learning.</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 w-full max-w-md">
+<input class="flex-1 h-14 rounded-xl px-6 bg-white/5 border-white/10 focus:ring-1 focus:ring-primary/50 text-white placeholder-slate-500" placeholder="Your email address" type="email"/>
+<button class="h-14 px-10 rounded-xl bg-primary text-white font-bold hover:bg-primary/90 transition-all whitespace-nowrap shadow-soft">
+                        Get Started
+                    </button>
+</div>
+</div>
+<div class="absolute inset-0 opacity-[0.03] seigaiha-bg z-0 pointer-events-none"></div>
+<div class="absolute -top-20 -right-20 size-80 bg-primary/10 rounded-full blur-[100px]"></div>
+</div>
+</section>
+</main>
+<footer class="bg-background-light dark:bg-[#0b111a] border-t border-[#eeeae0] dark:border-slate-800 pt-24 pb-12 px-6 lg:px-40">
+<div class="max-w-[1280px] mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-16 mb-20">
+<div class="col-span-2 lg:col-span-2 flex flex-col gap-8">
+<div class="flex items-center gap-3 text-primary">
+<div class="size-8">
+<svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold text-[#1a1c1e] dark:text-white font-serif">NihonGo Learn</h2>
+</div>
+<p class="text-slate-500 max-w-[320px] leading-relaxed">Dedicated to helping global learners master Japanese through beautiful design and mindful instruction.</p>
+<div class="flex gap-4">
+<a class="size-10 rounded-lg bg-[#eeeae0] dark:bg-slate-800 flex items-center justify-center text-slate-500 hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">language</span>
+</a>
+<a class="size-10 rounded-lg bg-[#eeeae0] dark:bg-slate-800 flex items-center justify-center text-slate-500 hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">podcasts</span>
+</a>
+<a class="size-10 rounded-lg bg-[#eeeae0] dark:bg-slate-800 flex items-center justify-center text-slate-500 hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">movie</span>
+</a>
+</div>
+</div>
+<div class="flex flex-col gap-6">
+<h4 class="font-bold text-[#1a1c1e] dark:text-white text-sm uppercase tracking-widest">Platform</h4>
+<nav class="flex flex-col gap-4">
+<a class="text-slate-500 text-sm hover:text-primary transition-colors" href="#">All Courses</a>
+<a class="text-slate-500 text-sm hover:text-primary transition-colors" href="#">Curriculum</a>
+<a class="text-slate-500 text-sm hover:text-primary transition-colors" href="#">Pricing</a>
+<a class="text-slate-500 text-sm hover:text-primary transition-colors" href="#">For Teams</a>
+</nav>
+</div>
+<div class="flex flex-col gap-6">
+<h4 class="font-bold text-[#1a1c1e] dark:text-white text-sm uppercase tracking-widest">Resources</h4>
+<nav class="flex flex-col gap-4">
+<a class="text-slate-500 text-sm hover:text-primary transition-colors" href="#">Journal</a>
+<a class="text-slate-500 text-sm hover:text-primary transition-colors" href="#">Study Sheets</a>
+<a class="text-slate-500 text-sm hover:text-primary transition-colors" href="#">Guidebooks</a>
+<a class="text-slate-500 text-sm hover:text-primary transition-colors" href="#">JLPT Guide</a>
+</nav>
+</div>
+<div class="flex flex-col gap-6">
+<h4 class="font-bold text-[#1a1c1e] dark:text-white text-sm uppercase tracking-widest">Support</h4>
+<nav class="flex flex-col gap-4">
+<a class="text-slate-500 text-sm hover:text-primary transition-colors" href="#">Help Center</a>
+<a class="text-slate-500 text-sm hover:text-primary transition-colors" href="#">Contact Us</a>
+<a class="text-slate-500 text-sm hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="text-slate-500 text-sm hover:text-primary transition-colors" href="#">Terms</a>
+</nav>
+</div>
+</div>
+<div class="max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6 border-t border-[#eeeae0] dark:border-slate-800 pt-10">
+<p class="text-slate-400 text-xs tracking-wide">© 2024 NihonGo Learn. Dedicated to excellence in language education. Made in Tokyo.</p>
+<div class="flex items-center gap-4 text-xs font-medium text-slate-500">
+<span class="hover:text-primary cursor-pointer transition-colors">English (US)</span>
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</div>
+</div>
+</footer>
+
+</body></html>

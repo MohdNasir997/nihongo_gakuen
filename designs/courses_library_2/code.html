@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NihonGo Learn | Course Library</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3c83f6",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101722",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#0d131c] dark:text-gray-100 min-h-screen">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-solid border-[#e7ecf4] dark:border-gray-800 px-4 md:px-10 lg:px-40 py-3">
+<div class="flex items-center justify-between max-w-[1280px] mx-auto">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3">
+<div class="size-8 text-primary">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z"></path>
+</svg>
+</div>
+<h2 class="text-[#0d131c] dark:text-white text-lg font-bold leading-tight tracking-tight">NihonGo Learn</h2>
+</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-primary text-sm font-semibold leading-normal" href="#">Courses</a>
+<a class="text-[#49699c] dark:text-gray-400 text-sm font-medium hover:text-primary transition-colors" href="#">Teachers</a>
+<a class="text-[#49699c] dark:text-gray-400 text-sm font-medium hover:text-primary transition-colors" href="#">Dashboard</a>
+<a class="text-[#49699c] dark:text-gray-400 text-sm font-medium hover:text-primary transition-colors" href="#">Pricing</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden sm:flex items-stretch rounded-lg bg-[#e7ecf4] dark:bg-gray-800 h-10">
+<div class="text-[#49699c] flex items-center justify-center pl-3">
+<span class="material-symbols-outlined text-xl">search</span>
+</div>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-40 lg:w-64 placeholder:text-[#49699c] dark:text-white" placeholder="Find a course..."/>
+</div>
+<button class="bg-primary text-white text-sm font-bold h-10 px-6 rounded-lg hover:bg-primary/90 transition-colors shadow-sm">
+                    Sign In
+                </button>
+</div>
+</div>
+</header>
+<main class="max-w-[1280px] mx-auto px-4 md:px-10 lg:px-40 py-8">
+<!-- Hero Section -->
+<section class="mb-12">
+<div class="bg-white dark:bg-gray-900 rounded-xl overflow-hidden border border-[#e7ecf4] dark:border-gray-800 shadow-sm">
+<div class="flex flex-col lg:flex-row gap-8 p-6 lg:p-10 items-center">
+<div class="w-full lg:w-1/2 rounded-lg overflow-hidden bg-gradient-to-br from-primary/10 to-primary/5 aspect-video flex items-center justify-center relative">
+<div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+<div class="relative z-10 flex flex-col items-center gap-4">
+<span class="material-symbols-outlined text-6xl text-primary/40">school</span>
+<div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur px-4 py-2 rounded-lg text-sm font-semibold shadow-xl border border-white/20">
+                                🇯🇵 Learn Anytime, Anywhere
+                            </div>
+</div>
+</div>
+<div class="w-full lg:w-1/2 flex flex-col gap-6">
+<div class="space-y-4">
+<h1 class="text-4xl lg:text-5xl font-black text-[#0d131c] dark:text-white leading-tight tracking-tight">
+                                Our Comprehensive Japanese Courses
+                            </h1>
+<p class="text-[#49699c] dark:text-gray-400 text-lg leading-relaxed">
+                                From beginner basics to advanced mastery. Explore our structured curriculum designed by expert linguists and native speakers.
+                            </p>
+</div>
+<div class="flex gap-4">
+<button class="bg-primary text-white font-bold h-12 px-8 rounded-lg hover:bg-primary/90 transition-all flex items-center gap-2">
+                                Start Learning <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+<button class="border border-[#ced8e8] dark:border-gray-700 bg-transparent text-[#0d131c] dark:text-white font-bold h-12 px-8 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all">
+                                View Roadmap
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Filters Section -->
+<section class="mb-10 space-y-6">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="space-y-3">
+<h3 class="text-[#0d131c] dark:text-white font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">filter_list</span>
+                        JLPT Proficiency Level
+                    </h3>
+<div class="flex flex-wrap gap-2">
+<button class="px-5 h-10 rounded-lg bg-primary text-white text-sm font-semibold shadow-md transition-all">All Levels</button>
+<button class="px-5 h-10 rounded-lg bg-white dark:bg-gray-800 border border-[#e7ecf4] dark:border-gray-700 text-[#0d131c] dark:text-gray-300 text-sm font-semibold hover:border-primary transition-all">N5</button>
+<button class="px-5 h-10 rounded-lg bg-white dark:bg-gray-800 border border-[#e7ecf4] dark:border-gray-700 text-[#0d131c] dark:text-gray-300 text-sm font-semibold hover:border-primary transition-all">N4</button>
+<button class="px-5 h-10 rounded-lg bg-white dark:bg-gray-800 border border-[#e7ecf4] dark:border-gray-700 text-[#0d131c] dark:text-gray-300 text-sm font-semibold hover:border-primary transition-all">N3</button>
+<button class="px-5 h-10 rounded-lg bg-white dark:bg-gray-800 border border-[#e7ecf4] dark:border-gray-700 text-[#0d131c] dark:text-gray-300 text-sm font-semibold hover:border-primary transition-all">N2</button>
+<button class="px-5 h-10 rounded-lg bg-white dark:bg-gray-800 border border-[#e7ecf4] dark:border-gray-700 text-[#0d131c] dark:text-gray-300 text-sm font-semibold hover:border-primary transition-all">N1</button>
+</div>
+</div>
+<div class="flex flex-wrap items-end gap-4">
+<div class="space-y-2">
+<p class="text-[#0d131c] dark:text-white text-sm font-semibold">Kanji Focus</p>
+<div class="relative min-w-[180px]">
+<select class="w-full appearance-none rounded-lg bg-white dark:bg-gray-800 border border-[#ced8e8] dark:border-gray-700 text-[#0d131c] dark:text-white h-10 px-4 pr-10 text-sm focus:ring-2 focus:ring-primary focus:border-transparent transition-all">
+<option>All Topics</option>
+<option>Radicals Only</option>
+<option>Common Use (Joyo)</option>
+<option>Business Kanji</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-gray-400">unfold_more</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Course Grid -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="group bg-white dark:bg-gray-900 border border-[#e7ecf4] dark:border-gray-800 rounded-xl overflow-hidden hover:shadow-xl transition-all flex flex-col">
+<div class="relative aspect-video bg-gray-100 dark:bg-gray-800">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Abstract Japanese landscape background illustration" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCMQ_odhDLL7szvV7kaUO_seq8pry0O74PTmi6CrUYPfV3LX-8e2CZUgdLz7UlncvQua6MWTkRguymF-uUTErf7eMFcezMBBShbuuj5MEvV7YmMwHaandWAP_jKzn5DCAGnP73LJ5gIvlkrW6pEgznnEGplzhj8XO5UIAnLqPBuZ8wl89WwfGqinDcrAk7nCN11dMu8AnfPt8Roko0DiJvsOi3S7_7fvXrTpYh_x-gtJhWqSbCrVafkZpklZUVBePlEKe5gKLK0zs0');"></div>
+<div class="absolute top-3 left-3 bg-primary text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest shadow-lg">N5 Beginner</div>
+</div>
+<div class="p-5 flex flex-col flex-1">
+<h3 class="text-lg font-bold text-[#0d131c] dark:text-white line-clamp-2 mb-2 group-hover:text-primary transition-colors">Survival Japanese: Essential Phrases for Travel</h3>
+<div class="flex items-center gap-2 mb-6 text-[#49699c] dark:text-gray-400 text-sm">
+<div class="size-6 rounded-full bg-gray-200 dark:bg-gray-700 overflow-hidden">
+<div class="w-full h-full bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-xs">person</span>
+</div>
+</div>
+<span>Kenji Sato • 12 Lessons</span>
+</div>
+<div class="mt-auto pt-4 border-t border-gray-100 dark:border-gray-800 flex items-center justify-between">
+<span class="text-xl font-black text-primary">$29.00</span>
+<button class="bg-primary/10 text-primary hover:bg-primary hover:text-white transition-all px-4 h-9 rounded-lg text-sm font-bold">View Course</button>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group bg-white dark:bg-gray-900 border border-[#e7ecf4] dark:border-gray-800 rounded-xl overflow-hidden hover:shadow-xl transition-all flex flex-col">
+<div class="relative aspect-video bg-gray-100 dark:bg-gray-800">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Kanji characters on a traditional paper background" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCte9rckTgpgc_u_5qMo1IEbmWXwhYi5mIaYe82Ss1rXXRgbF_vToWWMNR959w1NwtaoYK09E9lURHL2jX2McpkSXf-DHV9NJzA9PHP5_0ij_ID5xBVeHibDbrgQjq2vURoBRJZ-69_4rCvO9ZVyjNqNdeo5-uy3nLjR5vtV710q-jrCqJgif1j9kw6il6Z6ordFrSZ3IcjHKiFhN7rpRPJFM18IAhAsvIMGfpPy8fKhJ9Patg_SumsCZ5osFnr_deXtr65G25MGzc');"></div>
+<div class="absolute top-3 left-3 bg-indigo-600 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest shadow-lg">N3 Intermediate</div>
+</div>
+<div class="p-5 flex flex-col flex-1">
+<h3 class="text-lg font-bold text-[#0d131c] dark:text-white line-clamp-2 mb-2 group-hover:text-primary transition-colors">Mastering N3 Kanji: The Core 600</h3>
+<div class="flex items-center gap-2 mb-6 text-[#49699c] dark:text-gray-400 text-sm">
+<div class="size-6 rounded-full bg-gray-200 dark:bg-gray-700 overflow-hidden">
+<div class="w-full h-full bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-xs">person</span>
+</div>
+</div>
+<span>Aiko Tanaka • 45 Lessons</span>
+</div>
+<div class="mt-auto pt-4 border-t border-gray-100 dark:border-gray-800 flex items-center justify-between">
+<span class="text-xl font-black text-primary">$59.00</span>
+<button class="bg-primary/10 text-primary hover:bg-primary hover:text-white transition-all px-4 h-9 rounded-lg text-sm font-bold">View Course</button>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group bg-white dark:bg-gray-900 border border-[#e7ecf4] dark:border-gray-800 rounded-xl overflow-hidden hover:shadow-xl transition-all flex flex-col">
+<div class="relative aspect-video bg-gray-100 dark:bg-gray-800">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Modern Japanese office building with bright lights" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDxn2oer1szhQZR3jd3jjPBm1W8ixYHWceN9YfbK9Nmayi9wxqPumpZhsMNBV9xnCc3NhC2my6dX8ybZghbClariYG3BKIArT-5lWRpMkjXwuLbXuHyEP7IorWrv0hl8Dd6QiIU33_2rP_0Tfl08sxgxdhEoak4_67lOSoR79sa-qZnzAfU5OZD9KfDzYSY-eqBFb_GK6-VuAJBkLfUZ83porAJd-2gJhwC32yLBJHAJeuXcK2S0BVNm7H8QxCIyfjqDdykx8USVmw');"></div>
+<div class="absolute top-3 left-3 bg-red-600 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest shadow-lg">N2 Advanced</div>
+</div>
+<div class="p-5 flex flex-col flex-1">
+<h3 class="text-lg font-bold text-[#0d131c] dark:text-white line-clamp-2 mb-2 group-hover:text-primary transition-colors">Keigo Mastery: Professional Japanese for Business</h3>
+<div class="flex items-center gap-2 mb-6 text-[#49699c] dark:text-gray-400 text-sm">
+<div class="size-6 rounded-full bg-gray-200 dark:bg-gray-700 overflow-hidden">
+<div class="w-full h-full bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-xs">person</span>
+</div>
+</div>
+<span>Hiroshi Yamamoto • 24 Lessons</span>
+</div>
+<div class="mt-auto pt-4 border-t border-gray-100 dark:border-gray-800 flex items-center justify-between">
+<span class="text-xl font-black text-primary">$79.00</span>
+<button class="bg-primary/10 text-primary hover:bg-primary hover:text-white transition-all px-4 h-9 rounded-lg text-sm font-bold">View Course</button>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group bg-white dark:bg-gray-900 border border-[#e7ecf4] dark:border-gray-800 rounded-xl overflow-hidden hover:shadow-xl transition-all flex flex-col">
+<div class="relative aspect-video bg-gray-100 dark:bg-gray-800">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Colorful anime style characters illustration" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDrkF9Sis0tyPeGimu2uJUgVGvKNDWiFEatvcrZdbNqx798u2roX_gE0mdKzmDSVT9Qgr-NYpxuFuPYVOeeClamNSg9htHaDJXw_lfJzB7xE_Ek0jRifuH4nHPpTltXDogmcoUIZJJGWhvM1zQeO53zPpvaHnmrrI42_egEVkT_-r-Wl_jrlTH1Lwz04MBZZyIaDKBI2APUsax6zI2PDYTNQXpNbmU1iEx38bVDnjaiCZqsezqQ-JlO9-kt5fOe2cJiHMFw1VmVPb8');"></div>
+<div class="absolute top-3 left-3 bg-primary text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest shadow-lg">N4 Lower-Inter</div>
+</div>
+<div class="p-5 flex flex-col flex-1">
+<h3 class="text-lg font-bold text-[#0d131c] dark:text-white line-clamp-2 mb-2 group-hover:text-primary transition-colors">Japanese through Manga: Everyday Slang</h3>
+<div class="flex items-center gap-2 mb-6 text-[#49699c] dark:text-gray-400 text-sm">
+<div class="size-6 rounded-full bg-gray-200 dark:bg-gray-700 overflow-hidden">
+<div class="w-full h-full bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-xs">person</span>
+</div>
+</div>
+<span>Mika Chen • 18 Lessons</span>
+</div>
+<div class="mt-auto pt-4 border-t border-gray-100 dark:border-gray-800 flex items-center justify-between">
+<span class="text-xl font-black text-primary">$35.00</span>
+<button class="bg-primary/10 text-primary hover:bg-primary hover:text-white transition-all px-4 h-9 rounded-lg text-sm font-bold">View Course</button>
+</div>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="group bg-white dark:bg-gray-900 border border-[#e7ecf4] dark:border-gray-800 rounded-xl overflow-hidden hover:shadow-xl transition-all flex flex-col">
+<div class="relative aspect-video bg-gray-100 dark:bg-gray-800">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Elegant Japanese calligraphy on white scroll" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA2l3RAi4NQYN2HjoxLnb_LGvpBTmjbSYMBI9f5HFDOV8hEc7KjK5lBcSRkm-GKNq6rNYd-cWrlEf8yGP0phvYx6OyByD7tGBwlQtX2FM00SSzO9Cy2Uf66aDPbD0HRGq92tkrDIikdcF-hgnXgArEDD2QbeqIdpcrHNZsXfP7hKY2WjnQIbvyO3mEa8xxWMAsRfhx6WnwRWO057DyjiB1wOZNe1uJrHrt3kJ95gLKj1jNdaST7_HHJbH5ePdWdyt2m4Ophq7svOOw');"></div>
+<div class="absolute top-3 left-3 bg-black text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest shadow-lg">N1 Mastery</div>
+</div>
+<div class="p-5 flex flex-col flex-1">
+<h3 class="text-lg font-bold text-[#0d131c] dark:text-white line-clamp-2 mb-2 group-hover:text-primary transition-colors">Literary Japanese: Reading Classic Novels</h3>
+<div class="flex items-center gap-2 mb-6 text-[#49699c] dark:text-gray-400 text-sm">
+<div class="size-6 rounded-full bg-gray-200 dark:bg-gray-700 overflow-hidden">
+<div class="w-full h-full bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-xs">person</span>
+</div>
+</div>
+<span>Dr. Takashi Mori • 30 Lessons</span>
+</div>
+<div class="mt-auto pt-4 border-t border-gray-100 dark:border-gray-800 flex items-center justify-between">
+<span class="text-xl font-black text-primary">$99.00</span>
+<button class="bg-primary/10 text-primary hover:bg-primary hover:text-white transition-all px-4 h-9 rounded-lg text-sm font-bold">View Course</button>
+</div>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="group bg-white dark:bg-gray-900 border border-[#e7ecf4] dark:border-gray-800 rounded-xl overflow-hidden hover:shadow-xl transition-all flex flex-col">
+<div class="relative aspect-video bg-gray-100 dark:bg-gray-800">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500" data-alt="Microphone and textbook representing listening practice" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBIuP_GMpDTWwkJYQZ5PMnaNYD28nn2iRcUZLfbNjBTede7A1GQn-c4k8ZfxeluGqsMRkApILIueZdstpf9Bwl2A6pN7fp4fgcvA7lVhcE8T9rWdsUEn5GRRu6tqh2inWeHkTtpvbP_qsvCZwImLxY1L-4D_FkvwMlfuEZmfmGLuS6Dl7odO-phJztRnhRqWfJAisgFTyUTgjkHgmrpQGCBsaK5ERnhT6i6p3AAZ0CUQ3ApQRwRHTUsMuVGIAgMweeFjPVPw5XKzvI');"></div>
+<div class="absolute top-3 left-3 bg-primary text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest shadow-lg">All Levels</div>
+</div>
+<div class="p-5 flex flex-col flex-1">
+<h3 class="text-lg font-bold text-[#0d131c] dark:text-white line-clamp-2 mb-2 group-hover:text-primary transition-colors">Daily Listening Practice: Authentic Dialogues</h3>
+<div class="flex items-center gap-2 mb-6 text-[#49699c] dark:text-gray-400 text-sm">
+<div class="size-6 rounded-full bg-gray-200 dark:bg-gray-700 overflow-hidden">
+<div class="w-full h-full bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-xs">person</span>
+</div>
+</div>
+<span>Yuki Suzuki • 100+ Audio Clips</span>
+</div>
+<div class="mt-auto pt-4 border-t border-gray-100 dark:border-gray-800 flex items-center justify-between">
+<span class="text-xl font-black text-primary">$19.00</span>
+<button class="bg-primary/10 text-primary hover:bg-primary hover:text-white transition-all px-4 h-9 rounded-lg text-sm font-bold">View Course</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Pagination -->
+<div class="mt-16 flex justify-center">
+<nav class="flex items-center gap-2">
+<button class="w-10 h-10 rounded-lg flex items-center justify-center border border-[#e7ecf4] dark:border-gray-800 bg-white dark:bg-gray-900 text-gray-500 hover:text-primary hover:border-primary transition-all">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 rounded-lg flex items-center justify-center bg-primary text-white font-bold shadow-md">1</button>
+<button class="w-10 h-10 rounded-lg flex items-center justify-center border border-[#e7ecf4] dark:border-gray-800 bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-300 font-bold hover:border-primary transition-all">2</button>
+<button class="w-10 h-10 rounded-lg flex items-center justify-center border border-[#e7ecf4] dark:border-gray-800 bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-300 font-bold hover:border-primary transition-all">3</button>
+<span class="px-2 text-gray-400">...</span>
+<button class="w-10 h-10 rounded-lg flex items-center justify-center border border-[#e7ecf4] dark:border-gray-800 bg-white dark:bg-gray-900 text-gray-500 hover:text-primary hover:border-primary transition-all">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</nav>
+</div>
+</main>
+<footer class="mt-20 border-t border-[#e7ecf4] dark:border-gray-800 bg-white dark:bg-gray-900 py-12">
+<div class="max-w-[1280px] mx-auto px-4 md:px-10 lg:px-40 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-3">
+<div class="size-6 text-primary">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z"></path>
+</svg>
+</div>
+<h2 class="text-[#0d131c] dark:text-white font-bold">NihonGo Learn</h2>
+</div>
+<p class="text-[#49699c] dark:text-gray-400 text-sm">© 2024 NihonGo Learn. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="text-[#49699c] dark:text-gray-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">language</span></a>
+<a class="text-[#49699c] dark:text-gray-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">help</span></a>
+<a class="text-[#49699c] dark:text-gray-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">policy</span></a>
+</div>
+</div>
+</footer>
+</body></html>
