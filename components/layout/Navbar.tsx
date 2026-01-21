@@ -68,7 +68,7 @@ export function Navbar() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-8" aria-label="Main navigation">
+        <nav className="hidden md:flex items-center gap-6 xl:gap-8" aria-label="Main navigation">
           {NAVIGATION_LINKS.map((link) => (
             <Link
               key={link.href}
@@ -81,20 +81,20 @@ export function Navbar() {
         </nav>
 
         {/* Desktop Auth Buttons */}
-        <div className="hidden md:flex gap-4">
+        <div className="hidden md:flex gap-2 ml-2 xl:gap-4">
           <Button variant="secondary" size="default" className="min-w-25">
             Login
           </Button>
           <Button size="default" className="min-w-25 dark:bg-blue-400 dark:hover:bg-blue-500">
             Sign Up
           </Button>
-          <button
+          <Button
             onClick={toggleTheme}
             aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
-            className="flex items-center justify-center rounded-lg h-10 w-10 text-slate-400 hover:text-primary transition-all"
+            className="flex p-2 items-center justify-center rounded-lg h-10 w-10  dark:text-black text-slate-400 hover:text-primary transition-all"
           >
             {mounted && isDark ? <Sun className="size-5" /> : <Moon className="size-5" />}
-          </button>
+          </Button>
         </div>
 
         {/* Mobile Menu Button */}
