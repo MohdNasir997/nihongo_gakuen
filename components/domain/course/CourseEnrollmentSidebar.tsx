@@ -12,6 +12,7 @@ import {
   Clock,
   Users,
 } from 'lucide-react';
+import Link from 'next/link';
 
 interface CourseEnrollmentSidebarProps {
   course: CourseDetails;
@@ -70,11 +71,14 @@ export function CourseEnrollmentSidebar({ course }: CourseEnrollmentSidebarProps
             Enroll Now
           </Button>
           <Button
+           asChild
             className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-bold h-12 rounded-xl transition-all flex items-center justify-center gap-2"
             size="lg"
             variant="default"
           >
+            <Link href={'/pricing'}>
             Available with Subscription
+            </Link>
           </Button>
           <Button
             variant="outline"
