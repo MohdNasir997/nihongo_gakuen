@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Instructor Profile | NihonGo Learn</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#3B82F6",
+                        "background-light": "#F8FAFC",
+                        "background-dark": "#0F172A",
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.75rem",
+                    },
+                },
+            },
+        };
+    </script>
+<style type="text/tailwindcss">
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-mesh {
+            background-color: #0F172A;
+            background-image: radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.15) 0, transparent 50%), 
+                              radial-gradient(at 100% 0%, rgba(37, 99, 235, 0.1) 0, transparent 50%);
+        }
+        .card-blur {
+            backdrop-filter: blur(12px);
+            background-color: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body class="bg-background-dark text-slate-100 transition-colors duration-300">
+<nav class="sticky top-0 z-50 border-b border-slate-800 bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between h-16 items-center">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined">language</span>
+</div>
+<span class="text-xl font-bold tracking-tight">NihonGo<span class="text-primary font-medium">Learn</span></span>
+</div>
+<div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+<a class="hover:text-primary transition-colors text-slate-400" href="#">Courses</a>
+<a class="hover:text-primary transition-colors text-slate-400" href="#">Curriculum</a>
+<a class="text-primary" href="#">Teachers</a>
+<a class="hover:text-primary transition-colors text-slate-400" href="#">Pricing</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-primary hover:bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-semibold transition-all shadow-lg shadow-primary/20">Sign In</button>
+</div>
+</div>
+</div>
+</nav>
+<main class="gradient-mesh pb-24">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
+<nav class="flex items-center gap-2 text-sm text-slate-400 mb-8">
+<a class="hover:text-primary" href="#">Teachers</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-slate-200">Yumi Tanaka</span>
+</nav>
+<div class="flex flex-col lg:flex-row gap-8">
+<div class="flex-1 space-y-8">
+<section class="card-blur rounded-3xl p-6 lg:p-10 flex flex-col md:flex-row gap-8 items-start">
+<div class="w-full md:w-64 flex-shrink-0">
+<div class="aspect-[4/5] rounded-2xl overflow-hidden mb-4 border border-slate-700">
+<img alt="Yumi Tanaka" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNoREf3JiQrStKIuQRtYiFinZUSnNbkV2WInk8EZ-FKJ-zOsckyomtx0D_EJ4aclhksRg5JGvYD8zlHChV8m-ATfcX5hIhLvrPfP5tXBZImjxhJgkTQ_Y82GzvHyh5HN1pjVVfG73rvQkle4CTMoM6e2j1TLM2OA6LkmypTGGcqfpfqmzgYFdmofnT_7fL0FymJZAtNkS6AhUSNeAPLXZpOU6hN4xtlSxfaY8IhFLaeGsx0lapkyz-Gm_i0rOcSOkcbBEJjGys4HM"/>
+</div>
+<div class="flex items-center gap-2 justify-center py-2 px-4 bg-primary/10 rounded-xl border border-primary/20 text-primary">
+<span class="material-symbols-outlined text-base">verified</span>
+<span class="text-xs font-bold uppercase tracking-wider">Verified Native</span>
+</div>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h1 class="text-4xl font-extrabold mb-2">Yumi Tanaka</h1>
+<p class="text-primary font-medium">Linguistics Specialist &amp; JLPT Expert</p>
+</div>
+<div class="flex flex-col items-end">
+<div class="flex items-center gap-1 text-yellow-500 mb-1">
+<span class="material-symbols-outlined">star</span>
+<span class="font-bold">4.9</span>
+</div>
+<span class="text-xs text-slate-400">124 Reviews</span>
+</div>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-8">
+<div class="p-3 rounded-xl bg-slate-800/50 border border-slate-700/50">
+<p class="text-[10px] text-slate-400 uppercase font-bold tracking-widest mb-1">Lessons Done</p>
+<p class="text-lg font-bold">1,450+</p>
+</div>
+<div class="p-3 rounded-xl bg-slate-800/50 border border-slate-700/50">
+<p class="text-[10px] text-slate-400 uppercase font-bold tracking-widest mb-1">Students</p>
+<p class="text-lg font-bold">420</p>
+</div>
+<div class="p-3 rounded-xl bg-slate-800/50 border border-slate-700/50">
+<p class="text-[10px] text-slate-400 uppercase font-bold tracking-widest mb-1">Response</p>
+<p class="text-lg font-bold">~1hr</p>
+</div>
+</div>
+<div class="relative rounded-2xl overflow-hidden aspect-video bg-slate-900 border border-slate-800 group cursor-pointer">
+<img alt="Video Intro Thumbnail" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTbUioYl9OWnCgd_1NOV5IC6wdAWPUGI5Uax1AmavDW7DA1tVtZwjl9jO7rzUJguN1NQRFI6cOFj_qmliYYkJ2g7_tU7yG0ytzmNI_hPvkJ9WHsnSkNPT9Pw3UjtSqzF0OunvknWjM2-YYXic1C_Z4wnxOyw-_tUqKbKYBrFtcgirY-gAbcE82L-ypuXfvAys9oFxb95J1rLRc_iI8eOqT_bnIkFNJekojvbnSHbV4pUxN1JaNABWNaeF0lYv9I-m3jgJMlNuCOXY"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-16 h-16 bg-primary/90 text-white rounded-full flex items-center justify-center shadow-2xl shadow-primary/40 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-4 left-4 text-xs font-medium bg-black/60 backdrop-blur px-3 py-1.5 rounded-full">
+                                    Introduction Video • 1:45
+                                </div>
+</div>
+</div>
+</section>
+<section class="card-blur rounded-3xl p-6 lg:p-10 space-y-10">
+<div>
+<h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">person</span>
+                                About Me
+                            </h2>
+<p class="text-slate-400 leading-relaxed">
+                                Konnichiwa! I am Yumi, a native Japanese instructor with over 8 years of experience teaching internationally. I specialize in helping students navigate the complexities of Japanese grammar and JLPT preparation. My background in linguistics allows me to explain "why" the language works the way it does, making your learning journey logical and intuitive.
+                            </p>
+</div>
+<div>
+<h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">school</span>
+                                Teaching Style
+                            </h2>
+<p class="text-slate-400 leading-relaxed">
+                                I believe in a balanced approach: 60% conversation and 40% structured grammar. My lessons are highly interactive, utilizing real-world materials like news articles, manga, and business emails to ensure you're learning "living" Japanese. Every session is tailored to your specific goals, whether it's passing the N1 or preparing for a job interview in Tokyo.
+                            </p>
+</div>
+<div>
+<h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">workspace_premium</span>
+                                Specialties
+                            </h2>
+<div class="flex flex-wrap gap-3">
+<span class="px-4 py-2 bg-blue-500/10 text-blue-400 border border-blue-500/20 rounded-full text-sm font-bold">JLPT N1-N2 Mastery</span>
+<span class="px-4 py-2 bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 rounded-full text-sm font-bold">Honorifics (Keigo)</span>
+<span class="px-4 py-2 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded-full text-sm font-bold">Business Etiquette</span>
+<span class="px-4 py-2 bg-amber-500/10 text-amber-400 border border-amber-500/20 rounded-full text-sm font-bold">Academic Writing</span>
+<span class="px-4 py-2 bg-rose-500/10 text-rose-400 border border-rose-500/20 rounded-full text-sm font-bold">Intensive Speaking</span>
+</div>
+</div>
+</section>
+<section class="card-blur rounded-3xl p-6 lg:p-10">
+<div class="flex justify-between items-center mb-8">
+<h2 class="text-2xl font-bold">Student Reviews</h2>
+<div class="flex items-center gap-2 text-primary font-bold">
+                                4.9 <span class="material-symbols-outlined">star</span>
+</div>
+</div>
+<div class="space-y-6">
+<div class="p-6 rounded-2xl bg-slate-800/30 border border-slate-700/50">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center font-bold">JD</div>
+<div>
+<p class="font-bold text-sm text-slate-200">James D.</p>
+<p class="text-xs text-slate-500">2 weeks ago • JLPT N2 Student</p>
+</div>
+</div>
+<div class="flex text-yellow-500">
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+</div>
+</div>
+<p class="text-slate-400 text-sm italic">"Yumi-sensei is incredible. Her explanation of the passive-causative form finally made it click for me. I feel so much more confident for my upcoming exam."</p>
+</div>
+<div class="p-6 rounded-2xl bg-slate-800/30 border border-slate-700/50 text-slate-400 italic text-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center font-bold">MK</div>
+<div>
+<p class="font-bold text-sm text-slate-200">Miko K.</p>
+<p class="text-xs text-slate-500">1 month ago • Business Japanese</p>
+</div>
+</div>
+<div class="flex text-yellow-500">
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm text-slate-600">star</span>
+</div>
+</div>
+<p class="text-slate-400 text-sm italic">"The best Keigo teacher I've found. She corrected my email drafts and gave me the nuance I needed for my presentation."</p>
+</div>
+</div>
+<button class="w-full mt-8 py-3 text-slate-400 hover:text-white font-bold text-sm transition-colors border-t border-slate-700/50">Show all reviews (124)</button>
+</section>
+</div>
+<aside class="w-full lg:w-96">
+<div class="sticky top-24 space-y-6">
+<div class="card-blur rounded-3xl p-6 border-2 border-primary/20 bg-primary/5">
+<div class="flex justify-between items-center mb-6">
+<span class="text-slate-400 font-medium">Pricing</span>
+<div class="text-right">
+<span class="text-2xl font-bold text-white">$45</span>
+<span class="text-slate-400 text-sm">/hr</span>
+</div>
+</div>
+<div class="space-y-6">
+<div>
+<p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">Select Date</p>
+<div class="grid grid-cols-7 gap-1 text-center text-[10px] mb-2 font-bold text-slate-500">
+<span>MO</span><span>TU</span><span>WE</span><span>TH</span><span>FR</span><span>SA</span><span>SU</span>
+</div>
+<div class="grid grid-cols-7 gap-1 text-center">
+<button class="aspect-square flex items-center justify-center rounded-lg text-xs text-slate-600 cursor-not-allowed">21</button>
+<button class="aspect-square flex items-center justify-center rounded-lg text-xs text-slate-600 cursor-not-allowed">22</button>
+<button class="aspect-square flex items-center justify-center rounded-lg text-xs hover:bg-primary/20">23</button>
+<button class="aspect-square flex items-center justify-center rounded-lg text-xs hover:bg-primary/20">24</button>
+<button class="aspect-square flex items-center justify-center rounded-lg text-xs bg-primary text-white font-bold shadow-lg shadow-primary/30">25</button>
+<button class="aspect-square flex items-center justify-center rounded-lg text-xs hover:bg-primary/20">26</button>
+<button class="aspect-square flex items-center justify-center rounded-lg text-xs hover:bg-primary/20">27</button>
+</div>
+</div>
+<div>
+<p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">Available Times (JST)</p>
+<div class="grid grid-cols-2 gap-2">
+<button class="py-2.5 px-3 rounded-xl border border-slate-700 bg-slate-800 text-xs font-bold hover:border-primary transition-all">09:00 AM</button>
+<button class="py-2.5 px-3 rounded-xl border-2 border-primary bg-primary/20 text-xs font-bold">11:30 AM</button>
+<button class="py-2.5 px-3 rounded-xl border border-slate-700 bg-slate-800 text-xs font-bold hover:border-primary transition-all">02:00 PM</button>
+<button class="py-2.5 px-3 rounded-xl border border-slate-700 bg-slate-800 text-xs font-bold hover:border-primary transition-all">04:30 PM</button>
+</div>
+</div>
+<button class="w-full bg-primary hover:bg-blue-600 text-white py-4 rounded-2xl font-bold shadow-xl shadow-primary/25 transition-all flex items-center justify-center gap-2 group">
+                                    Book a Lesson
+                                    <span class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<p class="text-[11px] text-center text-slate-500">
+                                    Trial lesson? <a class="text-primary underline font-bold" href="#">Book a 30m session for $15</a>
+</p>
+</div>
+</div>
+<div class="card-blur rounded-3xl p-6 bg-slate-900/50">
+<h4 class="text-sm font-bold mb-4">Teacher Achievements</h4>
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-amber-500/10 flex items-center justify-center text-amber-500">
+<span class="material-symbols-outlined">emoji_events</span>
+</div>
+<p class="text-xs font-medium text-slate-300">Top Rated 2023</p>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">history_edu</span>
+</div>
+<p class="text-xs font-medium text-slate-300">JLPT Certified Examiner</p>
+</div>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</div>
+</main>
+<footer class="bg-slate-950 border-t border-slate-800 pt-16 pb-8">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 mb-6">
+<div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-lg">language</span>
+</div>
+<span class="text-xl font-bold">NihonGo Learn</span>
+</div>
+<p class="text-slate-500 text-sm leading-relaxed mb-6">
+                        Empowering language learners worldwide through structured paths and native interaction.
+                    </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-sm">public</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-sm">help</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-sm">verified_user</span>
+</a>
+</div>
+</div>
+<div>
+<h5 class="font-bold mb-6">Platform</h5>
+<ul class="space-y-4 text-sm text-slate-500">
+<li><a class="hover:text-primary transition-colors" href="#">Course Catalog</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Learning Roadmap</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Study Streak</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Certificates</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold mb-6">Support</h5>
+<ul class="space-y-4 text-sm text-slate-500">
+<li><a class="hover:text-primary transition-colors" href="#">Help Center</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Teacher Program</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Business Solutions</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold mb-6">Newsletter</h5>
+<p class="text-sm text-slate-500 mb-4">Join 15,000+ students learning weekly.</p>
+<div class="flex gap-2">
+<input class="flex-1 bg-slate-800 border-none rounded-xl text-sm px-4 focus:ring-2 focus:ring-primary" placeholder="Email" type="email"/>
+<button class="p-3 bg-primary text-white rounded-xl hover:bg-blue-600 transition-all">
+<span class="material-symbols-outlined text-sm">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+<p>© 2024 NihonGo Learn Inc. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="hover:text-primary" href="#">Privacy Policy</a>
+<a class="hover:text-primary" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+
+</body></html>

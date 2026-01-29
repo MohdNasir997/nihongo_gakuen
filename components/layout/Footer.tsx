@@ -14,15 +14,15 @@ const FOOTER_CONFIG = {
 const FOOTER_LINKS = {
   platform: [
     { label: 'All Courses', href: '/courses' },
-    { label: 'Curriculum', href: '/courses' },
+    { label: 'Curriculum', href: '/curriculum' },
     { label: 'Pricing', href: '/pricing' },
-    { label: 'For Teams', href: '#' },
+    { label: 'Our Teachers', href: '/teachers' },
   ],
   resources: [
-    { label: 'Journal', href: '#' },
-    { label: 'Study Sheets', href: '#' },
-    { label: 'Guidebooks', href: '#' },
-    { label: 'JLPT Guide', href: '#' },
+    { label: 'Journal', href: 'curriculum' },
+    { label: 'Study Sheets', href: 'curriculum' },
+    { label: 'Guidebooks', href: 'curriculum' },
+    { label: 'JLPT Guide', href: '/curriculum' },
   ],
   support: [
     { label: 'Help Center', href: '/contact' },

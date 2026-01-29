@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NihonGo Learn | Curriculum &amp; Teachers</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#3B82F6",
+                        "background-light": "#F8FAFC",
+                        "background-dark": "#0F172A",
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.75rem",
+                    },
+                },
+            },
+        };
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-mesh {
+            background-color: #0F172A;
+            background-image: radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.15) 0, transparent 50%), 
+                              radial-gradient(at 100% 0%, rgba(37, 99, 235, 0.1) 0, transparent 50%);
+        }
+        .dark .gradient-mesh {
+            background-color: #0F172A;
+        }
+        .card-blur {
+            backdrop-filter: blur(12px);
+            background-color: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .light .card-blur {
+            backdrop-filter: blur(12px);
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300">
+<nav class="sticky top-0 z-50 border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between h-16 items-center">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-icons-round text-lg">language</span>
+</div>
+<span class="text-xl font-bold tracking-tight">NihonGo<span class="text-primary font-medium">Learn</span></span>
+</div>
+<div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+<a class="hover:text-primary transition-colors" href="#">Courses</a>
+<a class="text-primary" href="#">Curriculum</a>
+<a class="hover:text-primary transition-colors" href="#">Teachers</a>
+<a class="hover:text-primary transition-colors" href="#">Pricing</a>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden sm:block">
+<span class="material-icons-round absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm">search</span>
+<input class="pl-10 pr-4 py-2 bg-slate-100 dark:bg-slate-800 border-none rounded-full text-sm w-48 focus:ring-2 focus:ring-primary transition-all" placeholder="Search lessons..." type="text"/>
+</div>
+<button class="bg-primary hover:bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-semibold transition-all shadow-lg shadow-primary/20">Sign In</button>
+</div>
+</div>
+</div>
+</nav>
+<header class="relative overflow-hidden pt-16 pb-24 gradient-mesh">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="flex flex-col lg:flex-row items-center gap-12">
+<div class="flex-1 text-center lg:text-left">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider mb-6">
+<span class="flex h-2 w-2 rounded-full bg-primary animate-pulse"></span>
+                        JLPT Focused Mastery
+                    </div>
+<h1 class="text-4xl lg:text-6xl font-extrabold mb-6 leading-tight">
+                        Your Guided Path to <br/> <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">Japanese Fluency</span>
+</h1>
+<p class="text-slate-500 dark:text-slate-400 text-lg mb-8 max-w-2xl mx-auto lg:mx-0">
+                        From zero to N1 mastery. Our structured curriculum, designed by native linguists, combines deep cultural immersion with rigorous JLPT preparation.
+                    </p>
+<div class="flex flex-wrap justify-center lg:justify-start gap-4">
+<button class="bg-primary hover:bg-blue-600 text-white px-8 py-3.5 rounded-xl font-bold transition-all flex items-center gap-2">
+                            Explore Curriculum <span class="material-icons-round text-sm">arrow_forward</span>
+</button>
+<button class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-8 py-3.5 rounded-xl font-bold hover:bg-slate-50 dark:hover:bg-slate-700 transition-all">
+                            Meet Our Teachers
+                        </button>
+</div>
+</div>
+<div class="flex-1 w-full lg:max-w-xl">
+<div class="relative">
+<div class="absolute -top-10 -left-10 w-40 h-40 bg-primary/20 blur-3xl rounded-full"></div>
+<div class="card-blur p-4 rounded-3xl relative overflow-hidden group">
+<img alt="Japanese traditional architecture" class="rounded-2xl w-full h-80 object-cover shadow-2xl transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTbUioYl9OWnCgd_1NOV5IC6wdAWPUGI5Uax1AmavDW7DA1tVtZwjl9jO7rzUJguN1NQRFI6cOFj_qmliYYkJ2g7_tU7yG0ytzmNI_hPvkJ9WHsnSkNPT9Pw3UjtSqzF0OunvknWjM2-YYXic1C_Z4wnxOyw-_tUqKbKYBrFtcgirY-gAbcE82L-ypuXfvAys9oFxb95J1rLRc_iI8eOqT_bnIkFNJekojvbnSHbV4pUxN1JaNABWNaeF0lYv9I-m3jgJMlNuCOXY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark/80 via-transparent to-transparent flex items-end p-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full border-2 border-white overflow-hidden">
+<img alt="Featured Teacher" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6oBPdU3cO_vUdrK0Moa9ts_HZ_vjghEHrUlruOumT9URkT6wtRSACd1YK1k5OUIGBBQoUjNmyn53fyHXD-dmMBnDimzMbZOte2WUSiSRl85timfeVJTmsDWdmQccehIyIcxZtHS43RsRwwsWHPRJUNJvQdgzD76uu1UCPVb_wEYAo0AVTTCGp4whxSBn2c8N8loOnvu7d8arPzfA6o2KeHRNqrbCwX2RNw_jVbVhxogFNB3OqYjSxuXLV__CJuMAMJXSEIdkBuZQ"/>
+</div>
+<div>
+<p class="text-white font-bold">Featured Lesson</p>
+<p class="text-white/70 text-sm italic">Mastering Keigo for Business</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<section class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div>
+<h2 class="text-3xl font-extrabold mb-4">Level Up Your Japanese</h2>
+<p class="text-slate-500 dark:text-slate-400">Our 5-stage roadmap aligned with global JLPT standards.</p>
+</div>
+<div class="flex bg-slate-100 dark:bg-slate-800 p-1 rounded-xl">
+<button class="px-6 py-2 bg-white dark:bg-slate-700 rounded-lg text-sm font-bold shadow-sm">Standard Path</button>
+<button class="px-6 py-2 text-slate-500 dark:text-slate-400 text-sm font-bold hover:text-slate-900 dark:hover:text-white transition-colors">Accelerated</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 hover:border-primary transition-all group">
+<div class="flex justify-between items-start mb-6">
+<span class="bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 px-3 py-1 rounded-md text-xs font-bold uppercase tracking-wider">Level N5</span>
+<span class="text-slate-400 text-xs font-medium">48 Lessons • 12 Weeks</span>
+</div>
+<h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">The Foundations</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm mb-6 leading-relaxed">Master Hiragana, Katakana, and essential daily survival phrases. Perfect for absolute beginners.</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-2 text-sm">
+<span class="material-icons-round text-primary text-base">check_circle</span> Mastering Kana Scripts
+                    </li>
+<li class="flex items-center gap-2 text-sm">
+<span class="material-icons-round text-primary text-base">check_circle</span> Basic Grammar (wa, ga, o)
+                    </li>
+<li class="flex items-center gap-2 text-sm">
+<span class="material-icons-round text-primary text-base">check_circle</span> 800+ Common Vocabulary
+                    </li>
+</ul>
+<button class="w-full py-3 bg-slate-100 dark:bg-slate-800 rounded-xl text-sm font-bold hover:bg-primary hover:text-white transition-all">Start Learning</button>
+</div>
+<div class="bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 hover:border-primary transition-all group">
+<div class="flex justify-between items-start mb-6">
+<span class="bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 px-3 py-1 rounded-md text-xs font-bold uppercase tracking-wider">Level N4</span>
+<span class="text-slate-400 text-xs font-medium">62 Lessons • 16 Weeks</span>
+</div>
+<h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">Daily Proficiency</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm mb-6 leading-relaxed">Build conversational confidence and tackle complex sentence patterns for daily life.</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-2 text-sm">
+<span class="material-icons-round text-primary text-base">check_circle</span> Conditional Forms
+                    </li>
+<li class="flex items-center gap-2 text-sm">
+<span class="material-icons-round text-primary text-base">check_circle</span> Potential &amp; Passive Verbs
+                    </li>
+<li class="flex items-center gap-2 text-sm">
+<span class="material-icons-round text-primary text-base">check_circle</span> 300 Essential Kanji
+                    </li>
+</ul>
+<button class="w-full py-3 bg-slate-100 dark:bg-slate-800 rounded-xl text-sm font-bold hover:bg-primary hover:text-white transition-all">Enroll Now</button>
+</div>
+<div class="bg-primary/5 border-2 border-primary rounded-2xl p-6 relative overflow-hidden group">
+<div class="absolute top-0 right-0 px-4 py-1 bg-primary text-white text-[10px] font-bold uppercase rounded-bl-xl">Popular</div>
+<div class="flex justify-between items-start mb-6">
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-md text-xs font-bold uppercase tracking-wider">Level N3</span>
+<span class="text-slate-400 text-xs font-medium">84 Lessons • 20 Weeks</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Intermediate Bridge</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm mb-6 leading-relaxed">Bridge the gap between basic and advanced. Understand daily news and natural dialogues.</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-2 text-sm">
+<span class="material-icons-round text-primary text-base">check_circle</span> Natural Speed Listening
+                    </li>
+<li class="flex items-center gap-2 text-sm">
+<span class="material-icons-round text-primary text-base">check_circle</span> Abstract Topics &amp; Essays
+                    </li>
+<li class="flex items-center gap-2 text-sm">
+<span class="material-icons-round text-primary text-base">check_circle</span> 650 Core Kanji
+                    </li>
+</ul>
+<button class="w-full py-3 bg-primary text-white rounded-xl text-sm font-bold hover:bg-blue-600 shadow-lg shadow-primary/30 transition-all">Book Trial Session</button>
+</div>
+</div>
+</section>
+<section class="py-24 bg-slate-50 dark:bg-slate-900/50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-extrabold mb-4">Meet Our Native Teachers</h2>
+<p class="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto">Learn from certified instructors who bring real-world cultural context and professional expertise to every lesson.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="group">
+<div class="relative mb-4 overflow-hidden rounded-2xl aspect-[4/5]">
+<img alt="Yumi Tanaka" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNoREf3JiQrStKIuQRtYiFinZUSnNbkV2WInk8EZ-FKJ-zOsckyomtx0D_EJ4aclhksRg5JGvYD8zlHChV8m-ATfcX5hIhLvrPfP5tXBZImjxhJgkTQ_Y82GzvHyh5HN1pjVVfG73rvQkle4CTMoM6e2j1TLM2OA6LkmypTGGcqfpfqmzgYFdmofnT_7fL0FymJZAtNkS6AhUSNeAPLXZpOU6hN4xtlSxfaY8IhFLaeGsx0lapkyz-Gm_i0rOcSOkcbBEJjGys4HM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
+<button class="bg-primary text-white py-2 rounded-lg text-xs font-bold">View Profile</button>
+</div>
+</div>
+<div class="text-center">
+<h4 class="font-bold text-lg">Yumi Tanaka</h4>
+<p class="text-primary text-sm font-medium mb-2">JLPT N1 Specialist</p>
+<div class="flex justify-center gap-1">
+<span class="material-icons-round text-yellow-500 text-sm">star</span>
+<span class="material-icons-round text-yellow-500 text-sm">star</span>
+<span class="material-icons-round text-yellow-500 text-sm">star</span>
+<span class="material-icons-round text-yellow-500 text-sm">star</span>
+<span class="material-icons-round text-yellow-500 text-sm">star</span>
+</div>
+</div>
+</div>
+<div class="group">
+<div class="relative mb-4 overflow-hidden rounded-2xl aspect-[4/5]">
+<img alt="Hiroshi Sato" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcY3U2Ak0HwTHYweEoLurwZhNgx5Vv9ybQ6QdvW60NdMGT7ccx_MwzdO3Lo5QKkP2zJDcX1nD3rOVpz46ahUVMS-8uFdfEhAz-Z_BGluKywqlMDO7X9QZeV7_rcR1HqQZaR27uKWbTizVG2-ALjtNWvUZ7kbMee6G-hU4Ei6Pq3rjUFWVMgJ5Tn8Xf6X_kRnimnCSATvJbxm4eMxGe61GCGCkkuFMVgHcSSYdzkelKmrQopAm0HIJnKxg0W_Vy24LQ-bgRgq65eyE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
+<button class="bg-primary text-white py-2 rounded-lg text-xs font-bold">View Profile</button>
+</div>
+</div>
+<div class="text-center">
+<h4 class="font-bold text-lg">Hiroshi Sato</h4>
+<p class="text-primary text-sm font-medium mb-2">Business Japanese</p>
+<div class="flex justify-center gap-1">
+<span class="material-icons-round text-yellow-500 text-sm">star</span>
+<span class="material-icons-round text-yellow-500 text-sm">star</span>
+<span class="material-icons-round text-yellow-500 text-sm">star</span>
+<span class="material-icons-round text-yellow-500 text-sm">star</span>
+<span class="material-icons-round text-slate-300 dark:text-slate-700 text-sm">star</span>
+</div>
+</div>
+</div>
+<div class="group">
+<div class="relative mb-4 overflow-hidden rounded-2xl aspect-[4/5]">
+<img alt="Sakura Ito" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAq751ohKbsQ359QAgyqUewVeXTwRZiv67MVi7VcfRx2tc_T9a5pPNWR4xHrkyYo_tOwnd0rObzciD5k6xBA5jtMAOVnoTegy-iArE2Q2FJewdjWbH5GGcHgmTdVaHLQxKXtjqJSjV9CvlUL_Yy2najKauBCozufoooB_2Q4NmtBWbjQym79U8tpbovGSKkM2cw7iGKaDWfl55vAf8wB5b96Oqd9XOMBRKQWSOlFtMdJJ1oUAumZHMENLoReyfbzpzPpTCd4_BeC_w"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
+<button class="bg-primary text-white py-2 rounded-lg text-xs font-bold">View Profile</button>
+</div>
+</div>
+<div class="text-center">
+<h4 class="font-bold text-lg">Sakura Ito</h4>
+<p class="text-primary text-sm font-medium mb-2">Culture &amp; Slang</p>
+<div class="flex justify-center gap-1">
+<span class="material-icons-round text-yellow-500 text-sm">star</span>
+<span class="material-icons-round text-yellow-500 text-sm">star</span>
+<span class="material-icons-round text-yellow-500 text-sm">star</span>
+<span class="material-icons-round text-yellow-500 text-sm">star</span>
+<span class="material-icons-round text-yellow-500 text-sm">star</span>
+</div>
+</div>
+</div>
+<div class="group">
+<div class="relative mb-4 overflow-hidden rounded-2xl aspect-[4/5]">
+<img alt="Kenji Watanabe" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa-5H5TvvKRw23strJXgMK2zJ1_iMRhuefuZ0YTT1XC3uX3kc8Y2hj2WmNjDp2J6jBO1Fc9YgM8SlkRA5WCnoqQ-uxwCTQkPzpmkLhEXmmwaVQk8GusdcUxfK5U6-z8Fg4Tt8_es6FSEGSL1SSU7AVwX9Ki0v5SQQMelpWffANSv-NuoU482oFb_sUMzLx6TAIOTh_8bbp7fux2VuSdr-Psg0k2sLyi25a4V4kYYD4OPuMRHkuc9qO2pdfEhPCQoCp5TSJVwC7wtE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
+<button class="bg-primary text-white py-2 rounded-lg text-xs font-bold">View Profile</button>
+</div>
+</div>
+<div class="text-center">
+<h4 class="font-bold text-lg">Kenji Watanabe</h4>
+<p class="text-primary text-sm font-medium mb-2">Academic Japanese</p>
+<div class="flex justify-center gap-1">
+<span class="material-icons-round text-yellow-500 text-sm">star</span>
+<span class="material-icons-round text-yellow-500 text-sm">star</span>
+<span class="material-icons-round text-yellow-500 text-sm">star</span>
+<span class="material-icons-round text-yellow-500 text-sm">star</span>
+<span class="material-icons-round text-yellow-500 text-sm">star</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16 border-t border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="text-center">
+<p class="text-4xl font-extrabold text-primary mb-2">15k+</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Active Students</p>
+</div>
+<div class="text-center">
+<p class="text-4xl font-extrabold text-primary mb-2">98%</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm">JLPT Pass Rate</p>
+</div>
+<div class="text-center">
+<p class="text-4xl font-extrabold text-primary mb-2">200+</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Native Teachers</p>
+</div>
+<div class="text-center">
+<p class="text-4xl font-extrabold text-primary mb-2">1.2k</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Video Lessons</p>
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 pt-16 pb-8">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 mb-6">
+<div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-icons-round text-lg">language</span>
+</div>
+<span class="text-xl font-bold">NihonGo Learn</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6">
+                        Empowering language learners worldwide through structured paths and native interaction.
+                    </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-icons-round text-sm">public</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-icons-round text-sm">help_outline</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-icons-round text-sm">verified_user</span>
+</a>
+</div>
+</div>
+<div>
+<h5 class="font-bold mb-6">Platform</h5>
+<ul class="space-y-4 text-sm text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="#">Course Catalog</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Learning Roadmap</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Study Streak</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Certificates</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold mb-6">Support</h5>
+<ul class="space-y-4 text-sm text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="#">Help Center</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Teacher Program</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Business Solutions</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold mb-6">Subscribe</h5>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Get weekly study tips and grammar guides.</p>
+<div class="flex gap-2">
+<input class="flex-1 bg-slate-100 dark:bg-slate-800 border-none rounded-xl text-sm px-4 focus:ring-2 focus:ring-primary" placeholder="Email address" type="email"/>
+<button class="p-3 bg-primary text-white rounded-xl hover:bg-blue-600 transition-all">
+<span class="material-icons-round text-sm">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col md:row justify-between items-center gap-4 text-xs text-slate-400">
+<p>© 2024 NihonGo Learn Inc. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="hover:text-primary" href="#">Privacy Policy</a>
+<a class="hover:text-primary" href="#">Terms of Service</a>
+<a class="hover:text-primary" href="#">Cookies</a>
+</div>
+</div>
+</div>
+</footer>
+
+</body></html>

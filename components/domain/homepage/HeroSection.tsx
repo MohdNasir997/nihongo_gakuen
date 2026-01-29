@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import { motion } from 'motion/react'
-import { ArrowRight } from 'lucide-react'
+import Link from 'next/link'
 
 export function HeroSection() {
   return (
@@ -45,14 +45,18 @@ export function HeroSection() {
               whileTap={{ scale: 0.98 }}
               className="flex min-w-50 items-center justify-center rounded-xl h-14 px-8 bg-primary dark:bg-blue-400 text-white text-lg font-bold shadow-lg hover:bg-primary/90 transition-all duration-300"
             >
+              <Link href="/courses" className="w-full h-full flex items-center justify-center">
               Start Learning
+              </Link>
             </motion.button>
             <motion.button
               whileHover={{ y: -4 }}
               whileTap={{ scale: 0.98 }}
               className="flex min-w-50 items-center justify-center rounded-xl h-14 px-8 bg-card-light dark:bg-slate-800 border border-[#e8e4db] dark:border-slate-700 text-[#2d333a] dark:text-white text-lg font-bold hover:bg-[#f5f2eb] dark:hover:bg-slate-700 transition-colors"
             >
+              <Link href="/courses" className="w-full h-full flex items-center justify-center">
               Explore Courses
+              </Link>
             </motion.button>
           </div>
 

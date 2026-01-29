@@ -82,11 +82,15 @@ export function Navbar() {
 
         {/* Desktop Auth Buttons */}
         <div className="hidden md:flex gap-2 ml-2 xl:gap-4">
-          <Button variant="secondary" size="default" className="min-w-25">
+          <Button asChild variant="secondary" size="default" className="min-w-25">
+            <Link href={'/dashboard'}>
             Login
+            </Link>
           </Button>
-          <Button size="default" className="min-w-25 dark:bg-blue-400 dark:hover:bg-blue-500">
+          <Button asChild size="default" className="min-w-25 dark:bg-blue-400 dark:hover:bg-blue-500">
+            <Link href={"/register"}>
             Sign Up
+            </Link>
           </Button>
           <Button
             onClick={toggleTheme}

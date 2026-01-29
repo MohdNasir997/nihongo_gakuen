@@ -18,7 +18,7 @@ const features = [
     description: 'Practice real-world Japanese with native speakers. Scheduled 1-on-1 calls to boost confidence.',
     linkText: 'Meet Tutors',
     color: 'green',
-    href: '/community'
+    href: '/teachers'
   },
   {
     icon: PenTool,

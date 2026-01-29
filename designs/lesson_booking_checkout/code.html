@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lesson Booking Checkout | Japanese Academy</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white min-h-screen">
+<!-- Top Navigation Bar -->
+<header class="border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark px-4 md:px-10 py-3 sticky top-0 z-50">
+<div class="max-w-[1200px] mx-auto flex items-center justify-between whitespace-nowrap">
+<div class="flex items-center gap-4">
+<div class="size-8 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined">school</span>
+</div>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-tight">Japanese Academy</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8 items-center">
+<nav class="flex items-center gap-9">
+<a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Lessons</a>
+<a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Teachers</a>
+<a class="text-slate-600 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">JLPT Prep</a>
+</nav>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-slate-200 dark:border-slate-700" data-alt="User profile avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDUAqhxkrTtXy6Vwts934CHMFZWpY9n9aVZgiQYYiZ5iW_fMKyU72Qh7BonMJ4ACYYl4Ej3mP17XFspiYTgfw7quj_SL-0uHOQyHGYx7DavX4dDn8ALaKJJC-t8q-E4DMHze_Sy2_xAPnRyKM0H55DVHu_NFzanw5krTPsgFPS59sTW_lmn0hHHpPSrrmRT4HjnnVEvXnD4v5JhAi3VoYBFCRhDLuC4UZDUqlL41qY4in-Qhd8j3YbVUNObYlr1YlbIDx1vhE462zo");'>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-[1200px] mx-auto px-4 py-8">
+<!-- Breadcrumbs -->
+<div class="flex items-center gap-2 mb-6">
+<a class="text-slate-500 dark:text-slate-400 text-sm font-medium hover:text-primary" href="#">Teachers</a>
+<span class="text-slate-400 dark:text-slate-600 text-sm">/</span>
+<a class="text-slate-500 dark:text-slate-400 text-sm font-medium hover:text-primary" href="#">Sensei Tanaka</a>
+<span class="text-slate-400 dark:text-slate-600 text-sm">/</span>
+<span class="text-slate-900 dark:text-white text-sm font-medium">Checkout</span>
+</div>
+<!-- Page Heading & Secure Badge -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
+<div class="flex flex-col gap-1">
+<h1 class="text-slate-900 dark:text-white text-4xl font-black leading-tight tracking-tight">Secure Checkout</h1>
+<p class="text-slate-500 dark:text-slate-400 text-base">Confirm your booking details and payment method</p>
+</div>
+<div class="flex items-center gap-2 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 px-4 py-2 rounded-lg border border-emerald-500/20">
+<span class="material-symbols-outlined text-xl">verified_user</span>
+<span class="text-sm font-bold uppercase tracking-wider">Secure SSL Encrypted</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+<!-- Left Column: Order Summary -->
+<div class="lg:col-span-5 flex flex-col gap-6">
+<div class="bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden shadow-sm">
+<h2 class="text-slate-900 dark:text-white text-xl font-bold p-6 border-b border-slate-200 dark:border-slate-800">1. Review Your Lesson</h2>
+<div class="p-6 space-y-6">
+<!-- Lesson Detail Card -->
+<div class="flex gap-4 items-start p-4 bg-slate-50 dark:bg-slate-800/50 rounded-lg">
+<div class="size-20 rounded-lg bg-center bg-cover flex-shrink-0" data-alt="Japanese sensei professional portrait" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBpED5lZbT36vLjBwrDQhqXVG3ff4nVzAhFow1VrTcDTC0t6GVh1vsofb-ZoRZ4KhcItKCGUV0-plmE6tED7_pIPctUv8-b20TZo263VJA16lThROy_9OBKd9a_ptRZtPHPvq0kxDTDOrQv05krD6gIJEtnjIUF8IIl9l1d2ilepC6pbVapMiupX5ZsGRqqgKGeG1tdzcDDxelcMiqQ8BxiA2GIvdYTHQKjO2Fm5Y24y9Y_Sh8uZef53bQP9NJAeHRdRUy8VkOTV6c');">
+</div>
+<div class="flex flex-col gap-1">
+<span class="bg-primary/10 text-primary text-[10px] font-bold uppercase px-2 py-0.5 rounded w-fit">JLPT N3 Specialist</span>
+<p class="text-slate-900 dark:text-white text-base font-bold">Sensei Tanaka - N3 Grammar Focus</p>
+<div class="flex items-center gap-1.5 text-slate-500 dark:text-slate-400 text-sm">
+<span class="material-symbols-outlined text-base">calendar_today</span>
+<span>Oct 24, 2023 | 14:00 JST</span>
+</div>
+<button class="text-primary text-xs font-bold mt-2 flex items-center gap-1 hover:underline">
+<span class="material-symbols-outlined text-xs">edit</span> Change Lesson
+                                </button>
+</div>
+</div>
+<!-- Price Breakdown -->
+<div class="space-y-3 pt-4 border-t border-slate-200 dark:border-slate-800">
+<div class="flex justify-between text-slate-600 dark:text-slate-400">
+<span>60-minute Lesson Rate</span>
+<span>$45.00</span>
+</div>
+<div class="flex justify-between text-slate-600 dark:text-slate-400">
+<span>Platform Service Fee</span>
+<span>$2.50</span>
+</div>
+<div class="flex justify-between text-slate-600 dark:text-slate-400">
+<span>Tax</span>
+<span>$0.00</span>
+</div>
+<div class="flex justify-between text-slate-900 dark:text-white font-bold text-xl pt-4 border-t border-slate-200 dark:border-slate-800">
+<span>Total Amount</span>
+<span class="text-primary">$47.50</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Promo Code -->
+<div class="bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl p-6">
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Promo Code</label>
+<div class="flex gap-2">
+<input class="flex-1 bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg text-sm focus:ring-primary focus:border-primary" placeholder="Enter code" type="text"/>
+<button class="bg-slate-200 dark:bg-slate-700 text-slate-800 dark:text-white px-4 py-2 rounded-lg font-bold text-sm hover:bg-slate-300 dark:hover:bg-slate-600 transition-colors">Apply</button>
+</div>
+</div>
+</div>
+<!-- Right Column: Payment Details -->
+<div class="lg:col-span-7 flex flex-col gap-6">
+<div class="bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden shadow-sm">
+<h2 class="text-slate-900 dark:text-white text-xl font-bold p-6 border-b border-slate-200 dark:border-slate-800">2. Payment Method</h2>
+<div class="p-6">
+<!-- Tabbed Payment Options -->
+<div class="grid grid-cols-3 gap-3 mb-8">
+<button class="flex flex-col items-center justify-center gap-2 p-4 rounded-xl border-2 border-primary bg-primary/5 text-primary">
+<span class="material-symbols-outlined">credit_card</span>
+<span class="text-xs font-bold">Card</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-2 p-4 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined">payments</span>
+<span class="text-xs font-bold">PayPal</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-2 p-4 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined">ios</span>
+<span class="text-xs font-bold">Apple Pay</span>
+</button>
+</div>
+<!-- Card Form -->
+<form class="space-y-6">
+<div class="space-y-2">
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300">Cardholder Name</label>
+<input class="w-full bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg py-3 px-4 focus:ring-primary focus:border-primary text-white" placeholder="Full Name on Card" type="text"/>
+</div>
+<div class="space-y-2 relative">
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300">Card Number</label>
+<div class="relative">
+<input class="w-full bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg py-3 px-4 focus:ring-primary focus:border-primary text-white pr-12" placeholder="0000 0000 0000 0000" type="text"/>
+<div class="absolute right-3 top-1/2 -translate-y-1/2 flex gap-1">
+<div class="w-8 h-5 bg-slate-200 dark:bg-slate-700 rounded flex items-center justify-center text-[8px] font-bold">VISA</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-2">
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300">Expiry Date</label>
+<input class="w-full bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg py-3 px-4 focus:ring-primary focus:border-primary text-white" placeholder="MM/YY" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300">CVV</label>
+<input class="w-full bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg py-3 px-4 focus:ring-primary focus:border-primary text-white" placeholder="123" type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-2">
+<input class="rounded text-primary focus:ring-primary bg-slate-800 border-slate-700" id="save-card" type="checkbox"/>
+<label class="text-sm text-slate-500 dark:text-slate-400" for="save-card">Save this card for future bookings</label>
+</div>
+<!-- Review Policy -->
+<div class="p-4 bg-slate-50 dark:bg-slate-800/30 rounded-lg border border-slate-200 dark:border-slate-800">
+<h4 class="text-sm font-bold text-slate-900 dark:text-white mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">info</span> Review Policy
+                                </h4>
+<p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                                    Free cancellation up to 24 hours before the lesson starts. Cancellations made within 24 hours are non-refundable. By clicking "Complete Purchase", you agree to our <a class="text-primary underline" href="#">Terms of Service</a>.
+                                </p>
+</div>
+<!-- Final Button -->
+<button class="w-full bg-primary hover:bg-blue-600 text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/20 flex items-center justify-center gap-3 transition-all transform active:scale-[0.98]" type="submit">
+<span class="material-symbols-outlined">lock</span>
+                                Complete Purchase - $47.50
+                            </button>
+</form>
+</div>
+</div>
+<!-- Footer Trust Assets -->
+<div class="flex justify-center gap-8 py-4 opacity-50 grayscale hover:grayscale-0 transition-all">
+<div class="flex items-center gap-1.5 grayscale dark:invert">
+<span class="material-symbols-outlined">credit_score</span>
+<span class="text-xs font-bold uppercase tracking-widest">PCI Compliant</span>
+</div>
+<div class="flex items-center gap-1.5 grayscale dark:invert">
+<span class="material-symbols-outlined">shield</span>
+<span class="text-xs font-bold uppercase tracking-widest">Fraud Protected</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="mt-20 border-t border-slate-200 dark:border-slate-800 py-10">
+<div class="max-w-[1200px] mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-4 text-slate-400">
+<div class="size-6 bg-slate-200 dark:bg-slate-800 rounded flex items-center justify-center">
+<span class="material-symbols-outlined text-xs">school</span>
+</div>
+<p class="text-sm">© 2023 Japanese Academy. All rights reserved.</p>
+</div>
+<div class="flex gap-6">
+<a class="text-slate-400 text-xs hover:text-primary" href="#">Privacy Policy</a>
+<a class="text-slate-400 text-xs hover:text-primary" href="#">Refund Policy</a>
+<a class="text-slate-400 text-xs hover:text-primary" href="#">Help Center</a>
+</div>
+</div>
+</footer>
+</body></html>
