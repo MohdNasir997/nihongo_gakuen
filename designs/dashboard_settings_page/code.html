@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NihonGo Learn - Account Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#6366f1", // Muted indigo
+                        "accent-muted": "#818cf8",
+                        "soft-green": "#4ade80",
+                        "deep-charcoal": "hsl(220, 15%, 12%)",
+                        "card-bg": "hsl(220, 15%, 15%)",
+                        "border-soft": "hsl(220, 15%, 20%)",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { 
+                        "DEFAULT": "0.5rem", 
+                        "lg": "0.75rem", 
+                        "xl": "1rem", 
+                        "2xl": "1.5rem",
+                        "full": "9999px" 
+                    },
+                    boxShadow: {
+                        'paper': '0 4px 20px -2px rgba(0, 0, 0, 0.3), 0 2px 10px -1px rgba(0, 0, 0, 0.2)',
+                    }
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            .material-symbols-outlined {
+                font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            }
+            .fill-icon {
+                font-variation-settings: 'FILL' 1;
+            }
+        }
+        body {
+            background-color: theme('colors.deep-charcoal');
+        }
+        .paper-card {
+            background-color: theme('colors.card-bg');
+            border: 1px solid theme('colors.border-soft');
+            box-shadow: theme('boxShadow.paper');
+        }.switch-input:checked ~ .switch-dot {
+            transform: translateX(100%);
+            background-color: white;
+        }
+        .switch-input:checked ~ .switch-bg {
+            background-color: theme('colors.primary');
+        }
+    </style>
+</head>
+<body class="font-display text-slate-300 antialiased min-h-screen">
+<div class="flex min-h-screen w-full relative">
+<input class="hidden peer" id="menu-toggle" type="checkbox"/>
+<aside class="fixed inset-y-0 left-0 z-50 w-64 md:w-20 lg:w-64 transform -translate-x-full peer-checked:translate-x-0 md:translate-x-0 transition-all duration-300 ease-in-out border-r border-border-soft bg-deep-charcoal flex flex-col justify-between p-4 h-screen md:sticky top-0">
+<div class="flex flex-col gap-8">
+<div class="flex items-center gap-3 px-2">
+<div class="bg-primary/20 text-primary rounded-xl p-2 flex-shrink-0">
+<svg class="size-6" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z" fill="currentColor"></path>
+</svg>
+</div>
+<div class="flex flex-col md:hidden lg:flex">
+<h1 class="text-white text-base font-bold leading-tight">NihonGo Learn</h1>
+<p class="text-slate-500 text-xs font-normal">Student Portal</p>
+</div>
+</div>
+<nav class="flex flex-col gap-1.5">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-400 hover:bg-white/5 transition-colors md:justify-center lg:justify-start" href="#">
+<span class="material-symbols-outlined">book_2</span>
+<span class="text-sm font-medium md:hidden lg:block">My Courses</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-400 hover:bg-white/5 transition-colors md:justify-center lg:justify-start" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-sm font-medium md:hidden lg:block">My Progress</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-400 hover:bg-white/5 transition-colors md:justify-center lg:justify-start" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-sm font-medium md:hidden lg:block">Profile</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-xl bg-primary/10 text-primary group md:justify-center lg:justify-start" href="#">
+<span class="material-symbols-outlined fill-icon">settings</span>
+<span class="text-sm font-semibold md:hidden lg:block">Settings</span>
+</a>
+</nav>
+</div>
+<div class="flex flex-col gap-4">
+<div class="bg-primary/5 rounded-2xl p-4 border border-primary/10 md:hidden lg:block">
+<p class="text-[10px] font-bold text-primary uppercase tracking-widest mb-2">Community</p>
+<p class="text-xs text-slate-500 mb-3 leading-relaxed">Join our student Discord for daily practice.</p>
+<button class="w-full bg-primary hover:bg-primary/90 text-white text-xs font-bold py-2.5 rounded-xl transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">forum</span>
+                    Join Discord
+                </button>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 text-slate-500 cursor-pointer hover:text-primary transition-colors md:justify-center lg:justify-start">
+<span class="material-symbols-outlined">help_center</span>
+<p class="text-sm font-medium md:hidden lg:block">Help Center</p>
+</div>
+</div>
+</aside>
+<label class="fixed inset-0 bg-black/60 z-40 hidden peer-checked:block md:hidden backdrop-blur-sm" for="menu-toggle"></label>
+<main class="flex-1 flex flex-col overflow-y-auto w-full">
+<header class="h-16 border-b border-border-soft bg-deep-charcoal/80 backdrop-blur-md sticky top-0 z-10 px-4 md:px-8 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<label class="md:hidden cursor-pointer p-1 text-slate-400" for="menu-toggle">
+<span class="material-symbols-outlined">menu</span>
+</label>
+<div class="hidden sm:flex items-center gap-2 text-xs text-slate-500">
+<a class="hover:text-primary transition-colors" href="#">Home</a>
+<span class="text-slate-600">/</span>
+<span class="text-slate-300 font-medium tracking-wide">Settings</span>
+</div>
+</div>
+<div class="flex items-center gap-3 md:gap-6">
+<div class="relative w-32 sm:w-64 group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 group-focus-within:text-primary transition-colors text-sm sm:text-base">search</span>
+<input class="w-full bg-white/5 border border-white/5 rounded-xl pl-8 sm:pl-10 py-2 text-xs sm:text-sm focus:ring-1 focus:ring-primary/50 focus:border-primary/50 text-slate-200 placeholder-slate-500" placeholder="Search settings..." type="text"/>
+</div>
+<div class="flex items-center gap-3 border-l border-border-soft pl-3 sm:pl-6">
+<div class="hidden sm:flex flex-col items-end">
+<span class="text-sm font-semibold text-slate-200">Alex Chen</span>
+<span class="text-[9px] bg-soft-green/10 text-soft-green px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">Pro Learner</span>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-9 border-2 border-border-soft shadow-inner" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBV2B_PXjzKa0KmElCrIFHyxjOR7rWEhJxpyzJezoU4_SoK6bN7bBHRZVLQg_0pjbvVhn8-RnwF6S9b4cD0GjRNH1flLmJiVFbkZYw2yqZwInGqXlGf4RyFEXXBnIQiEn6AAcUII8YkxJlcBXNnzaf1BvOegoEhrVN4g8ZisWz5FgyGt9cHwK6o2fjSJ4p0SM7riL1TlXGkIFzdWaL9G-vBarU8l615vwk6m8SsqcHUqYsWloQtT5T5LP-dlMO2EXuoivbgCA8SllA");'></div>
+</div>
+</div>
+</header>
+<div class="p-4 sm:p-6 md:p-8 max-w-5xl mx-auto w-full">
+<div class="mb-8">
+<h1 class="text-white text-2xl sm:text-3xl font-bold tracking-tight mb-2">Account Settings</h1>
+<p class="text-slate-500 text-sm sm:text-base">Manage your personal preferences, security, and subscription.</p>
+</div>
+<div class="flex flex-col gap-8">
+<section>
+<div class="flex items-center gap-2 mb-4 text-slate-200">
+<span class="material-symbols-outlined text-primary">security</span>
+<h2 class="text-lg font-bold">Account Security</h2>
+</div>
+<div class="paper-card rounded-2xl overflow-hidden">
+<div class="p-6 border-b border-border-soft">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div>
+<h3 class="text-white font-semibold">Email Address</h3>
+<p class="text-sm text-slate-500">alex.chen@example.com (Primary)</p>
+</div>
+<button class="px-4 py-2 bg-white/5 hover:bg-white/10 border border-border-soft text-sm font-medium rounded-lg transition-colors text-slate-300">
+                                    Change Email
+                                </button>
+</div>
+</div>
+<div class="p-6 border-b border-border-soft">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div>
+<h3 class="text-white font-semibold">Password</h3>
+<p class="text-sm text-slate-500">Last changed 3 months ago</p>
+</div>
+<button class="px-4 py-2 bg-white/5 hover:bg-white/10 border border-border-soft text-sm font-medium rounded-lg transition-colors text-slate-300">
+                                    Update Password
+                                </button>
+</div>
+</div>
+<div class="p-6">
+<div class="flex items-center justify-between gap-4">
+<div>
+<h3 class="text-white font-semibold">Two-Factor Authentication</h3>
+<p class="text-sm text-slate-500">Add an extra layer of security to your account.</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only switch-input" type="checkbox"/>
+<div class="w-10 h-6 bg-slate-700 rounded-full switch-bg transition-colors duration-200"></div>
+<div class="absolute left-1 top-1 bg-slate-400 w-4 h-4 rounded-full transition-transform duration-200 switch-dot"></div>
+</label>
+</div>
+</div>
+</div>
+</section>
+<section>
+<div class="flex items-center gap-2 mb-4 text-slate-200">
+<span class="material-symbols-outlined text-primary">notifications</span>
+<h2 class="text-lg font-bold">Notification Preferences</h2>
+</div>
+<div class="paper-card rounded-2xl p-6">
+<div class="space-y-6">
+<div class="flex items-start justify-between gap-4">
+<div>
+<h3 class="text-white font-semibold">Study Reminders</h3>
+<p class="text-sm text-slate-500">Get notified when it's time for your daily kanji review.</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer flex-shrink-0">
+<input checked="" class="sr-only switch-input" type="checkbox"/>
+<div class="w-10 h-6 bg-slate-700 rounded-full switch-bg transition-colors duration-200"></div>
+<div class="absolute left-1 top-1 bg-slate-400 w-4 h-4 rounded-full transition-transform duration-200 switch-dot"></div>
+</label>
+</div>
+<div class="flex items-start justify-between gap-4">
+<div>
+<h3 class="text-white font-semibold">Course Announcements</h3>
+<p class="text-sm text-slate-500">Receive updates about new lessons and content additions.</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer flex-shrink-0">
+<input checked="" class="sr-only switch-input" type="checkbox"/>
+<div class="w-10 h-6 bg-slate-700 rounded-full switch-bg transition-colors duration-200"></div>
+<div class="absolute left-1 top-1 bg-slate-400 w-4 h-4 rounded-full transition-transform duration-200 switch-dot"></div>
+</label>
+</div>
+<div class="flex items-start justify-between gap-4">
+<div>
+<h3 class="text-white font-semibold">Newsletter &amp; Offers</h3>
+<p class="text-sm text-slate-500">Occasional updates on language learning tips and platform deals.</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer flex-shrink-0">
+<input class="sr-only switch-input" type="checkbox"/>
+<div class="w-10 h-6 bg-slate-700 rounded-full switch-bg transition-colors duration-200"></div>
+<div class="absolute left-1 top-1 bg-slate-400 w-4 h-4 rounded-full transition-transform duration-200 switch-dot"></div>
+</label>
+</div>
+</div>
+</div>
+</section>
+<section>
+<div class="flex items-center gap-2 mb-4 text-slate-200">
+<span class="material-symbols-outlined text-primary">credit_card</span>
+<h2 class="text-lg font-bold">Billing &amp; Subscription</h2>
+</div>
+<div class="paper-card rounded-2xl p-6">
+<div class="flex flex-col md:flex-row gap-6 items-start md:items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="bg-primary/10 text-primary p-3 rounded-2xl">
+<span class="material-symbols-outlined text-3xl">workspace_premium</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h3 class="text-white font-bold text-lg">Pro Learner Annual</h3>
+<span class="text-[10px] bg-soft-green/10 text-soft-green px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">Active</span>
+</div>
+<p class="text-sm text-slate-500">Renews on September 15, 2024</p>
+</div>
+</div>
+<div class="flex gap-3 w-full md:w-auto">
+<button class="flex-1 md:flex-none px-5 py-2.5 bg-primary text-white text-sm font-semibold rounded-xl hover:bg-primary/90 transition-all">
+                                    Manage Plan
+                                </button>
+<button class="flex-1 md:flex-none px-5 py-2.5 bg-white/5 border border-border-soft text-slate-300 text-sm font-semibold rounded-xl hover:bg-white/10 transition-all">
+                                    View Invoices
+                                </button>
+</div>
+</div>
+<div class="mt-8 pt-8 border-t border-border-soft">
+<h4 class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4">Payment Method</h4>
+<div class="flex items-center justify-between p-4 bg-white/5 rounded-xl border border-border-soft">
+<div class="flex items-center gap-3">
+<div class="w-12 h-8 bg-slate-800 rounded flex items-center justify-center font-bold text-slate-400 text-[10px] tracking-tighter">
+                                        VISA
+                                    </div>
+<div>
+<p class="text-sm font-medium text-white">•••• •••• •••• 4242</p>
+<p class="text-xs text-slate-500">Expires 12/26</p>
+</div>
+</div>
+<button class="text-xs font-bold text-primary hover:text-accent-muted transition-colors uppercase tracking-wider">
+                                    Edit
+                                </button>
+</div>
+</div>
+</div>
+</section>
+<section class="mt-4">
+<div class="paper-card rounded-2xl border-red-500/20 bg-red-500/5 p-6">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div>
+<h3 class="text-red-400 font-semibold">Delete Account</h3>
+<p class="text-sm text-slate-500">Permanently delete your account and all study data. This cannot be undone.</p>
+</div>
+<button class="px-4 py-2 bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 text-red-400 text-sm font-medium rounded-lg transition-colors">
+                                Delete Account
+                            </button>
+</div>
+</div>
+</section>
+</div>
+<footer class="mt-12 pt-8 border-t border-border-soft flex flex-col sm:flex-row justify-between items-center gap-4 pb-8">
+<p class="text-xs text-slate-500">© 2024 NihonGo Learn. All rights reserved.</p>
+<div class="flex gap-6 text-xs font-medium text-slate-500">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-primary transition-colors" href="#">Contact Support</a>
+</div>
+</footer>
+</div>
+</main>
+</div>
+
+</body></html>

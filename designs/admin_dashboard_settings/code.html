@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Admin CMS Settings - NihonGo Learn</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3c83f6",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101722",
+                        "surface-dark": "#1e293b",
+                        "border-dark": "#314668",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-tab {
+            background-color: rgba(60, 131, 246, 0.1);
+            color: #3c83f6;
+            border-right: 2px solid #3c83f6;
+        }
+        /* Custom scrollbar for dark theme */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #101722;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #314668;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3c83f6;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Layout Wrapper -->
+<div class="flex h-screen overflow-hidden">
+<!-- Sidebar Component -->
+<aside class="w-64 flex-shrink-0 border-r border-border-dark bg-[#101723] hidden md:flex flex-col">
+<div class="p-6 flex flex-col h-full">
+<div class="flex items-center gap-3 mb-10">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="NihonGo Learn abstract logo pattern" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAnFJGfnAk1NLjEpTIGH5AUNasIItjab0IkQWRwgx4DdBzKv0YSCdg1uzZ_n9v_NpthJ3hvizveddTCW-aI7Bt1yeDQPZiM1mFEWtPZTUmz7Gtbtm5Xdp0AW63ZyQCmfUq92ld0Wzust0gw1bChLxH0apWRLhUtItsUpAfb8fpb-rroVDp6Vt-7Hx3oWaW0Q7XM2KEzPlfdscLIt0rEVaXPtTOse2ppsg0uKrntHqCNwffZCkt6vI3uYD9LUfGJonglXaWlM1gfB48");'></div>
+<div class="flex flex-col">
+<h1 class="text-white text-base font-bold leading-none mb-1">NihonGo Learn</h1>
+<p class="text-[#90a7cb] text-xs font-normal">CMS Admin</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2 flex-1">
+<a class="flex items-center gap-3 px-3 py-2 text-[#90a7cb] hover:text-white hover:bg-white/5 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-[#90a7cb] hover:text-white hover:bg-white/5 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">description</span>
+<span class="text-sm font-medium">Content Management</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-[#90a7cb] hover:text-white hover:bg-white/5 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="text-sm font-medium">Users</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-[#90a7cb] hover:text-white hover:bg-white/5 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-sm font-medium">Analytics</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 text-primary" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-sm font-medium">Settings</span>
+</a>
+</nav>
+<div class="mt-auto flex flex-col gap-1 border-t border-border-dark pt-4">
+<a class="flex items-center gap-3 px-3 py-2 text-[#90a7cb] hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">help</span>
+<span class="text-sm font-medium">Support</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-[#90a7cb] hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span class="text-sm font-medium">Sign Out</span>
+</a>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col overflow-hidden relative">
+<!-- Top Navigation Component -->
+<header class="flex items-center justify-between border-b border-border-dark bg-[#101723] px-8 py-3">
+<div class="flex items-center gap-4">
+<h2 class="text-white text-lg font-bold">Admin Settings</h2>
+</div>
+<div class="flex items-center gap-6">
+<label class="relative hidden lg:block">
+<span class="absolute inset-y-0 left-0 flex items-center pl-3 text-[#90a7cb]">
+<span class="material-symbols-outlined text-xl">search</span>
+</span>
+<input class="w-64 bg-[#223149] border-none rounded-lg text-white placeholder-[#90a7cb] focus:ring-2 focus:ring-primary pl-10 h-10 text-sm" placeholder="Search settings..." type="text"/>
+</label>
+<div class="flex items-center gap-3">
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-[#223149] text-white hover:bg-[#2d3f5e] transition-colors relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 h-2 w-2 bg-red-500 rounded-full"></span>
+</button>
+<button class="flex items-center gap-2 rounded-lg h-10 px-3 bg-[#223149] text-white hover:bg-[#2d3f5e] transition-colors">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="text-sm font-medium hidden sm:block">Admin User</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Scrollable Settings Container -->
+<div class="flex-1 overflow-y-auto pb-24">
+<!-- Page Heading Component -->
+<div class="px-8 pt-8 pb-4">
+<h1 class="text-white text-3xl font-black tracking-tight mb-2">Settings</h1>
+<p class="text-[#90a7cb] text-base">Configure your NihonGo Learn platform and global integrations.</p>
+</div>
+<!-- Settings Content with Vertical Tabs -->
+<div class="px-8 py-6 flex flex-col md:flex-row gap-8 max-w-7xl">
+<!-- Vertical Tabs Navigation -->
+<div class="w-full md:w-64 flex-shrink-0 flex flex-col gap-1">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg bg-primary/10 text-primary border-l-4 border-primary" href="#general">
+<span class="material-symbols-outlined">tune</span>
+<span class="text-sm font-bold">General</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-[#90a7cb] hover:bg-white/5 hover:text-white transition-colors" href="#payments">
+<span class="material-symbols-outlined">payments</span>
+<span class="text-sm font-bold">Payments</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-[#90a7cb] hover:bg-white/5 hover:text-white transition-colors" href="#security">
+<span class="material-symbols-outlined">security</span>
+<span class="text-sm font-bold">Security</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-[#90a7cb] hover:bg-white/5 hover:text-white transition-colors" href="#integrations">
+<span class="material-symbols-outlined">api</span>
+<span class="text-sm font-bold">Integrations</span>
+</a>
+</div>
+<!-- Content Sections -->
+<div class="flex-1 flex flex-col gap-8">
+<!-- General Settings Section -->
+<section class="space-y-6" id="general">
+<div class="flex items-center justify-between border-b border-border-dark pb-2">
+<h3 class="text-xl font-bold text-white">General Settings</h3>
+<span class="px-2 py-1 text-[10px] uppercase font-bold tracking-wider bg-primary/20 text-primary rounded">Configuring</span>
+</div>
+<!-- Branding Card -->
+<div class="bg-[#1e293b] rounded-xl p-6 border border-border-dark">
+<h4 class="text-white font-semibold mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">palette</span>
+                                    Branding &amp; Identity
+                                </h4>
+<div class="grid grid-cols-1 gap-6">
+<div class="space-y-2">
+<label class="text-sm font-medium text-[#90a7cb]">Site Name</label>
+<input class="w-full bg-[#101722] border border-border-dark rounded-lg px-4 py-2 text-white focus:ring-primary focus:border-primary" type="text" value="NihonGo Learn"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-3">
+<label class="text-sm font-medium text-[#90a7cb]">Main Logo (Light Mode)</label>
+<div class="flex items-center gap-4">
+<div class="h-16 w-16 bg-white rounded-lg flex items-center justify-center p-2">
+<img alt="Site logo preview" data-alt="Light mode site logo preview" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsVsTiU5HjhYtYU-8pRRtLj_jn1qP_0MIor138P5fk6ZsrMY2liR6RMrozsRXt4GqSAMRPTze9vOQt24appRkgd3I7doCrVk7iGXdoCnjJ9DjuHBIpku_z3jTxl4m6JE2NiVKG5HgBU2QkvK1siK4dvqlSYn6qRjXgQ39MhH84vKpNmKCK6gSs5I9IlWqYe-3WdWqT6Hs0nz78Lwa9XjF-9Y8zWa0Yv4c6m5HDAGfo4b3qPYcjSqcEQHL5MfMReHYVoa-5dIncR8M"/>
+</div>
+<button class="text-xs bg-border-dark hover:bg-border-dark/80 text-white px-3 py-2 rounded-lg font-bold transition-colors">Replace</button>
+</div>
+</div>
+<div class="space-y-3">
+<label class="text-sm font-medium text-[#90a7cb]">Main Logo (Dark Mode)</label>
+<div class="flex items-center gap-4">
+<div class="h-16 w-16 bg-[#101722] rounded-lg flex items-center justify-center p-2 border border-border-dark">
+<img alt="Site logo preview dark" data-alt="Dark mode site logo preview" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwuHBXV6esx54hNTRuUiTueOL2VXxNj6AprG09pTMGaONdy28DUtShozuh_nbJO2yFBPAq_CWW8tOlHk7WUvhXMczLQDGImzClkakyNYSIYrNu81y-uaFzEbK1zukoXzqXeHA80JzFzJCxkZUAZYSaUbo8vKecxu6Y83Kf1yx1G1wviNMjrBioyp5PLAFeFMIwreeBs6tDaCxl2T9aUfp0i6pAa5ajVLB2CZRAr9z81d8Z5RY6R31dC3VGNv-NLVTF8sV0JX4lojI"/>
+</div>
+<button class="text-xs bg-border-dark hover:bg-border-dark/80 text-white px-3 py-2 rounded-lg font-bold transition-colors">Replace</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- SEO Card -->
+<div class="bg-[#1e293b] rounded-xl p-6 border border-border-dark">
+<h4 class="text-white font-semibold mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">search</span>
+                                    Global SEO
+                                </h4>
+<div class="space-y-4">
+<div class="space-y-2">
+<label class="text-sm font-medium text-[#90a7cb]">Meta Title</label>
+<input class="w-full bg-[#101722] border border-border-dark rounded-lg px-4 py-2 text-white focus:ring-primary focus:border-primary text-sm" placeholder="Learn Japanese Online | NihonGo Learn" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-medium text-[#90a7cb]">Meta Description</label>
+<textarea class="w-full bg-[#101722] border border-border-dark rounded-lg px-4 py-2 text-white focus:ring-primary focus:border-primary text-sm" placeholder="The most effective way to learn Japanese from scratch to mastery." rows="3"></textarea>
+</div>
+</div>
+</div>
+</section>
+<!-- Payments Settings Section -->
+<section class="space-y-6" id="payments">
+<div class="flex items-center justify-between border-b border-border-dark pb-2">
+<h3 class="text-xl font-bold text-white">Payment Gateways</h3>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+<!-- Stripe Card -->
+<div class="bg-[#1e293b] rounded-xl p-6 border border-border-dark flex flex-col">
+<div class="flex justify-between items-start mb-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-[#635BFF] rounded-lg flex items-center justify-center text-white">
+<span class="font-bold text-xl italic">s</span>
+</div>
+<div>
+<h4 class="text-white font-semibold">Stripe</h4>
+<span class="text-xs text-green-400 flex items-center gap-1">
+<span class="h-1 w-1 bg-green-400 rounded-full"></span> Connected
+                                                </span>
+</div>
+</div>
+<label class="inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="relative w-11 h-6 bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="space-y-4">
+<div class="space-y-1">
+<label class="text-xs font-medium text-[#90a7cb]">Public Key</label>
+<input class="w-full bg-[#101722]/50 border border-border-dark/50 rounded-lg px-3 py-1.5 text-slate-400 text-xs cursor-not-allowed" readonly="" type="text" value="pk_live_51M..."/>
+</div>
+<div class="space-y-1">
+<label class="text-xs font-medium text-[#90a7cb]">Secret Key</label>
+<div class="relative">
+<input class="w-full bg-[#101722]/50 border border-border-dark/50 rounded-lg px-3 py-1.5 text-slate-400 text-xs cursor-not-allowed" type="password" value="sk_live_••••••••••••••••••••"/>
+<span class="absolute right-2 top-1.5 material-symbols-outlined text-sm cursor-pointer hover:text-white">visibility</span>
+</div>
+</div>
+</div>
+<button class="mt-6 w-full py-2 bg-[#223149] hover:bg-[#2d3f5e] text-white text-sm font-bold rounded-lg transition-colors">Configure Webhooks</button>
+</div>
+<!-- PayPal Card -->
+<div class="bg-[#1e293b] rounded-xl p-6 border border-border-dark flex flex-col">
+<div class="flex justify-between items-start mb-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-[#003087] rounded-lg flex items-center justify-center text-white">
+<span class="font-bold text-xl">P</span>
+</div>
+<div>
+<h4 class="text-white font-semibold">PayPal</h4>
+<span class="text-xs text-[#90a7cb] flex items-center gap-1">
+<span class="h-1 w-1 bg-slate-500 rounded-full"></span> Not Configured
+                                                </span>
+</div>
+</div>
+<label class="inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="relative w-11 h-6 bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<p class="text-xs text-[#90a7cb] mb-4">Accept payments via PayPal buttons and smart checkout.</p>
+<button class="mt-auto w-full py-2 bg-primary hover:bg-primary/90 text-white text-sm font-bold rounded-lg transition-colors">Setup PayPal</button>
+</div>
+</div>
+</section>
+<!-- Security Settings Section -->
+<section class="space-y-6" id="security">
+<div class="flex items-center justify-between border-b border-border-dark pb-2">
+<h3 class="text-xl font-bold text-white">Access &amp; Security</h3>
+</div>
+<div class="bg-[#1e293b] rounded-xl border border-border-dark overflow-hidden">
+<div class="p-6 border-b border-border-dark flex items-center justify-between">
+<div>
+<h4 class="text-white font-semibold">Two-Factor Authentication</h4>
+<p class="text-xs text-[#90a7cb]">Enforce 2FA for all administrator accounts.</p>
+</div>
+<label class="inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="relative w-11 h-6 bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="p-6">
+<h4 class="text-white text-sm font-semibold mb-4">Recent Security Logs</h4>
+<div class="space-y-3">
+<div class="flex items-center justify-between text-xs py-2 border-b border-border-dark/30">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-green-400">login</span>
+<span class="text-slate-200">Admin login successful</span>
+</div>
+<span class="text-slate-500">2 mins ago</span>
+</div>
+<div class="flex items-center justify-between text-xs py-2 border-b border-border-dark/30">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-amber-400">key</span>
+<span class="text-slate-200">API Key refreshed: Discord Webhook</span>
+</div>
+<span class="text-slate-500">1 hour ago</span>
+</div>
+<div class="flex items-center justify-between text-xs py-2">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-red-400">gpp_bad</span>
+<span class="text-slate-200">Failed login attempt (IP: 192.168.1.1)</span>
+</div>
+<span class="text-slate-500">5 hours ago</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+<!-- Sticky Footer Component -->
+<footer class="absolute bottom-0 left-0 right-0 bg-[#101723]/90 backdrop-blur-md border-t border-border-dark px-8 py-4 z-20">
+<div class="flex items-center justify-between max-w-7xl mx-auto">
+<div class="flex items-center gap-2 text-slate-400">
+<span class="material-symbols-outlined text-amber-400 animate-pulse">info</span>
+<span class="text-sm">You have unsaved branding changes.</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="px-6 py-2 rounded-lg text-white hover:bg-white/5 font-medium transition-colors">Discard</button>
+<button class="px-8 py-2 rounded-lg bg-primary hover:bg-primary/90 text-white font-bold shadow-lg shadow-primary/20 transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">save</span>
+                            Save Changes
+                        </button>
+</div>
+</div>
+</footer>
+</main>
+</div>
+</body></html>

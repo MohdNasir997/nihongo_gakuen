@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NihonGo Learn - Help Center</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#6366f1",
+                        "accent-muted": "#818cf8",
+                        "soft-green": "#4ade80",
+                        "deep-charcoal": "hsl(220, 15%, 12%)",
+                        "card-bg": "hsl(220, 15%, 15%)",
+                        "border-soft": "hsl(220, 15%, 20%)",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { 
+                        "DEFAULT": "0.5rem", 
+                        "lg": "0.75rem", 
+                        "xl": "1rem", 
+                        "2xl": "1.5rem",
+                        "full": "9999px" 
+                    },
+                    boxShadow: {
+                        'paper': '0 4px 20px -2px rgba(0, 0, 0, 0.3), 0 2px 10px -1px rgba(0, 0, 0, 0.2)',
+                    }
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            .material-symbols-outlined {
+                font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            }
+            .fill-icon {
+                font-variation-settings: 'FILL' 1;
+            }
+        }
+        body {
+            background-color: theme('colors.deep-charcoal');
+        }
+        .paper-card {
+            background-color: theme('colors.card-bg');
+            border: 1px solid theme('colors.border-soft');
+            box-shadow: theme('boxShadow.paper');
+        }
+        @media (min-width: 768px) and (max-width: 1023px) {
+            .sidebar-text { display: none; }
+            .sidebar-width { width: 5rem; }
+            .nav-item { justify-content: center; }
+        }
+    </style>
+</head>
+<body class="font-display text-slate-300 antialiased min-h-screen">
+<div class="flex min-h-screen w-full relative">
+<input class="hidden peer" id="menu-toggle" type="checkbox"/>
+<aside class="fixed inset-y-0 left-0 z-50 w-64 md:w-20 lg:w-64 transform -translate-x-full peer-checked:translate-x-0 md:translate-x-0 transition-all duration-300 ease-in-out border-r border-border-soft bg-deep-charcoal flex flex-col justify-between p-4 h-screen md:sticky top-0">
+<div class="flex flex-col gap-8">
+<div class="flex items-center gap-3 px-2">
+<div class="bg-primary/20 text-primary rounded-xl p-2 flex-shrink-0">
+<svg class="size-6" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z" fill="currentColor"></path>
+</svg>
+</div>
+<div class="flex flex-col md:hidden lg:flex">
+<h1 class="text-white text-base font-bold leading-tight">NihonGo Learn</h1>
+<p class="text-slate-500 text-xs font-normal">Student Portal</p>
+</div>
+</div>
+<nav class="flex flex-col gap-1.5">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-400 hover:bg-white/5 transition-colors md:justify-center lg:justify-start" href="#">
+<span class="material-symbols-outlined">book_2</span>
+<span class="text-sm font-medium md:hidden lg:block">My Courses</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-400 hover:bg-white/5 transition-colors md:justify-center lg:justify-start" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-sm font-medium md:hidden lg:block">My Progress</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-400 hover:bg-white/5 transition-colors md:justify-center lg:justify-start" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-sm font-medium md:hidden lg:block">Profile</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-400 hover:bg-white/5 transition-colors md:justify-center lg:justify-start" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-sm font-medium md:hidden lg:block">Settings</span>
+</a>
+</nav>
+</div>
+<div class="flex flex-col gap-4">
+<div class="bg-primary/5 rounded-2xl p-4 border border-primary/10 md:hidden lg:block">
+<p class="text-[10px] font-bold text-primary uppercase tracking-widest mb-2">Community</p>
+<p class="text-xs text-slate-500 mb-3 leading-relaxed">Join our student Discord for daily practice.</p>
+<button class="w-full bg-primary hover:bg-primary/90 text-white text-xs font-bold py-2.5 rounded-xl transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">forum</span>
+                    Join Discord
+                </button>
+</div>
+<a class="flex items-center gap-3 px-3 py-2 rounded-xl bg-primary/10 text-primary transition-colors md:justify-center lg:justify-start" href="#">
+<span class="material-symbols-outlined fill-icon">help_center</span>
+<p class="text-sm font-semibold md:hidden lg:block">Help Center</p>
+</a>
+</div>
+</aside>
+<label class="fixed inset-0 bg-black/60 z-40 hidden peer-checked:block md:hidden backdrop-blur-sm" for="menu-toggle"></label>
+<main class="flex-1 flex flex-col overflow-y-auto w-full">
+<header class="h-16 border-b border-border-soft bg-deep-charcoal/80 backdrop-blur-md sticky top-0 z-10 px-4 md:px-8 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<label class="md:hidden cursor-pointer p-1 text-slate-400" for="menu-toggle">
+<span class="material-symbols-outlined">menu</span>
+</label>
+<div class="hidden sm:flex items-center gap-2 text-xs text-slate-500">
+<a class="hover:text-primary transition-colors" href="#">Home</a>
+<span class="text-slate-600">/</span>
+<span class="text-slate-300 font-medium tracking-wide">Help Center</span>
+</div>
+</div>
+<div class="flex items-center gap-3 md:gap-6">
+<div class="relative w-32 sm:w-64 group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 group-focus-within:text-primary transition-colors text-sm sm:text-base">search</span>
+<input class="w-full bg-white/5 border border-white/5 rounded-xl pl-8 sm:pl-10 py-2 text-xs sm:text-sm focus:ring-1 focus:ring-primary/50 focus:border-primary/50 text-slate-200 placeholder-slate-500" placeholder="Search articles..." type="text"/>
+</div>
+<div class="flex items-center gap-3 border-l border-border-soft pl-3 sm:pl-6">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-9 border-2 border-border-soft shadow-inner" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBV2B_PXjzKa0KmElCrIFHyxjOR7rWEhJxpyzJezoU4_SoK6bN7bBHRZVLQg_0pjbvVhn8-RnwF6S9b4cD0GjRNH1flLmJiVFbkZYw2yqZwInGqXlGf4RyFEXXBnIQiEn6AAcUII8YkxJlcBXNnzaf1BvOegoEhrVN4g8ZisWz5FgyGt9cHwK6o2fjSJ4p0SM7riL1TlXGkIFzdWaL9G-vBarU8l615vwk6m8SsqcHUqYsWloQtT5T5LP-dlMO2EXuoivbgCA8SllA");'></div>
+</div>
+</div>
+</header>
+<div class="p-4 sm:p-6 md:p-8 max-w-6xl mx-auto w-full">
+<div class="text-center mb-12 py-8">
+<h1 class="text-white text-3xl sm:text-4xl font-bold tracking-tight mb-4">How can we help, Alex-san?</h1>
+<p class="text-slate-500 text-base max-w-xl mx-auto mb-8">Search our knowledge base or browse popular topics to find the answers you need to continue your learning journey.</p>
+<div class="max-w-2xl mx-auto relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-primary transition-colors">search</span>
+<input class="w-full bg-card-bg border border-border-soft rounded-2xl py-4 pl-12 pr-4 text-slate-200 focus:ring-2 focus:ring-primary/40 focus:border-primary/40 shadow-paper outline-none transition-all placeholder-slate-600" placeholder="Search for 'billing', 'kanji courses', 'discord link'..." type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+<a class="paper-card rounded-2xl p-6 hover:translate-y-[-4px] transition-all group" href="#">
+<div class="size-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<h3 class="text-white font-bold text-lg mb-2">Billing &amp; Subscriptions</h3>
+<p class="text-slate-500 text-sm leading-relaxed">Manage your Pro account, update payment methods, and view your invoices.</p>
+</a>
+<a class="paper-card rounded-2xl p-6 hover:translate-y-[-4px] transition-all group" href="#">
+<div class="size-12 rounded-xl bg-soft-green/10 text-soft-green flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">local_library</span>
+</div>
+<h3 class="text-white font-bold text-lg mb-2">Course Access</h3>
+<p class="text-slate-500 text-sm leading-relaxed">Troubleshooting access to JLPT N4-N5 content and vocabulary flashcards.</p>
+</a>
+<a class="paper-card rounded-2xl p-6 hover:translate-y-[-4px] transition-all group" href="#">
+<div class="size-12 rounded-xl bg-orange-400/10 text-orange-400 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">chat_bubble</span>
+</div>
+<h3 class="text-white font-bold text-lg mb-2">Language Exchange FAQ</h3>
+<p class="text-slate-500 text-sm leading-relaxed">Guidelines for community practice sessions and finding a study partner.</p>
+</a>
+<a class="paper-card rounded-2xl p-6 hover:translate-y-[-4px] transition-all group" href="#">
+<div class="size-12 rounded-xl bg-purple-400/10 text-purple-400 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">devices</span>
+</div>
+<h3 class="text-white font-bold text-lg mb-2">Technical Support</h3>
+<p class="text-slate-500 text-sm leading-relaxed">Reporting bugs, mobile app issues, or audio playback problems.</p>
+</a>
+<a class="paper-card rounded-2xl p-6 hover:translate-y-[-4px] transition-all group" href="#">
+<div class="size-12 rounded-xl bg-accent-muted/10 text-accent-muted flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">person_pin</span>
+</div>
+<h3 class="text-white font-bold text-lg mb-2">Account Settings</h3>
+<p class="text-slate-500 text-sm leading-relaxed">Change your password, email notifications, and study goals.</p>
+</a>
+<a class="paper-card rounded-2xl p-6 hover:translate-y-[-4px] transition-all group" href="#">
+<div class="size-12 rounded-xl bg-blue-400/10 text-blue-400 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">verified</span>
+</div>
+<h3 class="text-white font-bold text-lg mb-2">Certificates</h3>
+<p class="text-slate-500 text-sm leading-relaxed">How to download your course completion certificates for LinkedIn.</p>
+</a>
+</div>
+<div class="paper-card rounded-3xl p-8 sm:p-12 text-center bg-gradient-to-br from-card-bg to-deep-charcoal border-primary/20">
+<div class="mb-6">
+<span class="material-symbols-outlined text-5xl text-primary/40">contact_support</span>
+</div>
+<h2 class="text-white text-2xl font-bold mb-3">Still need help?</h2>
+<p class="text-slate-400 mb-8 max-w-md mx-auto">Can't find what you're looking for? Our support team is available Monday through Friday to assist you.</p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+<button class="w-full sm:w-auto px-8 py-3.5 bg-primary hover:bg-primary/90 text-white font-bold rounded-2xl transition-all shadow-lg shadow-primary/20 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">mail</span>
+                        Contact Support
+                    </button>
+<button class="w-full sm:w-auto px-8 py-3.5 bg-white/5 hover:bg-white/10 text-slate-300 font-bold rounded-2xl transition-all border border-border-soft flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">chat_paste_go</span>
+                        Live Chat
+                    </button>
+</div>
+<p class="mt-6 text-xs text-slate-600">Average response time: &lt; 24 hours</p>
+</div>
+<div class="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-8">
+<div>
+<h3 class="text-white font-bold text-xl mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">article</span>
+                        Trending Articles
+                    </h3>
+<div class="space-y-4">
+<a class="flex items-center justify-between p-4 rounded-xl hover:bg-white/5 transition-colors border border-transparent hover:border-border-soft group" href="#">
+<span class="text-slate-300 group-hover:text-primary transition-colors">How to use the Kanji Recognition Tool</span>
+<span class="material-symbols-outlined text-slate-600 group-hover:translate-x-1 transition-transform">chevron_right</span>
+</a>
+<a class="flex items-center justify-between p-4 rounded-xl hover:bg-white/5 transition-colors border border-transparent hover:border-border-soft group" href="#">
+<span class="text-slate-300 group-hover:text-primary transition-colors">Connecting your Discord account for roles</span>
+<span class="material-symbols-outlined text-slate-600 group-hover:translate-x-1 transition-transform">chevron_right</span>
+</a>
+<a class="flex items-center justify-between p-4 rounded-xl hover:bg-white/5 transition-colors border border-transparent hover:border-border-soft group" href="#">
+<span class="text-slate-300 group-hover:text-primary transition-colors">Setting up daily study reminders</span>
+<span class="material-symbols-outlined text-slate-600 group-hover:translate-x-1 transition-transform">chevron_right</span>
+</a>
+</div>
+</div>
+<div>
+<h3 class="text-white font-bold text-xl mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">live_help</span>
+                        Quick Tips
+                    </h3>
+<div class="paper-card rounded-2xl p-6">
+<div class="flex gap-4 mb-4">
+<div class="size-10 rounded-lg bg-soft-green/10 text-soft-green flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined">lightbulb</span>
+</div>
+<div>
+<h4 class="text-slate-200 font-bold text-sm mb-1">Use Mnemonics</h4>
+<p class="text-slate-500 text-xs leading-relaxed">When learning kanji, check the "Mnemonics" tab in any lesson for helpful memory triggers.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="size-10 rounded-lg bg-accent-muted/10 text-accent-muted flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined">keyboard</span>
+</div>
+<div>
+<h4 class="text-slate-200 font-bold text-sm mb-1">Keyboard Shortcuts</h4>
+<p class="text-slate-500 text-xs leading-relaxed">Press 'J' and 'K' to navigate through flashcards quickly during your review sessions.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Admin Platform Analytics - NihonGo Learn</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3c83f6",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101722",
+                        "card-dark": "#1a2332",
+                        "border-dark": "#314668",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .chart-gradient {
+            background: linear-gradient(180deg, rgba(60, 131, 246, 0.15) 0%, rgba(60, 131, 246, 0) 100%);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display">
+<div class="flex min-h-screen">
+<!-- Sidebar -->
+<aside class="w-64 bg-background-dark border-r border-border-dark flex flex-col fixed h-full">
+<div class="p-6 flex flex-col h-full">
+<div class="flex items-center gap-3 mb-10">
+<div class="bg-primary rounded-lg size-10 flex items-center justify-center">
+<span class="material-symbols-outlined text-white">translate</span>
+</div>
+<div class="flex flex-col">
+<h1 class="text-white text-base font-bold leading-tight">NihonGo Learn</h1>
+<p class="text-[#90a7cb] text-xs font-normal">Admin CMS</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2 grow">
+<a class="flex items-center gap-3 px-4 py-3 text-[#90a7cb] hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg bg-primary/20 text-primary border border-primary/30" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-sm font-medium">Analytics</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#90a7cb] hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="text-sm font-medium">Courses</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#90a7cb] hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="text-sm font-medium">Students</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#90a7cb] hover:text-white transition-colors mt-auto" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-sm font-medium">Settings</span>
+</a>
+</nav>
+<div class="mt-6 pt-6 border-t border-border-dark">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-2.5 rounded-lg text-sm transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">download</span>
+                        Export CSV
+                    </button>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="ml-64 flex-1 p-8">
+<!-- Header Section -->
+<div class="flex flex-wrap justify-between items-end gap-6 mb-8">
+<div class="flex flex-col gap-2">
+<h2 class="text-white text-4xl font-black tracking-tight">Platform Analytics</h2>
+<p class="text-[#90a7cb] text-base">Real-time overview of platform health and student growth.</p>
+</div>
+<div class="flex items-center gap-3">
+<div class="bg-card-dark border border-border-dark rounded-lg flex items-center px-4 py-2 text-white">
+<span class="material-symbols-outlined text-primary mr-2">calendar_today</span>
+<span class="text-sm font-medium">Oct 1, 2023 - Nov 30, 2023</span>
+</div>
+<button class="bg-card-dark border border-border-dark text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-border-dark transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">refresh</span>
+                        Refresh Data
+                    </button>
+</div>
+</div>
+<!-- Stats Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+<div class="bg-card-dark border border-border-dark rounded-xl p-6">
+<div class="flex justify-between items-start mb-4">
+<p class="text-[#90a7cb] text-sm font-medium">Total Users</p>
+<span class="bg-green-500/10 text-green-400 text-xs px-2 py-0.5 rounded-full">+12%</span>
+</div>
+<p class="text-white text-3xl font-bold">24,502</p>
+</div>
+<div class="bg-card-dark border border-border-dark rounded-xl p-6">
+<div class="flex justify-between items-start mb-4">
+<p class="text-[#90a7cb] text-sm font-medium">Active Students</p>
+<span class="bg-green-500/10 text-green-400 text-xs px-2 py-0.5 rounded-full">+5.2%</span>
+</div>
+<p class="text-white text-3xl font-bold">12,840</p>
+</div>
+<div class="bg-card-dark border border-border-dark rounded-xl p-6">
+<div class="flex justify-between items-start mb-4">
+<p class="text-[#90a7cb] text-sm font-medium">Churn Rate</p>
+<span class="bg-orange-500/10 text-orange-400 text-xs px-2 py-0.5 rounded-full">-0.5%</span>
+</div>
+<p class="text-white text-3xl font-bold">2.4%</p>
+</div>
+<div class="bg-card-dark border border-border-dark rounded-xl p-6">
+<div class="flex justify-between items-start mb-4">
+<p class="text-[#90a7cb] text-sm font-medium">Monthly Revenue</p>
+<span class="bg-green-500/10 text-green-400 text-xs px-2 py-0.5 rounded-full">+8.4%</span>
+</div>
+<p class="text-white text-3xl font-bold">¥1,250,000</p>
+</div>
+</div>
+<!-- Charts Section -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+<!-- Area Chart: Student Growth -->
+<div class="bg-card-dark border border-border-dark rounded-xl p-8">
+<div class="flex justify-between items-center mb-6">
+<div>
+<h3 class="text-white text-lg font-bold">Student Growth Over Time</h3>
+<p class="text-[#90a7cb] text-sm mt-1">Acquisition trends over the last 6 months</p>
+</div>
+<div class="text-right">
+<p class="text-primary text-2xl font-bold">12,840</p>
+<p class="text-[#90a7cb] text-xs uppercase tracking-wider font-bold">Active Total</p>
+</div>
+</div>
+<div class="h-64 relative">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 500 200">
+<defs>
+<lineargradient id="areaGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#3c83f6" stop-opacity="0.3"></stop>
+<stop offset="100%" stop-color="#3c83f6" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+<path d="M0,160 Q50,140 100,150 T200,80 T300,100 T400,40 T500,60 L500,200 L0,200 Z" fill="url(#areaGradient)"></path>
+<path d="M0,160 Q50,140 100,150 T200,80 T300,100 T400,40 T500,60" fill="none" stroke="#3c83f6" stroke-linecap="round" stroke-width="4"></path>
+</svg>
+</div>
+<div class="flex justify-between mt-4">
+<span class="text-[#90a7cb] text-xs font-bold uppercase tracking-widest">Jun</span>
+<span class="text-[#90a7cb] text-xs font-bold uppercase tracking-widest">Jul</span>
+<span class="text-[#90a7cb] text-xs font-bold uppercase tracking-widest">Aug</span>
+<span class="text-[#90a7cb] text-xs font-bold uppercase tracking-widest">Sep</span>
+<span class="text-[#90a7cb] text-xs font-bold uppercase tracking-widest">Oct</span>
+<span class="text-[#90a7cb] text-xs font-bold uppercase tracking-widest">Nov</span>
+</div>
+</div>
+<!-- Bar Chart: Revenue -->
+<div class="bg-card-dark border border-border-dark rounded-xl p-8">
+<div class="flex justify-between items-center mb-6">
+<div>
+<h3 class="text-white text-lg font-bold">Monthly Revenue Trends</h3>
+<p class="text-[#90a7cb] text-sm mt-1">Projected vs Actual Revenue</p>
+</div>
+<div class="text-right">
+<p class="text-green-400 text-2xl font-bold">¥1.25M</p>
+<p class="text-[#90a7cb] text-xs uppercase tracking-wider font-bold">Monthly Total</p>
+</div>
+</div>
+<div class="h-64 flex items-end justify-between gap-4 px-2">
+<div class="flex-1 bg-border-dark/50 rounded-t-lg relative group h-[40%]">
+<div class="absolute inset-0 bg-primary/40 rounded-t-lg transition-all group-hover:bg-primary/60"></div>
+</div>
+<div class="flex-1 bg-border-dark/50 rounded-t-lg relative group h-[55%]">
+<div class="absolute inset-0 bg-primary/40 rounded-t-lg transition-all group-hover:bg-primary/60"></div>
+</div>
+<div class="flex-1 bg-border-dark/50 rounded-t-lg relative group h-[45%]">
+<div class="absolute inset-0 bg-primary/40 rounded-t-lg transition-all group-hover:bg-primary/60"></div>
+</div>
+<div class="flex-1 bg-border-dark/50 rounded-t-lg relative group h-[75%]">
+<div class="absolute inset-0 bg-primary/40 rounded-t-lg transition-all group-hover:bg-primary/60"></div>
+</div>
+<div class="flex-1 bg-border-dark/50 rounded-t-lg relative group h-[90%]">
+<div class="absolute inset-0 bg-primary/40 rounded-t-lg transition-all group-hover:bg-primary/60"></div>
+</div>
+<div class="flex-1 bg-border-dark/50 rounded-t-lg relative group h-[65%]">
+<div class="absolute inset-0 bg-primary/40 rounded-t-lg transition-all group-hover:bg-primary/60"></div>
+</div>
+</div>
+<div class="flex justify-between mt-4 px-2">
+<span class="text-[#90a7cb] text-xs font-bold uppercase tracking-widest">Jun</span>
+<span class="text-[#90a7cb] text-xs font-bold uppercase tracking-widest">Jul</span>
+<span class="text-[#90a7cb] text-xs font-bold uppercase tracking-widest">Aug</span>
+<span class="text-[#90a7cb] text-xs font-bold uppercase tracking-widest">Sep</span>
+<span class="text-[#90a7cb] text-xs font-bold uppercase tracking-widest">Oct</span>
+<span class="text-[#90a7cb] text-xs font-bold uppercase tracking-widest">Nov</span>
+</div>
+</div>
+</div>
+<!-- Bottom Section Grid -->
+<div class="grid grid-cols-1 xl:grid-cols-3 gap-8">
+<!-- Course Distribution Doughnut -->
+<div class="bg-card-dark border border-border-dark rounded-xl p-8">
+<h3 class="text-white text-lg font-bold mb-6">JLPT Level Distribution</h3>
+<div class="relative flex justify-center py-6">
+<svg class="size-48" viewbox="0 0 36 36">
+<circle cx="18" cy="18" fill="none" r="16" stroke="#223149" stroke-width="4"></circle>
+<circle cx="18" cy="18" fill="none" r="16" stroke="#3c83f6" stroke-dasharray="30 100" stroke-dashoffset="0" stroke-width="4"></circle>
+<circle cx="18" cy="18" fill="none" r="16" stroke="#60a5fa" stroke-dasharray="25 100" stroke-dashoffset="-30" stroke-width="4"></circle>
+<circle cx="18" cy="18" fill="none" r="16" stroke="#93c5fd" stroke-dasharray="20 100" stroke-dashoffset="-55" stroke-width="4"></circle>
+<circle cx="18" cy="18" fill="none" r="16" stroke="#bfdbfe" stroke-dasharray="15 100" stroke-dashoffset="-75" stroke-width="4"></circle>
+<circle cx="18" cy="18" fill="none" r="16" stroke="#dbeafe" stroke-dasharray="10 100" stroke-dashoffset="-90" stroke-width="4"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="text-white text-2xl font-bold">142</span>
+<span class="text-[#90a7cb] text-xs uppercase font-bold tracking-widest">Courses</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 mt-6">
+<div class="flex items-center gap-2">
+<div class="size-2 rounded-full bg-blue-500"></div>
+<span class="text-white text-sm">N5: 30%</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="size-2 rounded-full bg-blue-400"></div>
+<span class="text-white text-sm">N4: 25%</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="size-2 rounded-full bg-blue-300"></div>
+<span class="text-white text-sm">N3: 20%</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="size-2 rounded-full bg-blue-200"></div>
+<span class="text-white text-sm">N2: 15%</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="size-2 rounded-full bg-blue-100"></div>
+<span class="text-white text-sm">N1: 10%</span>
+</div>
+</div>
+</div>
+<!-- Top Performing Courses -->
+<div class="xl:col-span-2 bg-card-dark border border-border-dark rounded-xl p-8">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-white text-lg font-bold">Top Performing Courses</h3>
+<button class="text-primary text-sm font-bold hover:underline">View All</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="text-[#90a7cb] text-xs font-bold uppercase tracking-wider border-b border-border-dark">
+<th class="pb-4">Course Name</th>
+<th class="pb-4">Level</th>
+<th class="pb-4">Enrollments</th>
+<th class="pb-4">Completion</th>
+<th class="pb-4">Rating</th>
+</tr>
+</thead>
+<tbody class="text-sm">
+<tr class="border-b border-border-dark/50">
+<td class="py-4 text-white font-medium">Mastering Katakana</td>
+<td class="py-4"><span class="px-2 py-1 bg-blue-500/10 text-blue-400 rounded text-[10px] font-bold">N5</span></td>
+<td class="py-4 text-white">4,280</td>
+<td class="py-4">
+<div class="w-24 bg-border-dark rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary h-full w-[85%]"></div>
+</div>
+</td>
+<td class="py-4 flex items-center gap-1 text-yellow-400">
+<span class="material-symbols-outlined text-sm">star</span> 4.9
+                                    </td>
+</tr>
+<tr class="border-b border-border-dark/50">
+<td class="py-4 text-white font-medium">JLPT N4 Grammar Essentials</td>
+<td class="py-4"><span class="px-2 py-1 bg-blue-500/10 text-blue-400 rounded text-[10px] font-bold">N4</span></td>
+<td class="py-4 text-white">3,150</td>
+<td class="py-4">
+<div class="w-24 bg-border-dark rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary h-full w-[72%]"></div>
+</div>
+</td>
+<td class="py-4 flex items-center gap-1 text-yellow-400">
+<span class="material-symbols-outlined text-sm">star</span> 4.8
+                                    </td>
+</tr>
+<tr class="border-b border-border-dark/50">
+<td class="py-4 text-white font-medium">Daily Life Conversations</td>
+<td class="py-4"><span class="px-2 py-1 bg-blue-500/10 text-blue-400 rounded text-[10px] font-bold">N3</span></td>
+<td class="py-4 text-white">2,890</td>
+<td class="py-4">
+<div class="w-24 bg-border-dark rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary h-full w-[60%]"></div>
+</div>
+</td>
+<td class="py-4 flex items-center gap-1 text-yellow-400">
+<span class="material-symbols-outlined text-sm">star</span> 4.7
+                                    </td>
+</tr>
+<tr class="border-b border-border-dark/50">
+<td class="py-4 text-white font-medium">Business Japanese Advanced</td>
+<td class="py-4"><span class="px-2 py-1 bg-blue-500/10 text-blue-400 rounded text-[10px] font-bold">N2</span></td>
+<td class="py-4 text-white">1,420</td>
+<td class="py-4">
+<div class="w-24 bg-border-dark rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary h-full w-[45%]"></div>
+</div>
+</td>
+<td class="py-4 flex items-center gap-1 text-yellow-400">
+<span class="material-symbols-outlined text-sm">star</span> 4.9
+                                    </td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

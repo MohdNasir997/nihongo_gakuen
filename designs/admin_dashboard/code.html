@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NihonGo Learn - Admin CMS Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3c3cf6",
+                        "background-light": "#f5f5f8",
+                        "background-dark": "#101022",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .sidebar-active {
+            background-color: rgba(60, 60, 246, 0.15);
+            border-left: 4px solid #3c3cf6;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<div class="flex h-screen overflow-hidden">
+<!-- Sidebar Navigation -->
+<aside class="w-72 bg-white dark:bg-[#16162d] border-r border-slate-200 dark:border-[#222249] flex flex-col transition-all duration-300">
+<div class="p-6">
+<div class="flex items-center gap-3">
+<div class="bg-primary size-10 rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined">translate</span>
+</div>
+<div>
+<h1 class="text-lg font-bold leading-tight">NihonGo Learn</h1>
+<p class="text-xs text-slate-500 dark:text-[#9090cb]">CMS Administrator</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 px-4 space-y-1">
+<a class="flex items-center gap-3 px-3 py-3 rounded-lg sidebar-active text-primary" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-sm font-semibold">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-3 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-[#222249] transition-colors" href="#">
+<span class="material-symbols-outlined">article</span>
+<span class="text-sm font-medium">Content Management</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-3 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-[#222249] transition-colors" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="text-sm font-medium">Users</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-3 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-[#222249] transition-colors" href="#">
+<span class="material-symbols-outlined">school</span>
+<span class="text-sm font-medium">Courses</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-3 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-[#222249] transition-colors" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-sm font-medium">Reports</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-3 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-[#222249] transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-sm font-medium">Settings</span>
+</a>
+</nav>
+<div class="p-4 border-t border-slate-200 dark:border-[#222249]">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-3 rounded-lg flex items-center justify-center gap-2 transition-all">
+<span class="material-symbols-outlined text-sm">add</span>
+<span>Quick Add Course</span>
+</button>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col overflow-y-auto bg-background-light dark:bg-background-dark">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between px-8 py-4 bg-white/50 dark:bg-[#101022]/50 backdrop-blur-md border-b border-slate-200 dark:border-[#222249] sticky top-0 z-10">
+<div class="flex items-center gap-4 flex-1">
+<div class="relative w-full max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 dark:text-[#9090cb]">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-slate-100 dark:bg-[#222249] border-none rounded-lg focus:ring-2 focus:ring-primary/50 dark:text-white placeholder:text-slate-400 dark:placeholder:text-[#9090cb]" placeholder="Search lessons, users, or reports..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-lg bg-slate-100 dark:bg-[#222249] text-slate-600 dark:text-white hover:bg-slate-200 dark:hover:bg-[#2c2c5a] relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2.5 w-2 h-2 bg-red-500 rounded-full border-2 border-white dark:border-[#101022]"></span>
+</button>
+<button class="p-2 rounded-lg bg-slate-100 dark:bg-[#222249] text-slate-600 dark:text-white hover:bg-slate-200 dark:hover:bg-[#2c2c5a]">
+<span class="material-symbols-outlined">chat_bubble</span>
+</button>
+</div>
+<div class="h-8 w-px bg-slate-200 dark:border-[#222249]"></div>
+<div class="flex items-center gap-3 pl-2">
+<div class="text-right hidden sm:block">
+<p class="text-sm font-bold">Admin Tanaka</p>
+<p class="text-xs text-slate-500 dark:text-[#9090cb]">System Architect</p>
+</div>
+<div class="size-10 rounded-full border-2 border-primary overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Profile picture of the platform administrator" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCPWNT7iEOFUV3APyoGzvMMSy71p5kmF7VFHN-AvLFmIZUfYh98U7x1n3er9itJi5RTClIbhQPigBiyLNR-o_oz9Oimd-lMIL9AuWiavCBE-wfW3-Ve9ZHuvZvkGcHHaY_GGawyuAvreMi9PhGK8tMwAMUtJL8ZStS5nIHmkT-fsgquRoOZBkNYv9ymDVTuYymdhkZMK4A5xkglYZ_rwL5Av5q3ukN53ChpOOj4XDO9roUN9ClEVmnD0MFV8-YKUPmSc6Ed8bhVFk"/>
+</div>
+</div>
+</div>
+</header>
+<div class="p-8 space-y-8">
+<!-- Page Heading -->
+<div class="flex flex-col gap-2">
+<h2 class="text-4xl font-black tracking-tight">Dashboard Overview</h2>
+<p class="text-slate-500 dark:text-[#9090cb]">Welcome back. Here is the latest performance data for NihonGo Learn.</p>
+</div>
+<!-- Stats Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="bg-white dark:bg-[#222249] p-6 rounded-xl shadow-sm border border-slate-200 dark:border-transparent">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-blue-100 dark:bg-blue-500/20 text-blue-600 dark:text-blue-400 rounded-lg">
+<span class="material-symbols-outlined">group</span>
+</div>
+<span class="text-green-500 text-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">trending_up</span> +12.5%
+                            </span>
+</div>
+<p class="text-slate-500 dark:text-[#9090cb] text-sm font-medium">Total Students</p>
+<p class="text-3xl font-bold mt-1">12,482</p>
+</div>
+<div class="bg-white dark:bg-[#222249] p-6 rounded-xl shadow-sm border border-slate-200 dark:border-transparent">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-purple-100 dark:bg-purple-500/20 text-purple-600 dark:text-purple-400 rounded-lg">
+<span class="material-symbols-outlined">library_books</span>
+</div>
+<span class="text-green-500 text-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">trending_up</span> +3.2%
+                            </span>
+</div>
+<p class="text-slate-500 dark:text-[#9090cb] text-sm font-medium">Active Courses</p>
+<p class="text-3xl font-bold mt-1">156</p>
+</div>
+<div class="bg-white dark:bg-[#222249] p-6 rounded-xl shadow-sm border border-slate-200 dark:border-transparent">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-emerald-100 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 rounded-lg">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<span class="text-green-500 text-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">trending_up</span> +8.4%
+                            </span>
+</div>
+<p class="text-slate-500 dark:text-[#9090cb] text-sm font-medium">Monthly Revenue</p>
+<p class="text-3xl font-bold mt-1">¥2,450,000</p>
+</div>
+<div class="bg-white dark:bg-[#222249] p-6 rounded-xl shadow-sm border border-slate-200 dark:border-transparent">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-orange-100 dark:bg-orange-500/20 text-orange-600 dark:text-orange-400 rounded-lg">
+<span class="material-symbols-outlined">history_edu</span>
+</div>
+<span class="text-orange-500 text-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">pending</span> 18
+                            </span>
+</div>
+<p class="text-slate-500 dark:text-[#9090cb] text-sm font-medium">Pending Review</p>
+<p class="text-3xl font-bold mt-1">24</p>
+</div>
+</div>
+<!-- Recent Activity Section -->
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<h3 class="text-2xl font-bold">Recent Activity</h3>
+<button class="text-primary text-sm font-bold hover:underline">View All Activity</button>
+</div>
+<div class="bg-white dark:bg-[#222249] rounded-xl overflow-hidden shadow-sm border border-slate-200 dark:border-transparent">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-slate-50 dark:bg-[#2a2a5a] text-slate-500 dark:text-[#9090cb] text-xs uppercase tracking-wider">
+<th class="px-6 py-4 font-bold">Event Type</th>
+<th class="px-6 py-4 font-bold">Details</th>
+<th class="px-6 py-4 font-bold">Timestamp</th>
+<th class="px-6 py-4 font-bold">Status</th>
+<th class="px-6 py-4 font-bold text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 dark:divide-[#2c2c5a]">
+<tr class="hover:bg-slate-50 dark:hover:bg-[#2a2a5a]/50 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-blue-500">person_add</span>
+<span class="font-medium">New Student</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<div class="flex flex-col">
+<span class="text-sm font-bold">Sato Kenji</span>
+<span class="text-xs text-slate-500 dark:text-[#9090cb]">Enrolled in JLPT N3 Intensive</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-500 dark:text-[#9090cb]">2 mins ago</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 rounded-full text-[10px] font-bold uppercase bg-green-100 text-green-700 dark:bg-green-500/20 dark:text-green-400">Completed</span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 dark:hover:bg-[#2a2a5a]/50 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-purple-500">upload_file</span>
+<span class="font-medium">Course Update</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<div class="flex flex-col">
+<span class="text-sm font-bold">Business Japanese Vol. 2</span>
+<span class="text-xs text-slate-500 dark:text-[#9090cb]">By Sensei Nakamura</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-500 dark:text-[#9090cb]">14 mins ago</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 rounded-full text-[10px] font-bold uppercase bg-amber-100 text-amber-700 dark:bg-amber-500/20 dark:text-amber-400">Reviewing</span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 dark:hover:bg-[#2a2a5a]/50 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-emerald-500">shopping_cart</span>
+<span class="font-medium">New Subscription</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<div class="flex flex-col">
+<span class="text-sm font-bold">Emily Watson</span>
+<span class="text-xs text-slate-500 dark:text-[#9090cb]">Lifetime Premium Access Plan</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-500 dark:text-[#9090cb]">45 mins ago</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 rounded-full text-[10px] font-bold uppercase bg-green-100 text-green-700 dark:bg-green-500/20 dark:text-green-400">Completed</span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 dark:hover:bg-[#2a2a5a]/50 transition-colors">
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-red-500">error</span>
+<span class="font-medium">System Alert</span>
+</div>
+</td>
+<td class="px-6 py-4">
+<div class="flex flex-col">
+<span class="text-sm font-bold">Video Server Latency</span>
+<span class="text-xs text-slate-500 dark:text-[#9090cb]">High load on Tokyo-01 Node</span>
+</div>
+</td>
+<td class="px-6 py-4 text-sm text-slate-500 dark:text-[#9090cb]">1 hour ago</td>
+<td class="px-6 py-4">
+<span class="px-2 py-1 rounded-full text-[10px] font-bold uppercase bg-red-100 text-red-700 dark:bg-red-500/20 dark:text-red-400">Critical</span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Secondary Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 pb-12">
+<div class="bg-white dark:bg-[#222249] p-6 rounded-xl shadow-sm border border-slate-200 dark:border-transparent">
+<div class="flex items-center justify-between mb-6">
+<h4 class="text-lg font-bold">Popular Courses</h4>
+<span class="material-symbols-outlined text-slate-400">bar_chart</span>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded bg-primary/10 flex items-center justify-center font-bold text-primary">N5</div>
+<div class="flex-1">
+<p class="text-sm font-bold">Absolute Beginner Kanji</p>
+<div class="w-full bg-slate-100 dark:bg-[#2c2c5a] h-1.5 mt-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[85%]"></div>
+</div>
+</div>
+<span class="text-xs font-bold">85% Capacity</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded bg-primary/10 flex items-center justify-center font-bold text-primary">N3</div>
+<div class="flex-1">
+<p class="text-sm font-bold">Intermediate Conversational Japanese</p>
+<div class="w-full bg-slate-100 dark:bg-[#2c2c5a] h-1.5 mt-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[62%]"></div>
+</div>
+</div>
+<span class="text-xs font-bold">62% Capacity</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded bg-primary/10 flex items-center justify-center font-bold text-primary">B2</div>
+<div class="flex-1">
+<p class="text-sm font-bold">Keigo for Business Success</p>
+<div class="w-full bg-slate-100 dark:bg-[#2c2c5a] h-1.5 mt-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[44%]"></div>
+</div>
+</div>
+<span class="text-xs font-bold">44% Capacity</span>
+</div>
+</div>
+</div>
+<div class="bg-gradient-to-br from-primary to-blue-600 p-8 rounded-xl shadow-lg relative overflow-hidden group">
+<div class="relative z-10 text-white flex flex-col h-full justify-between">
+<div>
+<h4 class="text-2xl font-bold mb-2">Platform Health</h4>
+<p class="opacity-80 text-sm">System integrity is optimal. All API endpoints responding within 40ms.</p>
+</div>
+<div class="mt-8 flex gap-4">
+<div class="flex flex-col">
+<span class="text-3xl font-black">99.9%</span>
+<span class="text-xs uppercase font-bold opacity-75">Uptime</span>
+</div>
+<div class="w-px bg-white/20 h-full"></div>
+<div class="flex flex-col">
+<span class="text-3xl font-black">2.1s</span>
+<span class="text-xs uppercase font-bold opacity-75">Avg Load Time</span>
+</div>
+</div>
+</div>
+<div class="absolute -right-4 -bottom-4 opacity-20 transform group-hover:scale-110 transition-transform duration-700">
+<span class="material-symbols-outlined text-[160px]">verified_user</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>
