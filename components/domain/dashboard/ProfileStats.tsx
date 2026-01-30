@@ -1,5 +1,6 @@
 import { Card } from '@/components/ui/card';
 import { motion } from 'motion/react';
+import { GraduationCap, Clock, Flame, Trophy } from 'lucide-react';
 
 interface ProfileStatsProps {
   stats: {
@@ -15,26 +16,26 @@ export default function ProfileStats({ stats }: ProfileStatsProps) {
     {
       label: 'Courses Completed',
       value: stats.coursesCompleted,
-      icon: 'school',
-      color: 'text-blue-500',
+      icon: <GraduationCap className="text-3xl" />,
+      color: 'text-blue-600 dark:text-blue-400',
     },
     {
       label: 'Hours Studied',
       value: stats.hoursStudied,
-      icon: 'schedule',
-      color: 'text-green-500',
+      icon: <Clock className="text-3xl" />,
+      color: 'text-green-600 dark:text-green-400',
     },
     {
       label: 'Current Streak',
       value: `${stats.currentStreak} days`,
-      icon: 'local_fire_department',
-      color: 'text-orange-500',
+      icon: <Flame className="text-3xl" />,
+      color: 'text-orange-600 dark:text-orange-400',
     },
     {
       label: 'Longest Streak',
       value: `${stats.longestStreak} days`,
-      icon: 'emoji_events',
-      color: 'text-purple-500',
+      icon: <Trophy className="text-3xl" />,
+      color: 'text-purple-600 dark:text-purple-400',
     },
   ];
 
@@ -44,9 +45,9 @@ export default function ProfileStats({ stats }: ProfileStatsProps) {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3, delay: 0.3 }}
     >
-      <Card className="bg-card-bg border-border-soft shadow-paper">
+      <Card className="bg-card border-border shadow-sm">
         <div className="p-6">
-          <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-6">
+          <h2 className="text-xl font-bold text-card-foreground mb-6">
             My Stats
           </h2>
           <div className="grid grid-cols-2 gap-4">
@@ -57,20 +58,18 @@ export default function ProfileStats({ stats }: ProfileStatsProps) {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.3, delay: index * 0.1 }}
                 whileHover={{ scale: 1.05 }}
-                className="p-4 rounded-lg bg-white/5 hover:bg-white/10 transition-colors"
+                className="p-4 rounded-lg bg-accent/20 hover:bg-accent/10 transition-colors"
               >
                 <div className="flex items-center gap-3 mb-2">
-                  <span
-                    className={`material-symbols-outlined text-3xl ${stat.color}`}
-                  >
+                  <span className={stat.color}>
                     {stat.icon}
                   </span>
                 </div>
                 <div>
-                  <p className="text-sm text-slate-500 dark:text-slate-400 mb-1">
+                  <p className="text-sm text-muted-foreground mb-1">
                     {stat.label}
                   </p>
-                  <p className="text-3xl font-bold text-slate-900 dark:text-white">
+                  <p className="text-3xl font-bold text-card-foreground">
                     {stat.value}
                   </p>
                 </div>

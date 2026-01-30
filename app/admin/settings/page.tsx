@@ -18,119 +18,93 @@ export default function AdminSettingsPage() {
       >
         {" "}
         <div className="mb-8">
-          {" "}
-          <h1 className="text-3xl font-bold text-slate-900 dark:text-white mb-2">
-            {" "}
-            Admin Settings{" "}
-          </h1>{" "}
-          <p className="text-slate-500 dark:text-slate-400">
-            {" "}
-            Configure platform settings, integrations, and security
-            options.{" "}
-          </p>{" "}
-        </div>{" "}
+          <h1 className="text-3xl font-bold text-card-foreground mb-2">
+            Admin Settings
+          </h1>
+          <p className="text-muted-foreground">
+            Configure platform settings, integrations, and security options.
+          </p>
+        </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {" "}
-          <Card className="bg-card-bg border-border-soft shadow-paper">
-            {" "}
+          <Card className="bg-card border-border shadow-sm">
             <div className="p-6">
-              {" "}
-              <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-4">
-                {" "}
-                General Settings{" "}
-              </h2>{" "}
+              <h2 className="text-xl font-bold text-card-foreground mb-4">
+                General Settings
+              </h2>
               <div className="space-y-4">
-                {" "}
                 <div>
-                  {" "}
-                  <Label htmlFor="siteName">Site Name</Label>{" "}
-                  <Input id="siteName" defaultValue={general.platformName} />{" "}
-                </div>{" "}
+                  <Label htmlFor="siteName">Site Name</Label>
+                  <Input id="siteName" defaultValue={general.platformName} />
+                </div>
                 <div>
-                  {" "}
-                  <Label htmlFor="siteUrl">Site URL</Label>{" "}
-                  <Input id="siteUrl" defaultValue={general.platformName} />{" "}
-                </div>{" "}
+                  <Label htmlFor="siteUrl">Site URL</Label>
+                  <Input id="siteUrl" defaultValue={general.platformName} />
+                </div>
                 <div>
-                  {" "}
-                  <Label htmlFor="defaultLanguage">Default Language</Label>{" "}
+                  <Label htmlFor="defaultLanguage">Default Language</Label>
                   <select
                     id="defaultLanguage"
                     aria-label="default language"
                     defaultValue={general.defaultLanguage}
-                    className="w-full px-3 py-2 border border-border-soft rounded-md bg-background text-slate-900 dark:text-white"
+                    className="w-full px-3 py-2 border border-border rounded-md bg-background text-foreground"
                   >
-                    {" "}
-                    <option value="en">English</option>{" "}
-                    <option value="ja">Japanese</option>{" "}
-                    <option value="es">Spanish</option>{" "}
-                  </select>{" "}
-                </div>{" "}
+                    <option value="en">English</option>
+                    <option value="ja">Japanese</option>
+                    <option value="es">Spanish</option>
+                  </select>
+                </div>
                 <div className="flex items-center justify-between">
-                  {" "}
-                  <Label htmlFor="maintenanceMode">Maintenance Mode</Label>{" "}
+                  <Label htmlFor="maintenanceMode">Maintenance Mode</Label>
                   <Switch
                     id="maintenanceMode"
                     defaultChecked={true}
-                  />{" "}
-                </div>{" "}
-              </div>{" "}
-            </div>{" "}
-          </Card>{" "}
-          <Card className="bg-card-bg border-border-soft shadow-paper">
-            {" "}
+                  />
+                </div>
+              </div>
+            </div>
+          </Card>
+          <Card className="bg-card border-border shadow-sm">
             <div className="p-6">
-              {" "}
-              <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-4">
-                {" "}
-                Notification Settings{" "}
-              </h2>{" "}
+              <h2 className="text-xl font-bold text-card-foreground mb-4">
+                Notification Settings
+              </h2>
               <div className="space-y-4">
-                {" "}
                 <div className="flex items-center justify-between">
-                  {" "}
-                  <Label htmlFor="emailAlerts">Email Alerts</Label>{" "}
+                  <Label htmlFor="emailAlerts">Email Alerts</Label>
                   <Switch
                     id="emailAlerts"
                     defaultChecked={notifications.emailAlerts}
-                  />{" "}
-                </div>{" "}
+                  />
+                </div>
                 <div className="flex items-center justify-between">
-                  {" "}
                   <Label htmlFor="pushNotifications">
                     Push Notifications
-                  </Label>{" "}
+                  </Label>
                   <Switch
                     id="pushNotifications"
                     defaultChecked={notifications.pushNotifications}
-                  />{" "}
-                </div>{" "}
+                  />
+                </div>
                 <div className="flex items-center justify-between">
-                  {" "}
-                  <Label htmlFor="weeklyReports">Weekly Reports</Label>{" "}
+                  <Label htmlFor="weeklyReports">Weekly Reports</Label>
                   <Switch
                     id="weeklyReports"
                     defaultChecked={true}
-                  />{" "}
-                </div>{" "}
-              </div>{" "}
-            </div>{" "}
-          </Card>{" "}
-          <Card className="bg-card-bg border-border-soft shadow-paper">
-            {" "}
+                  />
+                </div>
+              </div>
+            </div>
+          </Card>
+          <Card className="bg-card border-border shadow-sm">
             <div className="p-6">
-              {" "}
-              <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-4">
-                {" "}
-                Security Settings{" "}
-              </h2>{" "}
+              <h2 className="text-xl font-bold text-card-foreground mb-4">
+                Security Settings
+              </h2>
               <div className="space-y-4">
-                {" "}
                 <div>
-                  {" "}
                   <Label htmlFor="sessionTimeout">
                     Session Timeout (minutes)
-                  </Label>{" "}
+                  </Label>
                   <Input
                     id="sessionTimeout"
                     type="number"
@@ -139,78 +113,68 @@ export default function AdminSettingsPage() {
                     step="1"
                     defaultValue={security.sessionTimeout / 60}
                     aria-describedby="sessionTimeoutHelp"
-                  />{" "}
-                  <p id="sessionTimeoutHelp" className="text-sm text-slate-500 dark:text-slate-400">
+                  />
+                  <p id="sessionTimeoutHelp" className="text-sm text-muted-foreground">
                     Time before users are automatically logged out (1-1440 minutes)
                   </p>
-                </div>{" "}
+                </div>
                 <div className="flex items-center justify-between">
-                  {" "}
                   <Label htmlFor="twoFactorAuth">
                     Two-Factor Authentication
-                  </Label>{" "}
+                  </Label>
                   <Switch
                     id="twoFactorAuth"
                     defaultChecked={security.twoFactorEnabled}
-                  />{" "}
-                </div>{" "}
+                  />
+                </div>
                 <div className="flex items-center justify-between">
-                  {" "}
-                  <Label htmlFor="ipWhitelist">IP Whitelist</Label>{" "}
+                  <Label htmlFor="ipWhitelist">IP Whitelist</Label>
                   <Switch
                     id="ipWhitelist"
                     defaultChecked={true}
-                  />{" "}
-                </div>{" "}
-              </div>{" "}
-            </div>{" "}
-          </Card>{" "}
-          <Card className="bg-card-bg border-border-soft shadow-paper">
-            {" "}
+                  />
+                </div>
+              </div>
+            </div>
+          </Card>
+          <Card className="bg-card border-border shadow-sm">
             <div className="p-6">
-              {" "}
-              <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-4">
-                {" "}
-                Integrations{" "}
-              </h2>{" "}
+              <h2 className="text-xl font-bold text-card-foreground mb-4">
+                Integrations
+              </h2>
               <div className="space-y-4">
-                {" "}
                 <div className="flex items-center justify-between">
-                  {" "}
-                  <Label htmlFor="stripeIntegration">Stripe Payment</Label>{" "}
+                  <Label htmlFor="stripeIntegration">Stripe Payment</Label>
                   <Switch
                     id="stripeIntegration"
                     defaultChecked={true}
-                  />{" "}
-                </div>{" "}
+                  />
+                </div>
                 <div className="flex items-center justify-between">
-                  {" "}
-                  <Label htmlFor="googleAnalytics">Google Analytics</Label>{" "}
+                  <Label htmlFor="googleAnalytics">Google Analytics</Label>
                   <Switch
                     id="googleAnalytics"
                     defaultChecked={true}
-                  />{" "}
-                </div>{" "}
+                  />
+                </div>
                 <div className="flex items-center justify-between">
-                  {" "}
                   <Label htmlFor="emailProvider">
                     Email Service Provider
-                  </Label>{" "}
+                  </Label>
                   <select
                     id="emailProvider"
                     aria-label="email"
                     defaultValue={general.supportEmail}
-                    className="w-full px-3 py-2 border border-border-soft rounded-md bg-background text-slate-900 dark:text-white"
+                    className="w-full px-3 py-2 border border-border rounded-md bg-background text-foreground"
                   >
-                    {" "}
-                    <option value="sendgrid">SendGrid</option>{" "}
-                    <option value="mailgun">Mailgun</option>{" "}
-                    <option value="aws">AWS SES</option>{" "}
-                  </select>{" "}
-                </div>{" "}
-              </div>{" "}
-            </div>{" "}
-          </Card>{" "}
+                    <option value="sendgrid">SendGrid</option>
+                    <option value="mailgun">Mailgun</option>
+                    <option value="aws">AWS SES</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </Card>
         </div>{" "}
         <div className="mt-6 flex justify-end">
           {" "}

@@ -10,10 +10,10 @@ export default function AdminDashboardPage() {
     <div className="p-8">
       {/* Header */}
       <div className="mb-8">
-        <h1 className="text-4xl font-black tracking-tight text-slate-900 dark:text-white mb-2">
+        <h1 className="text-4xl font-black tracking-tight text-card-foreground mb-2">
           Admin Dashboard
         </h1>
-        <p className="text-slate-500 dark:text-slate-400">
+        <p className="text-muted-foreground">
           Overview of platform metrics and recent activities.
         </p>
       </div>

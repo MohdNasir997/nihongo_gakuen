@@ -21,13 +21,13 @@ export default function AdminEditorPage({ params }: { params: { lessonId: string
           transition={{ duration: 0.3 }}
           className="flex-1 flex flex-col overflow-hidden"
         >
-          <div className="border-b border-border-soft bg-card-bg">
+          <div className="border-b border-border bg-card">
             <div className="p-4 flex items-center justify-between">
               <div>
-                <h1 className="text-2xl font-bold text-slate-900 dark:text-white mb-1">
+                <h1 className="text-2xl font-bold text-card-foreground mb-1">
                   {title}
                 </h1>
-                <p className="text-sm text-slate-500 dark:text-slate-400">
+                <p className="text-sm text-muted-foreground">
                   Course: {courseId} Module: {moduleId}
                 </p>
               </div>
@@ -49,7 +49,7 @@ export default function AdminEditorPage({ params }: { params: { lessonId: string
                 </TabsList>
 
                 <TabsContent value="content" className="flex-1 flex flex-col">
-                  <Card className="flex-1 bg-card-bg border-border-soft shadow-paper">
+                  <Card className="flex-1 bg-card border-border shadow-sm">
                     <div className="p-6 h-full flex flex-col">
                       <div className="mb-4">
                         <Label htmlFor="lessonTitle">Lesson Title</Label>
@@ -60,9 +60,9 @@ export default function AdminEditorPage({ params }: { params: { lessonId: string
                         />
                       </div>
 
-                      <div className="flex-1 border border-border-soft rounded-md overflow-hidden">
+                      <div className="flex-1 border border-border rounded-md overflow-hidden">
                         <div className="h-full bg-background">
-                          <div className="p-4 text-slate-500 dark:text-slate-400 min-h-full">
+                          <div className="p-4 text-muted-foreground min-h-full">
                             <p className="mb-4">TipTap Editor placeholder</p>
                             <p className="text-sm">
                               This is where the rich text editor will be integrated.
@@ -81,17 +81,17 @@ export default function AdminEditorPage({ params }: { params: { lessonId: string
                         </div>
                       </div>
 
-                      <div className="mt-4 flex items-center justify-between text-sm text-slate-500 dark:text-slate-400">
+                      <div className="mt-4 flex items-center justify-between text-sm text-muted-foreground">
                         <span>Last saved: {lastSaved}</span>
                         <span>
                           Status:{' '}
                           <span
                             className={`ml-1 ${
                               status === 'published'
-                                ? 'text-green-500'
+                                ? 'text-green-600 dark:text-green-400'
                                 : status === 'draft'
-                                ? 'text-yellow-500'
-                                : 'text-gray-500'
+                                ? 'text-yellow-600 dark:text-yellow-400'
+                                : 'text-gray-600 dark:text-gray-400'
                             }`}
                           >
                             {status.toUpperCase()}
@@ -103,7 +103,7 @@ export default function AdminEditorPage({ params }: { params: { lessonId: string
                 </TabsContent>
 
                 <TabsContent value="metadata" className="flex-1 overflow-y-auto">
-                  <Card className="bg-card-bg border-border-soft shadow-paper">
+                  <Card className="bg-card border-border shadow-sm">
                     <div className="p-6 space-y-4">
                       <div>
                         <Label htmlFor="description">Description</Label>
@@ -113,29 +113,26 @@ export default function AdminEditorPage({ params }: { params: { lessonId: string
                           id="description"
                           defaultValue={metadata.description}
                           rows={4}
-                          className="w-full px-3 py-2 border border-border-soft rounded-md bg-background text-slate-900 dark:text-white"
+                          className="w-full px-3 py-2 border border-border rounded-md bg-background text-foreground"
                         />
                       </div>
-
                       <div>
                         <Label htmlFor="duration">Duration</Label>
                         <Input id="duration" defaultValue={metadata.duration} />
                       </div>
-
                       <div>
                         <Label htmlFor="difficulty">Difficulty Level</Label>
                         <select
                           id="difficulty"
                           aria-label='difficulty'
                           defaultValue={metadata.difficulty}
-                          className="w-full px-3 py-2 border border-border-soft rounded-md bg-background text-slate-900 dark:text-white"
+                          className="w-full px-3 py-2 border border-border rounded-md bg-background text-foreground"
                         >
                           <option value="beginner">Beginner</option>
                           <option value="intermediate">Intermediate</option>
                           <option value="advanced">Advanced</option>
                         </select>
                       </div>
-
                       <div>
                         <Label htmlFor="tags">Tags</Label>
                         <Input
@@ -149,14 +146,14 @@ export default function AdminEditorPage({ params }: { params: { lessonId: string
                 </TabsContent>
 
                 <TabsContent value="settings" className="flex-1 overflow-y-auto">
-                  <Card className="bg-card-bg border-border-soft shadow-paper">
+                  <Card className="bg-card border-border shadow-sm">
                     <div className="p-6 space-y-4">
                       <div className="flex items-center justify-between">
                         <div>
-                          <h3 className="font-semibold text-slate-900 dark:text-white">
+                          <h3 className="font-semibold text-card-foreground">
                             Allow Comments
                           </h3>
-                          <p className="text-sm text-slate-500 dark:text-slate-400">
+                          <p className="text-sm text-muted-foreground">
                             Enable students to comment on this lesson
                           </p>
                         </div>
@@ -167,15 +164,13 @@ export default function AdminEditorPage({ params }: { params: { lessonId: string
                           className="w-5 h-5"
                         />
                       </div>
-
                       <Separator />
-
                       <div className="flex items-center justify-between">
                         <div>
-                          <h3 className="font-semibold text-slate-900 dark:text-white">
+                          <h3 className="font-semibold text-card-foreground">
                             Allow Downloads
                           </h3>
-                          <p className="text-sm text-slate-500 dark:text-slate-400">
+                          <p className="text-sm text-muted-foreground">
                             Allow students to download lesson materials
                           </p>
                         </div>
@@ -186,15 +181,13 @@ export default function AdminEditorPage({ params }: { params: { lessonId: string
                           className="w-5 h-5"
                         />
                       </div>
-
                       <Separator />
-
                       <div className="flex items-center justify-between">
                         <div>
-                          <h3 className="font-semibold text-slate-900 dark:text-white">
+                          <h3 className="font-semibold text-card-foreground">
                             Require Completion
                           </h3>
-                          <p className="text-sm text-slate-500 dark:text-slate-400">
+                          <p className="text-sm text-muted-foreground">
                             Students must complete this lesson to proceed
                           </p>
                         </div>
@@ -205,9 +198,7 @@ export default function AdminEditorPage({ params }: { params: { lessonId: string
                           className="w-5 h-5"
                         />
                       </div>
-
                       <Separator />
-
                       <div>
                         <Label htmlFor="publishDate">Publish Date</Label>
                         <Input
